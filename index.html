@@ -1,0 +1,13 @@
+<!-- Load Jade Template Compiler Dependencies -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="//rawgithub.com/visionmedia/jade/master/jade.js"></script>
+<script src="//coffeescript.org/extras/coffee-script.js"></script>
+
+<!-- Dynamically Compile the Jade Template -->
+<script type="text/coffeescript">
+  $.get "index.jade", (template) ->
+    template = jade.compile(template, pretty: true)
+    contents = document.open("text/html", "replace")
+    contents.write template()
+    contents.close()
+</script>

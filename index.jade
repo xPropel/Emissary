@@ -1,0 +1,56 @@
+doctype 5
+html
+
+  head
+
+    //- Site Information
+    block meta
+
+      title Create Tournament Code
+
+    //- Stylesheets
+    block stylesheets
+
+      link(rel="stylesheet/less" href="index.less")
+
+  body
+
+    select(onchange="update()")#maps
+
+      option Summoner's Rift
+      option Howling Abyss
+      option Crystal Scar
+      option Twisted Treeline
+
+    select(onchange="update()")#modes
+
+      option Blind Pick
+      option All Random
+      option Draft Mode
+      option Tournament Draft
+
+    select(onchange="update()")#specs
+
+      option All
+      option Friends
+      option Lobby
+      option None
+
+    br
+    h4 Lobby Name:
+    input(onchange="update()" autofocus)#lobbyName
+    h4 Lobby Password:
+    input(onchange="update()")#lobbyPass
+    h4 Tournament Code:
+    input#tournamentCode
+
+    //- Javascript
+    block javascript
+
+      //- Required Libraries
+      script(src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.4.1/less.min.js")
+      script(src="//coffeescript.org/extras/coffee-script.js")
+
+      //- Local Dependencies
+      each file in ['index'].reverse()
+        script(type="text/coffeescript" src=file+".coffee")
