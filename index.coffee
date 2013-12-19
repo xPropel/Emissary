@@ -5,7 +5,7 @@ League of Legends Tournament Code Generator
 window.update = () ->
 
   # String-Format the Tournament Code Endpoint
-  players  = if getMap() is 4 then 3 else 5
+  players  = if getMap() is 10 then 3 else 5
   endpoint = ["pvpnet://lol/customgame/joinorcreate"
                "map#{getMap()}"
               "pick#{getMode()}"
