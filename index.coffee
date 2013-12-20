@@ -25,9 +25,9 @@ getMap = () ->
   # Determine the Selected Map
   switch maps[maps.selectedIndex].text
     when "Summoner's Rift"  then return 1
-    when "Howling Abyss"    then return 8
-    when "Crystal Scar"     then return 7
-    when "Twisted Treeline" then return 4
+    when "Howling Abyss"    then return 12
+    when "Crystal Scar"     then return 8
+    when "Twisted Treeline" then return 10
 
 getMode = () ->
 
