@@ -51,3 +51,7 @@ getSpec = () ->
     when "Lobby"   then return "LOBBYONLY"
     when "None"    then return "NONE"
 
+# Regenerate Tournament Codes While Typing
+$("select").bind "change", update
+$("input").bind  "input",  update
+$("#lobbyName").focus()

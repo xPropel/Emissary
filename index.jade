@@ -15,14 +15,14 @@ html
 
   body
 
-    select(onchange="update()")#maps
+    select#maps
 
       option Summoner's Rift
       option Howling Abyss
       option Crystal Scar
       option Twisted Treeline
 
-    select(onchange="update()")#modes
+    select#modes
 
       option Blind Pick
       option All Random
@@ -33,7 +33,7 @@ html
       //- Legacy Game Modes
       option(disabled) One for All
 
-    select(onchange="update()")#specs
+    select#specs
 
       option All
       option(disabled) Friends
@@ -42,9 +42,9 @@ html
 
     br
     h4 Lobby Name:
-    input(onchange="update()" autofocus)#lobbyName
+    input#lobbyName
     h4 Lobby Password:
-    input(onchange="update()")#lobbyPass
+    input#lobbyPass
     h4 Tournament Code:
     input#tournamentCode
 
@@ -52,6 +52,7 @@ html
     block javascript
 
       //- Required Libraries
+      script(src="//code.jquery.com/jquery-latest.min.js")
       script(src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.4.1/less.min.js")
       script(src="//coffeescript.org/extras/coffee-script.js")
 
