@@ -1,13 +1,24 @@
-<!-- Load Jade Template Compiler Dependencies -->
+<!-- Load Client-Side Compiler Dependencies -->
 <script src="//code.jquery.com/jquery-latest.min.js"></script>
 <script src="//rawgithub.com/visionmedia/jade/master/jade.js"></script>
+<script src="//learnboost.github.io/stylus/stylus.min.js"></script>
 <script src="//coffeescript.org/extras/coffee-script.js"></script>
 
-<!-- Dynamically Compile the Jade Template -->
+<!-- Process the Template and Stylesheet -->
 <script type="text/coffeescript">
-  $.get "index.jade", (template) ->
-    template = jade.compile(template, pretty: true)
-    contents = document.open("text/html", "replace")
-    contents.write template()
-    contents.close()
+
+jQuery.ajaxSetup async: false
+
+$.get "index.jade", (template) ->
+  template = jade.compile(template, pretty: true)
+  contents = document.open("text/html", "replace")
+  contents.write template()
+  contents.close()
+
+$.get "index.styl", (styl) ->
+  stylus.render styl, (err, css) ->
+    styl = document.createElement("style")
+    styl.innerHTML = css # Compiled Stylus
+    document.body.appendChild(styl)
+
 </script>
