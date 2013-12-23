@@ -10,6 +10,8 @@ html
 
   body
 
+    button(onclick="update()") update
+
     select#maps
 
       option Summoner's Rift
@@ -26,6 +28,7 @@ html
       option Blind Draft
 
       //- Legacy Game Modes
+      option(disabled)
       option(disabled) One for All
 
     select#specs
@@ -41,7 +44,22 @@ html
     h4 Lobby Password:
     input#lobbyPass
     h4 Tournament Code:
-    input#tournamentCode
+    input#single
+
+    br
+    label Random Password
+      input(type="checkbox")#rpass
+    br
+    label Random Hash
+      input(type="checkbox")#rhash
+
+    br
+    label Use Index
+      input(type="checkbox")#index
+    br
+    input#number
+    br
+    textarea#multi
 
     //- Javascript
     block javascript

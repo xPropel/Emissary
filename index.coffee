@@ -2,23 +2,61 @@
 League of Legends Tournament Code Generator
 ###
 
+$("#lobbyName").focus()
+$("#lobbyName").attr("placeholder", "Enter a Lobby Name")
+$("#lobbyPass").attr("placeholder", "Enter a Password (Optional)")
+
+# Decode Existing Codes Option
+
 window.update = () ->
 
-  # String-Format the Tournament Code Endpoint
-  players  = if getMap() is 10 then 3 else 5
-  endpoint = ["pvpnet://lol/customgame/joinorcreate"
-               "map#{getMap()}"
-              "pick#{getMode()}"
-              "team#{players}"
-              "spec#{getSpec()}"
-              ""].join "/"
+  # Determine the Endpoint
+  endpoint = formatEndpoint()
+  $("#single").val('')
+  $("#multi").text('')
+
+  # Generate New Tournament Codes
+  $("#single").val(encodeSingle endpoint)
+  $("#multi").text(encodeMulti  endpoint)
+
+encodeMulti = (endpoint, codes="") ->
+
+  # Generate Multiple Identifiers
+  for index in [1..10]
+    index = "" unless $("#index").prop("checked")
+    codes += encodeSingle(endpoint, index) + "\n"
+  return codes
+
+encodeSingle = (endpoint, index=null) ->
+
+  # Generate Pseudorandom Identifiers
+  lrand = Math.random().toString(36).substring(2, 7)
+  prand = Math.random().toString(36).substring(0, 9)
 
   # Generate the Lobby Identifier String
-  id = Math.random().toString(36).substring(2, 7)
-  lobby = btoa JSON.stringify
-    name:     lobbyName.value or "Emissary " + id
-    password: lobbyPass.value or ""
-  tournamentCode.value = endpoint + lobby
+  rhash = $("#rhash").prop("checked")
+  lname = lobbyName.value or "Custom Lobby"
+  if index then lname += " #" + index
+  if rhash then lname += " !" + lrand
+
+  # Generate the Lobby Password
+  lpass = lobbyPass.value or ""
+  rpass = $("#rpass").prop("checked")
+  if rpass then lpass = prand
+
+  # Format and Return a Tournament Code
+  return endpoint + btoa JSON.stringify
+    name: lname, password: lpass
+
+formatEndpoint = () ->
+
+  # String-Format the Tournament Code Endpoint
+  return ["pvpnet://lol/customgame/joinorcreate"
+           "map#{getMap()}"
+          "pick#{getMode()}"
+          "team#{getPlayers()}"
+          "spec#{getSpec()}"
+          ""].join "/"
 
 getMap = () ->
 
@@ -42,6 +80,13 @@ getMode = () ->
     # Legacy Game Modes
     when "One for All"      then return 14
 
+getPlayers = () ->
+
+  # Determines the Correct Number of Players
+  switch maps[maps.selectedIndex].text
+    when "Twisted Treeline" then return 3
+    else                         return 5
+
 getSpec = () ->
 
   # Determine the Selected Spectator Format
@@ -52,6 +97,6 @@ getSpec = () ->
     when "None"    then return "NONE"
 
 # Regenerate Tournament Codes While Typing
-$("select").bind "change", update
-$("input").bind  "input",  update
-$("#lobbyName").focus()
+$("select")    .bind "change", update
+$("input")     .bind "input",  update
+$(":checkbox") .bind "change", update
