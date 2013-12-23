@@ -47,7 +47,7 @@ getSpec = () ->
   # Determine the Selected Spectator Format
   switch specs[specs.selectedIndex].text
     when "All"     then return "ALL"
-    when "Friends" then return "FRIENDSONLY"
+    when "Friends" then return "DROPINONLY"
     when "Lobby"   then return "LOBBYONLY"
     when "None"    then return "NONE"
 
