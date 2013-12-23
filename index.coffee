@@ -43,6 +43,9 @@ encodeSingle = (endpoint, index=null) ->
   lpass = lobbyPass.value or ""
   rpass = $("#rpass").prop("checked")
   if rpass then lpass = prand
+  switch rpass # Enable Input
+    when true  then $("#lobbyPass").attr("disabled", rpass)
+    when false then $("#lobbyPass").attr("disabled", rpass)
 
   # Format and Return a Tournament Code
   return endpoint + btoa JSON.stringify
