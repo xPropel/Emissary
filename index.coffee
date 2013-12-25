@@ -22,7 +22,7 @@ window.update = () ->
 encodeMulti = (endpoint, codes="") ->
 
   # Generate Multiple Identifiers
-  for index in [1..10]
+  for index in [1..$("#number").val()]
     index = "" unless $("#index").prop("checked")
     codes += encodeSingle(endpoint, index) + "\n"
   return codes

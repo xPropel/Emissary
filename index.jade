@@ -10,7 +10,7 @@ html
 
   body
 
-    button(onclick="update()") update
+    button(onclick="update()") refresh
 
     select#maps
 
@@ -57,7 +57,8 @@ html
     label Use Index
       input(type="checkbox")#index
     br
-    input#number
+    h4 Number of Extra Codes to Generate:
+    input(type="number")#number
     br
     textarea#multi
 
