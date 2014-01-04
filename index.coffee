@@ -25,7 +25,7 @@ encodeMulti = (endpoint, codes="") ->
   for index in [1..$("#number").val()]
     index = "" unless $("#index").prop("checked")
     codes += encodeSingle(endpoint, index) + "\n"
-  return codes
+  return codes unless $("#number").val() <= 0
 
 encodeSingle = (endpoint, index=null) ->
 
