@@ -1,7 +1,7 @@
 # [Emissary](http://polytonic.github.io/Emissary/)
 
 ## Summary
-Emissary is a set of tools and resources for [League of Legends](http://leagueoflegends.com), implementing and/or extending features not offered by the official [Riot Games API](https://developer.riotgames.com/) and the [PVP.net](http://leagueoflegends.wikia.com/wiki/PVP.net) client. Detailed descriptions for each utility are located under the respective subdirectories.
+Emissary is a set of tools and resources for [League of Legends](http://leagueoflegends.com), implementing and/or extending features not offered by the official [Riot Games API](https://developer.riotgames.com/) and the [PVP.net](http://leagueoflegends.wikia.com/wiki/PVP.net) client. Detailed descriptions for each utility are located under their respective subdirectories.
 
 ## Table of Contents
 >- [Tournament Codes]()
