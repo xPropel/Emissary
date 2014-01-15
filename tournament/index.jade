@@ -32,13 +32,9 @@ html
       option(disabled) Blind Draft
       option(disabled) One for All
 
-    select#teamsSize
-
-      option(value=1) 1
-      option(value=2) 2
-      option(value=3) 3
-      option(value=4) 4
-      option(selected="selected" value=5) 5      
+    select#players
+      each val in [1, 2, 3, 4, 5]
+        option(value=val)=val
 
     select#specs
 

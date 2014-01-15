@@ -2,18 +2,11 @@
 League of Legends Tournament Code Generator
 ###
 
-$("#lobbyName").focus()
-$("#lobbyName").attr("placeholder", "Enter a Lobby Name")
-$("#lobbyPass").attr("placeholder", "Enter a Password (Optional)")
-
-# Decode Existing Codes Option
-
 window.update = () ->
-
-  updateTeamsSize()
 
   # Determine the Endpoint
   endpoint = formatEndpoint()
+  teams    = updateTeams()
   $("#single").val('')
   $("#multi").text('')
 
@@ -53,20 +46,6 @@ encodeSingle = (endpoint, index=null) ->
   return endpoint + btoa JSON.stringify
     name: lname, password: lpass
 
-# update the teamsSize option according to the map selected
-updateTeamsSize = () ->
-  switch maps[maps.selectedIndex].text
-    when "Twisted Treeline"
-      if ($("#teamsSize option").length > 3)
-        if teamsSize[teamsSize.selectedIndex].value > 3 
-          $("#teamsSize").val('3')
-        $("#teamsSize option[value='4']").remove();
-        $("#teamsSize option[value='5']").remove();
-    else
-      if ($("#teamsSize option").length < 5)
-        $("#teamsSize").append('<option value="4">4</option>');
-        $("#teamsSize").append('<option value="5">5</option>');
-
 formatEndpoint = () ->
 
   # String-Format the Tournament Code Endpoint
@@ -101,12 +80,10 @@ getMode = () ->
 
 getPlayers = () ->
 
-  teamsSizeReturn = teamsSize[teamsSize.selectedIndex].text
-
-  if maps[maps.selectedIndex].text == "Twisted Treeline" and teamsSizeReturn > 3
-    teamsSizeReturn = 3
-
-  return teamsSizeReturn
+  # Return the Appropriate Number of Players
+  if maps[maps.selectedIndex].text is "Twisted Treeline"
+    return 3 if players[players.selectedIndex].text >= 3
+  else return players[players.selectedIndex].text
 
 getSpec = () ->
 
@@ -117,7 +94,29 @@ getSpec = () ->
     when "Lobby"   then return "LOBBYONLY"
     when "None"    then return "NONE"
 
-# Regenerate Tournament Codes While Typing
-$("select")    .bind "change", update
-$("input")     .bind "input",  update
-$(":checkbox") .bind "change", update
+updateTeams = () ->
+
+  # Modify Player Capacity on Twisted Treeline
+  if maps[maps.selectedIndex].text is "Twisted Treeline"
+    $("#players option[value='4']").remove()
+    $("#players option[value='5']").remove()
+    $("#players").val(3)
+
+  # Restore Player Capacity for All Other Maps
+  else if $("#players option").length < 5
+    $("#players").append('<option value="4">4</option>')
+    $("#players").append('<option value="5">5</option>')
+    $("#players").val(5)
+
+do () ->
+
+  # Set Default Attributes on Elements
+  $("#players").val(5)
+  $("#lobbyName").focus()
+  $("#lobbyName").attr("placeholder", "Enter a Lobby Name")
+  $("#lobbyPass").attr("placeholder", "Enter a Password (Optional)")
+
+  # Bind Events to Update Selectors
+  $("select")    .bind "change", update
+  $("input")     .bind "input",  update
+  $(":checkbox") .bind "change", update
