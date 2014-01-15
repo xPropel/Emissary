@@ -31,8 +31,10 @@ encodeSingle = (endpoint, index=null) ->
   # Generate the Lobby Identifier String
   rhash = $("#rhash").prop("checked")
   lname = lobbyName.value or "Custom Lobby"
-  if index then lname += " #" + index
-  if rhash then lname += " !" + lrand
+  if index then lname += " ~" + index
+  if rhash then lname += " #" + lrand
+  if lname is "Custom Lobby" and not rhash
+    lname += " #" + lrand
 
   # Generate the Lobby Password
   lpass = lobbyPass.value or ""
