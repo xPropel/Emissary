@@ -4,7 +4,26 @@
 Emissary is a set of tools and resources for [League of Legends](http://leagueoflegends.com), implementing and/or extending features not offered by the official [Riot Games API](https://developer.riotgames.com/) and the [PVP.net](http://leagueoflegends.wikia.com/wiki/PVP.net) client. Detailed descriptions for each utility are located under their respective subdirectories.
 
 ## Table of Contents
->- [Tournament Codes]()
+> - [Tournament Codes]()
+
+## Roadmap
+> - Develop a Responsive Site Theme
+> - Refactor Existing Code to Smaller Files
+>   - Introduce Task Runner
+>   - Concat + Minify
+> - Add Match Reporting
+>   - Setup Backend on Heroku
+>   - Link to Subdomain
+> - Develop Riot API Wrappers
+>   - Javascript (Node)
+>   - Python
+>   - Ruby
+> - Add XMPP Functionality
+>   - XMPP/IRC Robot
+>   - XMPP Browser Client
+>   - Chat Status Tool
+> - Mastery Calculator
+> - Unit Tests ... Yeah!
 
 ## License
 ```
