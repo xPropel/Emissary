@@ -10,6 +10,8 @@ $("#lobbyPass").attr("placeholder", "Enter a Password (Optional)")
 
 window.update = () ->
 
+  updateTeamsSize()
+
   # Determine the Endpoint
   endpoint = formatEndpoint()
   $("#single").val('')
@@ -51,6 +53,20 @@ encodeSingle = (endpoint, index=null) ->
   return endpoint + btoa JSON.stringify
     name: lname, password: lpass
 
+# update the teamsSize option according to the map selected
+updateTeamsSize = () ->
+  switch maps[maps.selectedIndex].text
+    when "Twisted Treeline"
+      if ($("#teamsSize option").length > 3)
+        if teamsSize[teamsSize.selectedIndex].value > 3 
+          $("#teamsSize").val('3')
+        $("#teamsSize option[value='4']").remove();
+        $("#teamsSize option[value='5']").remove();
+    else
+      if ($("#teamsSize option").length < 5)
+        $("#teamsSize").append('<option value="4">4</option>');
+        $("#teamsSize").append('<option value="5">5</option>');
+
 formatEndpoint = () ->
 
   # String-Format the Tournament Code Endpoint
@@ -85,10 +101,12 @@ getMode = () ->
 
 getPlayers = () ->
 
-  # Determines the Correct Number of Players
-  switch maps[maps.selectedIndex].text
-    when "Twisted Treeline" then return 3
-    else                         return 5
+  teamsSizeReturn = teamsSize[teamsSize.selectedIndex].text
+
+  if maps[maps.selectedIndex].text == "Twisted Treeline" and teamsSizeReturn > 3
+    teamsSizeReturn = 3
+
+  return teamsSizeReturn
 
 getSpec = () ->
 
