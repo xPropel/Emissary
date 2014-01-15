@@ -98,15 +98,15 @@ updateTeams = () ->
 
   # Modify Player Capacity on Twisted Treeline
   if maps[maps.selectedIndex].text is "Twisted Treeline"
+    $("#players").val(3) if $("#players").val() > 3
     $("#players option[value='4']").remove()
     $("#players option[value='5']").remove()
-    $("#players").val(3)
 
   # Restore Player Capacity for All Other Maps
   else if $("#players option").length < 5
     $("#players").append('<option value="4">4</option>')
     $("#players").append('<option value="5">5</option>')
-    $("#players").val(5)
+    $("#players").val(5) if $("#players").val() < 5
 
 do () ->
 
