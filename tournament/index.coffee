@@ -110,6 +110,26 @@ updateTeams = () ->
     $("#players").append('<option value="5">5</option>')
     $("#players").val(5) if $("#players").val() < 5
 
+processStringQuery = (query) ->
+
+  # Default to Lowercase Keys
+  query[key.toLowerCase()] = query[key].replace(/\/$/, "") for key of query
+
+  # Fill in Game Dropdown Options
+  for key in [ "map", "mode", "player", "spec" ]
+    if parseInt(query[key]) in [0..$("##{key}s").prop("length")-1]
+      $("##{key}s").prop("selectedIndex", query[key]-1)
+
+  # Fill in Extra Lobby Options
+  for key in [ "rpass", "rhash", "index" ]
+    $("##{key}").prop("checked", query[key])
+
+  # Fill in Lobby Name and Password
+  if query.lobby then $("#lobbyName").val(decodeURI query.lobby)
+  if query.pass  then $("#lobbyPass").val(decodeURI query.pass)
+  if query.codes then $("#number")   .val(query.codes)
+  return update()
+
 do () ->
 
   # Set Default Attributes on Elements
@@ -117,6 +137,11 @@ do () ->
   $("#lobbyName").focus()
   $("#lobbyName").attr("placeholder", "Enter a Lobby Name")
   $("#lobbyPass").attr("placeholder", "Enter a Password (Optional)")
+
+  # Create and Process If a String Query is Provided
+  query = new URI(window.location.search).search(true) # Uses URI.js
+  if (Object.keys(query).length) then processStringQuery(query)
+
 
   # Bind Events to Update Selectors
   $("select")    .bind "change", update
