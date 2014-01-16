@@ -22,8 +22,10 @@ Emissary is a set of tools and resources for [League of Legends](http://leagueof
 >   - XMPP/IRC Robot
 >   - XMPP Browser Client
 >   - Chat Status Tool
+>   - Desktop Notifications
 > - Mastery Calculator
 > - Unit Tests ... Yeah!
+> - Generate Documentation
 
 ## License
 ```
