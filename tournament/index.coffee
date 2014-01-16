@@ -110,6 +110,37 @@ updateTeams = () ->
     $("#players").append('<option value="5">5</option>')
     $("#players").val(5) if $("#players").val() < 5
 
+processStringQuery = (query) ->
+ 
+  # Read the Query and Update Options Accordingly
+ 
+  # Handle Upper Cases for Keys
+  query[key.toLowerCase()] = query[key] for key of query
+ 
+  ###
+  Dropdown Options:
+  Map    0: Summoner's Rift, 1: Howling Abyss, 2: Crystal Scar, 3: Twisted Treeline
+  Mode   0: Blind Pick,      1: All Random,    2: Draft Mode,   3: Tournament Draft
+  Spec   0: All,             1: Friends,       2: Lobby,        3: None
+  ###
+
+  # Fill in Game Dropdown Options
+  for key in [ "map", "mode", "player", "spec" ]
+    if parseInt(query[key]) in [0..$("##{key}s").prop("length")-1]
+      $("##{key}s").prop("selectedIndex", query[key])
+ 
+  # Fill in Lobby Name and Password
+  if query.lobby then $("#lobbyName") .val(decodeURI query.lobby)
+  if query.pass  then $("#lobbyPass") .val(decodeURI query.pass)
+ 
+  # Fill in Extra Lobby Options
+  for key in [ "rpass", "rhash", "index" ]
+    $("##{key}").prop("checked", query[key])
+ 
+  $("#number").val query.codes
+ 
+  update()
+
 do () ->
 
   # Set Default Attributes on Elements
@@ -117,6 +148,11 @@ do () ->
   $("#lobbyName").focus()
   $("#lobbyName").attr("placeholder", "Enter a Lobby Name")
   $("#lobbyPass").attr("placeholder", "Enter a Password (Optional)")
+
+  # Create and Process If a String Query is Provided
+  query = new URI(window.location.search).search(true) # Uses URI.js
+  if (Object.keys(query).length) then processStringQuery(query)
+
 
   # Bind Events to Update Selectors
   $("select")    .bind "change", update
