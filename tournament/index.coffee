@@ -85,7 +85,7 @@ getPlayers = () ->
   # Return the Appropriate Number of Players
   if maps[maps.selectedIndex].text is "Twisted Treeline"
     return 3 if players[players.selectedIndex].text >= 3
-  else return players[players.selectedIndex].text
+  return players[players.selectedIndex].text
 
 getSpec = () ->
 
