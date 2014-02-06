@@ -6,7 +6,7 @@ window.update = () ->
 
   # Determine the Endpoint
   endpoint = formatEndpoint()
-  teams    = updateTeams()
+  #teams    = updateTeams()
   $("#single").val('')
   $("#multi").text('')
 
@@ -100,7 +100,7 @@ updateTeams = () ->
 
   # Modify Player Capacity on Twisted Treeline
   if maps[maps.selectedIndex].text is "Twisted Treeline"
-    $("#players").val(3) if $("#players").val() > 3
+    $("#players").val(3)
     $("#players option[value='4']").remove()
     $("#players option[value='5']").remove()
 
@@ -146,4 +146,6 @@ do () ->
   # Bind Events to Update Selectors
   $("select")    .bind "change", update
   $("input")     .bind "input",  update
+  $("#maps")     .bind "change", updateTeams # Update Team Size
   $(":checkbox") .bind "change", update
+  
