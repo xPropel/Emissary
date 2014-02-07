@@ -24,6 +24,7 @@ Emissary is a set of tools and resources for [League of Legends](http://leagueof
 >   - Chat Status Tool
 >   - Desktop Notifications
 > - Mastery Calculator
+> - Custom Ladder/League (Player Tracking)
 > - Unit Tests ... Yeah!
 > - Generate Documentation
 
