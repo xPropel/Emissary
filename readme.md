@@ -1,4 +1,5 @@
 # [Emissary](http://polytonic.github.io/Emissary/)
+[![Build Status](https://travis-ci.org/Polytonic/Emissary.png?branch=master)](https://travis-ci.org/Polytonic/Emissary) [![Dependency Status](https://gemnasium.com/Polytonic/Emissary.png)](https://gemnasium.com/Polytonic/Emissary)
 
 ## Summary
 Emissary is a set of tools and resources for [League of Legends](http://leagueoflegends.com), implementing and/or extending features not offered by the official [Riot Games API](https://developer.riotgames.com/) and the [PVP.net](http://leagueoflegends.wikia.com/wiki/PVP.net) client. Detailed descriptions for each utility are located under their respective subdirectories.
