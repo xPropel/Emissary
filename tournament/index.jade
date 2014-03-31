@@ -10,16 +10,16 @@ html(ng-app="generatorApp")
 
   body(ng-controller="OptionsCtrl")
 
-    button(ng-click="update()") refresh
+    button(ng-click="update()") Generate New Code
 
-    select(ng-model="map" ng-change="updateTeams()")#maps
+    select(ng-model="userOptions.map" ng-change="updateTeams()")#maps
 
       option Summoner's Rift
       option Howling Abyss
       option Crystal Scar
       option Twisted Treeline
 
-    select(ng-model="mode" ng-change="update()")#modes
+    select(ng-model="userOptions.mode" ng-change="update()")#modes
 
       option Blind Pick
       option All Random
@@ -32,13 +32,13 @@ html(ng-app="generatorApp")
       option(disabled) Blind Draft
       option(disabled) One for All
 
-    select(ng-model="player" ng-change="update()")#players
+    select(ng-model="userOptions.player" ng-change="update()")#players
       each val in [1, 2, 3]
         option(value=val)=val
       each val in [4, 5]
-        option(value=val ng-if="map != 'Twisted Treeline'")=val
+        option(value=val ng-if="userOptions.map != 'Twisted Treeline'")=val
 
-    select(ng-model="spec" ng-change="update()")#specs
+    select(ng-model="userOptions.spec" ng-change="update()")#specs
 
       option All
       option Friends
@@ -47,31 +47,31 @@ html(ng-app="generatorApp")
 
     br
     h4 Lobby Name:
-    input(ng-model="lobbyName" ng-change="update()" 
-      placeholder="Enter a Lobby Name")#lobbyName
+    input(ng-model="userOptions.lobbyName" ng-change="update()" 
+      placeholder="Enter a Lobby Name" autofocus)#lobbyName
     h4 Lobby Password:
-    input(ng-model="lobbyPass" ng-change="update()" ng-disabled="rpass" 
+    input(ng-model="userOptions.lobbyPass" ng-change="update()" ng-disabled="userOptions.rpass || userOptions.rpass === 'true'" 
       placeholder="Enter a Password (Optional)")#lobbyPass
     h4 Tournament Code:
-    input(ng-model="single" onclick="this.select()" readonly)#single
+    input(ng-model="outputs.single" onclick="this.select()" readonly)#single
 
     br
     label Random Password
-      input(ng-model="rpass" ng-checked="rpass" ng-change="update()" 
+      input(ng-model="userOptions.rpass" ng-checked="userOptions.rpass" ng-change="update()" 
         type="checkbox")#rpass
     br
     label Random Hash
-      input(ng-model="rhash" ng-checked="rhash" ng-change="update()" 
+      input(ng-model="userOptions.rhash" ng-checked="userOptions.rhash" ng-change="update()" 
         type="checkbox")#rhash
     br
     label Use Index
-      input(ng-model="index" ng-checked="index" ng-change="update()" 
+      input(ng-model="userOptions.index" ng-checked="userOptions.index" ng-change="update()" 
         type="checkbox")#index
     br
     h4 Number of Extra Codes to Generate:
-    input(ng-model="number" ng-change="update()" type="number")#number
+    input(ng-model="userOptions.number" ng-change="update()" type="number")#number
     br
-    textarea(ng-model="multi" readonly)#multi
+    textarea(ng-model="outputs.multi" readonly)#multi
 
     //- Javascript
     block javascript
