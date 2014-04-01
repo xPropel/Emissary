@@ -15,26 +15,41 @@ html(ng-app="emissaryApp")
         td(bgcolor="#0000FF" rowspan="{{data.teamPlayerParticipantsSummaries.length+1}}")#teamName
       tr(ng-repeat="summoner in data.teamPlayerParticipantsSummaries")
         td(bgcolor="{{getBgcolor(summoner)}}")#summonerName {{summoner.summonerName}}
+       
+        td(bgcolor="{{getBgcolor(summoner)}}")#champ 
+          img(ng-src="{{getChamp(summoner)}}")
+        
         td(bgcolor="{{getBgcolor(summoner)}}")#summonersBox
           table
             td
               img(ng-src="{{getSpellIcon(summoner.spell1Id)}}")
             td
               img(ng-src="{{getSpellIcon(summoner.spell2Id)}}")
+        
         td(bgcolor="{{getBgcolor(summoner)}}")#kda {{getStat(summoner, "CHAMPIONS_KILLED")}}/{{getStat(summoner, "NUM_DEATHS")}}/{{getStat(summoner, "ASSISTS")}}
+
+        
+
       tr#divider
         td(colspan="4")
       tr
         td(bgcolor="#993399" rowspan="{{data.teamPlayerParticipantsSummaries.length+1}}")#teamName
       tr(ng-repeat="summoner in data.otherTeamPlayerParticipantsSummaries")
         td(bgcolor="{{getBgcolor(summoner)}}")#summonerName {{summoner.summonerName}}
+        
+        td(bgcolor="{{getBgcolor(summoner)}}")#champ 
+          img(ng-src="{{getChamp(summoner)}}")
+
         td(bgcolor="{{getBgcolor(summoner)}}")#summonersBox
           table
             td
               img(ng-src="{{getSpellIcon(summoner.spell1Id)}}")
             td
               img(ng-src="{{getSpellIcon(summoner.spell2Id)}}")
+        
         td(bgcolor="{{getBgcolor(summoner)}}")#kda {{getStat(summoner, "CHAMPIONS_KILLED")}}/{{getStat(summoner, "NUM_DEATHS")}}/{{getStat(summoner, "ASSISTS")}}
+
+
 
     //- CHAMPIONS_KILLED / NUM_DEATHS / ASSISTS
 

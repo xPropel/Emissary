@@ -28,4 +28,7 @@ angular.module("emissaryApp", []).factory "MatchReportFactory", ($http) ->
 
   $scope.getBgcolor = (summoner) ->
     #Return Background Color (Win/Lose)
-    if summoner.isWinningTeam then "#00FF00" else "#FF0000"
+    if summoner.isWinningTeam then "#00AA00" else "#AA0000"
+
+  $scope.getChamp = (summoner) ->
+    return "champion_icons/"+summoner.skinName+".png"
