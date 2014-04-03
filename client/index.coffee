@@ -142,10 +142,8 @@ do () ->
   query = new URI(window.location.search).search(true) # Uses URI.js
   if (Object.keys(query).length) then processStringQuery(query)
 
-
   # Bind Events to Update Selectors
   $("select")    .bind "change", update
   $("input")     .bind "input",  update
   $("#maps")     .bind "change", updateTeams # Update Team Size
   $(":checkbox") .bind "change", update
-  
