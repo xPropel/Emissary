@@ -3,7 +3,7 @@ app = () ->
   bower  = "#{__dirname}/../bower_components/"
   client = "#{__dirname}/../client/"
 
-  @use '/static', require("express") .static(bower)
+  @use "/static", require("express") .static(bower)
   @use            require("harp")    .mount(client)
   return this
 
