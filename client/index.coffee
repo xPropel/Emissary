@@ -77,7 +77,7 @@ getMode = () ->
     when "Tournament Draft" then return 6
 
     # Legacy Game Modes
-    when "Blind Draft"      then return 7
+    when "Blind Draft"      then return 16
     when "One for All"      then return 14
 
 getPlayers = () ->
