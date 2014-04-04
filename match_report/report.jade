@@ -38,7 +38,7 @@ html(ng-app="emissaryApp")
               img(ng-src="{{getSpellIcon(summoner.spell1Id)}}")
             td
               img(ng-src="{{getSpellIcon(summoner.spell2Id)}}")
-        td(bgcolor="{{getBgcolor(summoner)}}")#gold {{getStat(summoner, "GOLD_EARNED")}}
+        td(bgcolor="{{getBgcolor(summoner)}}")#gold {{getStat(summoner, "GOLD_EARNED")}}k
         td(bgcolor="{{getBgcolor(summoner)}}")#kda {{getStat(summoner, "CHAMPIONS_KILLED")}}/{{getStat(summoner, "NUM_DEATHS")}}/{{getStat(summoner, "ASSISTS")}}
         td(bgcolor="{{getBgcolor(summoner)}}")#cs {{getStat(summoner, "MINIONS_KILLED")}}
         
@@ -62,7 +62,7 @@ html(ng-app="emissaryApp")
               img(ng-src="{{getSpellIcon(summoner.spell1Id)}}")
             td
               img(ng-src="{{getSpellIcon(summoner.spell2Id)}}")
-        td(bgcolor="{{getBgcolor(summoner)}}")#gold {{getStat(summoner, "GOLD_EARNED")}}
+        td(bgcolor="{{getBgcolor(summoner)}}")#gold {{getStat(summoner, "GOLD_EARNED")}}k
         td(bgcolor="{{getBgcolor(summoner)}}")#kda {{getStat(summoner, "CHAMPIONS_KILLED")}}/{{getStat(summoner, "NUM_DEATHS")}}/{{getStat(summoner, "ASSISTS")}}
         td(bgcolor="{{getBgcolor(summoner)}}")#cs {{getStat(summoner, "MINIONS_KILLED")}}
         

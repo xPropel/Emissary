@@ -10,10 +10,21 @@ angular.module("emissaryApp", []).factory("MatchReportFactory", function($http) 
     return $scope.data = results;
   });
   $scope.getStat = function(summoner, statStr) {
-    var val, _i, _len, _ref;
-    _ref = summoner.statistics;
-    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-      val = _ref[_i];
+    var gold, val, _i, _j, _len, _len1, _ref, _ref1;
+    if (statStr === "GOLD_EARNED") {
+      _ref = summoner.statistics;
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        val = _ref[_i];
+        if (val.statTypeName === statStr) {
+          gold = val.value;
+        }
+      }
+      gold = (Math.round(gold / 100)) / 10;
+      return gold;
+    }
+    _ref1 = summoner.statistics;
+    for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
+      val = _ref1[_j];
       if (val.statTypeName === statStr) {
         return val.value;
       }
@@ -41,9 +52,9 @@ angular.module("emissaryApp", []).factory("MatchReportFactory", function($http) 
   };
   $scope.getBgcolor = function(summoner) {
     if (summoner.isWinningTeam) {
-      return "#00AA00";
+      return "#FFAAFF";
     } else {
-      return "#AA0000";
+      return "#AAFFFF";
     }
   };
   $scope.getChampIcon = function(summoner) {

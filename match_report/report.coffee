@@ -12,6 +12,11 @@ angular.module("emissaryApp", []).factory "MatchReportFactory", ($http) ->
 
   $scope.getStat = (summoner, statStr) ->
     # Return the Value of the Requested Statistic
+    if(statStr == "GOLD_EARNED")
+        gold = val.value for val in summoner.statistics when val.statTypeName == statStr
+        gold = (Math.round gold / 100) /10
+        return gold
+
     return val.value for val in summoner.statistics when val.statTypeName == statStr
 
   $scope.getSpellIcon = (spellId) ->
@@ -28,7 +33,7 @@ angular.module("emissaryApp", []).factory "MatchReportFactory", ($http) ->
 
   $scope.getBgcolor = (summoner) ->
     #Return Background Color (Win/Lose)
-    if summoner.isWinningTeam then "#00AA00" else "#AA0000"
+    if summoner.isWinningTeam then "#FFAAFF" else "#AAFFFF"
 
   $scope.getChampIcon = (summoner) ->
     return "champion_icons/"+summoner.skinName+".png"
