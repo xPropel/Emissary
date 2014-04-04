@@ -12,43 +12,60 @@ html(ng-app="emissaryApp")
 
     table#teamTable
       tr
+        td Color
+        td 
+        td Champion
+        td Level
+        td Summoner Name
+        td Spells
+        td Gold
+        td K/D/A
+        td CS
+
+      tr
         td(bgcolor="#0000FF" rowspan="{{data.teamPlayerParticipantsSummaries.length+1}}")#teamName
       tr(ng-repeat="summoner in data.teamPlayerParticipantsSummaries")
-        td(bgcolor="{{getBgcolor(summoner)}}")#summonerName {{summoner.summonerName}}
-       
         td(bgcolor="{{getBgcolor(summoner)}}")#champ 
-          img(ng-src="{{getChamp(summoner)}}")
-        
+          img(ng-src="{{getChampIcon(summoner)}}") 
+        td(bgcolor="{{getBgcolor(summoner)}}")#champ 
+          {{getChamp(summoner)}}
+        td(bgcolor="{{getBgcolor(summoner)}}")#champlvl
+          {{getStat(summoner,"LEVEL")}} 
+        td(bgcolor="{{getBgcolor(summoner)}}")#summonerName {{summoner.summonerName}}
         td(bgcolor="{{getBgcolor(summoner)}}")#summonersBox
           table
             td
               img(ng-src="{{getSpellIcon(summoner.spell1Id)}}")
             td
               img(ng-src="{{getSpellIcon(summoner.spell2Id)}}")
-        
+        td(bgcolor="{{getBgcolor(summoner)}}")#gold {{getStat(summoner, "GOLD_EARNED")}}
         td(bgcolor="{{getBgcolor(summoner)}}")#kda {{getStat(summoner, "CHAMPIONS_KILLED")}}/{{getStat(summoner, "NUM_DEATHS")}}/{{getStat(summoner, "ASSISTS")}}
-
+        td(bgcolor="{{getBgcolor(summoner)}}")#cs {{getStat(summoner, "MINIONS_KILLED")}}
         
 
       tr#divider
         td(colspan="4")
+      
       tr
         td(bgcolor="#993399" rowspan="{{data.teamPlayerParticipantsSummaries.length+1}}")#teamName
       tr(ng-repeat="summoner in data.otherTeamPlayerParticipantsSummaries")
-        td(bgcolor="{{getBgcolor(summoner)}}")#summonerName {{summoner.summonerName}}
-        
         td(bgcolor="{{getBgcolor(summoner)}}")#champ 
-          img(ng-src="{{getChamp(summoner)}}")
-
+          img(ng-src="{{getChampIcon(summoner)}}") 
+        td(bgcolor="{{getBgcolor(summoner)}}")#champ 
+          {{getChamp(summoner)}}
+        td(bgcolor="{{getBgcolor(summoner)}}")#champlvl
+          {{getStat(summoner,"LEVEL")}} 
+        td(bgcolor="{{getBgcolor(summoner)}}")#summonerName {{summoner.summonerName}}
         td(bgcolor="{{getBgcolor(summoner)}}")#summonersBox
           table
             td
               img(ng-src="{{getSpellIcon(summoner.spell1Id)}}")
             td
               img(ng-src="{{getSpellIcon(summoner.spell2Id)}}")
-        
+        td(bgcolor="{{getBgcolor(summoner)}}")#gold {{getStat(summoner, "GOLD_EARNED")}}
         td(bgcolor="{{getBgcolor(summoner)}}")#kda {{getStat(summoner, "CHAMPIONS_KILLED")}}/{{getStat(summoner, "NUM_DEATHS")}}/{{getStat(summoner, "ASSISTS")}}
-
+        td(bgcolor="{{getBgcolor(summoner)}}")#cs {{getStat(summoner, "MINIONS_KILLED")}}
+        
 
 
     //- CHAMPIONS_KILLED / NUM_DEATHS / ASSISTS
