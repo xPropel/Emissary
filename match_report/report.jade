@@ -10,65 +10,43 @@ html(ng-app="emissaryApp")
 
   body(ng-controller="MatchReportCtrl")
 
-    table#teamTable
+    table(ng-init="teams = ['teamPlayerParticipantsSummaries', 'otherTeamPlayerParticipantsSummaries']")#teamTable
       tr
-        td Color
-        td 
-        td Champion
-        td Level
-        td Summoner Name
-        td Spells
-        td Gold
-        td K/D/A
-        td CS
+        th Color
+        th Champion
+        th Level
+        th Summoner Name
+        th Spells
+        th Gold
+        th K/D/A
+        th CS
 
-      tr
-        td(bgcolor="#0000FF" rowspan="{{data.teamPlayerParticipantsSummaries.length+1}}")#teamName
-      tr(ng-repeat="summoner in data.teamPlayerParticipantsSummaries")
-        td(bgcolor="{{getBgcolor(summoner)}}")#champ 
-          img(ng-src="{{getChampIcon(summoner)}}") 
-        td(bgcolor="{{getBgcolor(summoner)}}")#champ 
-          {{getChamp(summoner)}}
-        td(bgcolor="{{getBgcolor(summoner)}}")#champlvl
-          {{getStat(summoner,"LEVEL")}} 
-        td(bgcolor="{{getBgcolor(summoner)}}")#summonerName {{summoner.summonerName}}
-        td(bgcolor="{{getBgcolor(summoner)}}")#summonersBox
-          table
-            td
-              img(ng-src="{{getSpellIcon(summoner.spell1Id)}}")
-            td
-              img(ng-src="{{getSpellIcon(summoner.spell2Id)}}")
-        td(bgcolor="{{getBgcolor(summoner)}}")#gold {{getStat(summoner, "GOLD_EARNED")}}k
-        td(bgcolor="{{getBgcolor(summoner)}}")#kda {{getStat(summoner, "CHAMPIONS_KILLED")}}/{{getStat(summoner, "NUM_DEATHS")}}/{{getStat(summoner, "ASSISTS")}}
-        td(bgcolor="{{getBgcolor(summoner)}}")#cs {{getStat(summoner, "MINIONS_KILLED")}}
-        
-
-      tr#divider
-        td(colspan="4")
-      
-      tr
-        td(bgcolor="#993399" rowspan="{{data.teamPlayerParticipantsSummaries.length+1}}")#teamName
-      tr(ng-repeat="summoner in data.otherTeamPlayerParticipantsSummaries")
-        td(bgcolor="{{getBgcolor(summoner)}}")#champ 
-          img(ng-src="{{getChampIcon(summoner)}}") 
-        td(bgcolor="{{getBgcolor(summoner)}}")#champ 
-          {{getChamp(summoner)}}
-        td(bgcolor="{{getBgcolor(summoner)}}")#champlvl
-          {{getStat(summoner,"LEVEL")}} 
-        td(bgcolor="{{getBgcolor(summoner)}}")#summonerName {{summoner.summonerName}}
-        td(bgcolor="{{getBgcolor(summoner)}}")#summonersBox
-          table
-            td
-              img(ng-src="{{getSpellIcon(summoner.spell1Id)}}")
-            td
-              img(ng-src="{{getSpellIcon(summoner.spell2Id)}}")
-        td(bgcolor="{{getBgcolor(summoner)}}")#gold {{getStat(summoner, "GOLD_EARNED")}}k
-        td(bgcolor="{{getBgcolor(summoner)}}")#kda {{getStat(summoner, "CHAMPIONS_KILLED")}}/{{getStat(summoner, "NUM_DEATHS")}}/{{getStat(summoner, "ASSISTS")}}
-        td(bgcolor="{{getBgcolor(summoner)}}")#cs {{getStat(summoner, "MINIONS_KILLED")}}
-        
-
-
-    //- CHAMPIONS_KILLED / NUM_DEATHS / ASSISTS
+      tbody(ng-repeat="team in teams")
+        tr#teamName
+          td(bgcolor="{{getTeamColor($index)}}" rowspan="{{data[team].length+1}}")
+        tr(ng-repeat="summoner in data[team]")
+          td(bgcolor="{{getWinLoseColor(summoner)}}")
+            table
+              td
+                img(ng-src="{{getChampIcon(summoner)}}")#champIcon
+              td
+                {{getPlayerStat(summoner, "skinName")}}
+          td(bgcolor="{{getWinLoseColor(summoner)}}")#champlvl
+            {{getDetailedPlayerStat(summoner, "LEVEL")}}
+          td(bgcolor="{{getWinLoseColor(summoner)}}")#summonerName
+            {{summoner.summonerName}} ({{getPlayerStat(summoner, "level")}})
+          td(bgcolor="{{getWinLoseColor(summoner)}}")#summonersBox
+            table
+              td
+                img(ng-src="{{getSpellIcon(summoner.spell1Id)}}")
+              td
+                img(ng-src="{{getSpellIcon(summoner.spell2Id)}}")
+          td(bgcolor="{{getWinLoseColor(summoner)}}")#gold
+            {{getDetailedPlayerStat(summoner, "GOLD_EARNED")}}k
+          td(bgcolor="{{getWinLoseColor(summoner)}}")#kda
+            {{getDetailedPlayerStat(summoner, "CHAMPIONS_KILLED")}}/{{getDetailedPlayerStat(summoner, "NUM_DEATHS")}}/{{getDetailedPlayerStat(summoner, "ASSISTS")}}
+          td(bgcolor="{{getWinLoseColor(summoner)}}")#cs
+            {{getDetailedPlayerStat(summoner, "MINIONS_KILLED")}}
 
     //- Javascript
     block javascript
