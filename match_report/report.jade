@@ -11,8 +11,8 @@ html(ng-app="emissaryApp")
   body(ng-controller="MatchReportCtrl")
 
     table(ng-init="teams = ['teamPlayerParticipantsSummaries', 'otherTeamPlayerParticipantsSummaries']")#teamTable
-      tr
-        th Color
+      tr#infoTitle
+        th Result
         th Champion
         th Level
         th Summoner Name
@@ -22,31 +22,40 @@ html(ng-app="emissaryApp")
         th CS
 
       tbody(ng-repeat="team in teams")
-        tr#teamName
-          td(bgcolor="{{getTeamColor($index)}}" rowspan="{{data[team].length+1}}")
-        tr(ng-repeat="summoner in data[team]")
-          td(bgcolor="{{getWinLoseColor(summoner)}}")
+        tr
+          td(bgcolor="{{getWinLoseColor(data[team][0])}}" rowspan="{{(data[team].length+1)*2}}")#gameOutcomeBox
+            label#gameOutcome {{getWinLoseString(data[team][0])}}
+        tr(ng-repeat-start="summoner in data[team]" ng-click="toggleDetails(summoner, getTeamString($parent.$index))")
+          td#championBox
             table
               td
-                img(ng-src="{{getChampIcon(summoner)}}")#champIcon
+                img(ng-src="{{getChampIcon(summoner)}}")#championIcon
               td
-                {{getPlayerStat(summoner, "skinName")}}
-          td(bgcolor="{{getWinLoseColor(summoner)}}")#champlvl
+                label(style="{{getTeamColorShadow($parent.$index)}}") {{getPlayerStat(summoner, "skinName")}}
+          td#championLevelBox
             {{getDetailedPlayerStat(summoner, "LEVEL")}}
-          td(bgcolor="{{getWinLoseColor(summoner)}}")#summonerName
+          td#summonerNameBox
             {{summoner.summonerName}} ({{getPlayerStat(summoner, "level")}})
-          td(bgcolor="{{getWinLoseColor(summoner)}}")#summonersBox
+          td#summonersBox
             table
               td
                 img(ng-src="{{getSpellIcon(summoner.spell1Id)}}")
               td
                 img(ng-src="{{getSpellIcon(summoner.spell2Id)}}")
-          td(bgcolor="{{getWinLoseColor(summoner)}}")#gold
+          td#goldBox
             {{getDetailedPlayerStat(summoner, "GOLD_EARNED")}}k
-          td(bgcolor="{{getWinLoseColor(summoner)}}")#kda
+          td#kdaBox
             {{getDetailedPlayerStat(summoner, "CHAMPIONS_KILLED")}}/{{getDetailedPlayerStat(summoner, "NUM_DEATHS")}}/{{getDetailedPlayerStat(summoner, "ASSISTS")}}
-          td(bgcolor="{{getWinLoseColor(summoner)}}")#cs
+          td#csBox
             {{getDetailedPlayerStat(summoner, "MINIONS_KILLED")}}
+        tr(ng-repeat-end style="display: none" id="{{getTeamString($parent.$index)}}{{getPlayerStat(summoner, 'skinName')}}Details")
+          td(colspan="8")
+            div(id="{{getTeamString($parent.$index)}}{{getPlayerStat(summoner, 'skinName')}}DamageChart" style="height:250px")
+              //-p
+                {{getTeamString($parent.$index)}}{{getPlayerStat(summoner, 'skinName')}}DamageChart
+
+        tr#divider
+          td(colspan="8")
 
     //- Javascript
     block javascript
