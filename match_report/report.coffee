@@ -10,6 +10,8 @@ angular.module("emissaryApp", []).factory "MatchReportFactory", ($http) ->
   MatchReportFactory.report (results) ->
     $scope.data = results
 
+  this.chartDisplay = "cs"
+  
   $scope.getPlayerStat = (summoner, statStr) ->
     # Return the Value of Basic Player Stat
     summoner[statStr]
@@ -97,10 +99,59 @@ angular.module("emissaryApp", []).factory "MatchReportFactory", ($http) ->
         data: [$scope.getDetailedPlayerStat(summoner, "MAGIC_DAMAGE_DEALT_PLAYER"), $scope.getDetailedPlayerStat(summoner, "MAGIC_DAMAGE_TAKEN")]
       ]
 
+  $scope.loadCsChart = (summoner, element) ->
+
+    $('#' + element).highcharts
+      chart:
+        type: "bar"
+
+      title:
+        text: "Farm Distribution"
+
+      xAxis:
+        categories: ["Creep Score"]
+
+      yAxis:
+        title:
+          text: "Minions/Monsters Killed"
+        min: 0
+        reversedStacks: false
+
+      legend:
+        title:
+          text: "Type of CS"
+        backgroundColor: "#FFFFFF"
+
+      plotOptions:
+        series:
+          stacking: "normal"
+
+      series: [
+        name: "Lanes"
+        data: [$scope.getDetailedPlayerStat(summoner, "MINIONS_KILLED") - $scope.getDetailedPlayerStat(summoner, "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE") - $scope.getDetailedPlayerStat(summoner, "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE")]
+      ,
+        name: "Own Jungle"
+        data: [$scope.getDetailedPlayerStat(summoner, "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE")]
+      ,
+        name: "Counter Jungle"
+        data: [$scope.getDetailedPlayerStat(summoner, "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE")]
+      ]
+
+  $scope.showDetails = (summoner, teamStr) ->
+    # Shows the Hidden Details
+    document.getElementById(teamStr + $scope.getPlayerStat(summoner, 'skinName') + "Details").style.display = ""
+
+    if not this.chartDisplay then this.chartDisplay = "damage"
+    if this.chartDisplay is "damage"
+      $scope.loadDamageChart(summoner, teamStr + summoner.skinName + "Chart")
+    else if this.chartDisplay is "cs"
+      $scope.loadCsChart(summoner, teamStr + summoner.skinName + "Chart")
+    return
+
   $scope.toggleDetails = (summoner, teamStr) ->
-    # Shows the Hidden div with Detailed Stats for Specified Summoner
+    # Toggle the Visibility of the Hidden div with Detailed Stats for Specified Summoner
     if document.getElementById(teamStr + summoner.skinName + "Details").style.display is ""
       document.getElementById(teamStr + summoner.skinName + "Details").style.display = "none"
-    else
-      $scope.loadDamageChart(summoner, teamStr + summoner.skinName + "DamageChart")
-      document.getElementById(teamStr + $scope.getPlayerStat(summoner, 'skinName') + "Details").style.display = ""
+    else 
+      $scope.showDetails(summoner, teamStr)
+    return

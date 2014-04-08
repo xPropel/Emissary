@@ -50,7 +50,11 @@ html(ng-app="emissaryApp")
             {{getDetailedPlayerStat(summoner, "MINIONS_KILLED")}}
         tr(ng-repeat-end style="display: none" id="{{getTeamString($parent.$index)}}{{getPlayerStat(summoner, 'skinName')}}Details")
           td(colspan="8")
-            div(id="{{getTeamString($parent.$index)}}{{getPlayerStat(summoner, 'skinName')}}DamageChart" style="height:250px")
+            input(ng-model="chartDisplay" value="damage" ng-change="showDetails(summoner, getTeamString($parent.$index))" type="radio" name="chartType" checked)
+            label Damage
+            input(ng-model="chartDisplay" value="cs" ng-change="showDetails(summoner, getTeamString($parent.$index))" type="radio" name="chartType")
+            label CS
+            div(id="{{getTeamString($parent.$index)}}{{getPlayerStat(summoner, 'skinName')}}Chart" style="height:250px")
               //-p
                 {{getTeamString($parent.$index)}}{{getPlayerStat(summoner, 'skinName')}}DamageChart
 
