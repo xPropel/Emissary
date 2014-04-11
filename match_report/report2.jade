@@ -1,0 +1,79 @@
+doctype html
+html(ng-app="emissaryApp")
+
+  head
+
+    //- Site Information
+    block meta
+
+      title Emissary • Match Report
+
+  body(ng-controller="MatchReportCtrl")
+
+    div#game-info-container
+      div#victory-content
+        h1(ng-show="data") {{getVictoryStr()}}
+      hr#victory-line
+      div#game-info-content
+        ul
+          li#game-info Game Mode:
+            label {{getGameModeStr()}}
+          li#divider
+          li#game-info Game Length:
+            label {{getGameLength()}}
+          li#divider
+          li#game-info Game ID:
+            label {{data.gameId}}
+    div(ng-init="teams = ['teamPlayerParticipantsSummaries', 'otherTeamPlayerParticipantsSummaries']")#content-container
+      section(ng-repeat="team in teams")#table-container
+        header#team-name {{getTeamString($index)}} Team
+        article
+          table#team-table
+            tbody
+              tr#team-table-header
+                th#champion-th Champion
+                th#summoner-th Summoner
+                th#level-th Level
+                th#summoners-th Spells
+                th#kda-th K/D/A
+                th#cs-th CS
+                th#gold-th Gold
+                th#items-th Items
+              tr(ng-repeat="summoner in data[team]" style="background:{{getRowColor($index)}}")
+                td#champion-td
+                  table
+                    td
+                      img(ng-src="{{getChampIcon(summoner)}}")
+                    td
+                      label {{summoner.skinName}}
+                td#summoner-td {{summoner.summonerName}}
+                td#level-td {{getPlayerStatistics(summoner, "LEVEL")}}
+                td#summoners-td
+                  table
+                    td
+                      img(ng-src="{{getSpellIcon(summoner.spell1Id)}}")
+                    td
+                      img(ng-src="{{getSpellIcon(summoner.spell2Id)}}")
+                td#kda-td {{getPlayerStatistics(summoner, "CHAMPIONS_KILLED")}}/{{getPlayerStatistics(summoner, "NUM_DEATHS")}}/{{getPlayerStatistics(summoner, "ASSISTS")}}
+                td#cs-td {{getPlayerStatistics(summoner, "MINIONS_KILLED")}}
+                td#gold-td {{getPlayerStatistics(summoner, "GOLD_EARNED")}}k                                                                                                        
+                td#items-td itemss
+            tfoot  
+              tr
+                th(colspan="2")#team-totals Team Totals
+                th {{getTeamTotal(team, "LEVEL")}}
+                th
+                th {{getTeamTotal(team, "CHAMPIONS_KILLED")}}/{{getTeamTotal(team, "NUM_DEATHS")}}/{{getTeamTotal(team, "ASSISTS")}}
+                th {{getTeamTotal(team, "MINIONS_KILLED")}}
+                th {{getTeamTotal(team, "GOLD_EARNED")}}k
+                th
+    footer Thanks guys
+
+    
+
+
+    //- Javascript
+    block javascript
+
+      //- Required Libraries
+      script(src="//code.angularjs.org/1.3.0-beta.1/angular.min.js")

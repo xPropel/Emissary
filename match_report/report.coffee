@@ -70,6 +70,9 @@ angular.module("emissaryApp", []).factory "MatchReportFactory", ($http) ->
       title:
         text: "Damage Distribution"
 
+      credits:
+        enabled: false
+
       xAxis:
         categories: ["Damage Dealt", "Damage Received"]
 
