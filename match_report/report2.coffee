@@ -1,56 +1,68 @@
 angular.module("emissaryApp", []).factory "MatchReportFactory", ($http) ->
   
   return {
-    report: (callback) ->
+    getMatchData: (callback) ->
       # Load Match Report Json File using $http.get
-      $http.get("udes4.json").success(callback)
+      $http.get("udes1.json").success(callback)
+    getItemData: (callback) ->
+      # Load Item Data CSV File using $http.get
+      $http.get("item_data.csv").success(callback)
   }
   
 .controller "MatchReportCtrl", ($scope, MatchReportFactory) ->
 
-  MatchReportFactory.report (results) ->
-    $scope.data = results
-
-  $scope.data = null
+  MatchReportFactory.getMatchData (results) ->
+    $scope.matchData = results
+  
+  MatchReportFactory.getItemData (results) ->
+    $scope.itemData = $.parse(results).results
 
   ###
   #General Game Info
   ###
   $scope.getVictoryStr = () ->
     # Return String for Victory Header
-    if not $scope.data or $scope.data.invalid
+    if not $scope.matchData or $scope.matchData.invalid
       return "Game Invalidated"
-    if $scope.data.teamPlayerParticipantsSummaries[0].isWinningTeam
+    player1 = $scope.matchData.teamPlayerParticipantsSummaries[0]
+    if player1.teamId is 100 and player1.isWinningTeam or player1.teamId is 200 and not player1.isWinningTeam
       "Blue Team Victory"
-    else if $scope.data.otherTeamPlayerParticipantsSummaries[0].isWinningTeam
+    else if player1.teamId is 200 and player1.isWinningTeam or player1.teamId is 100 and not player1.isWinningTeam
       "Purple Team Victory"
 
   $scope.getGameModeStr = () ->
     # Return Game Mode in Natural Language
-    if not $scope.data or $scope.data.invalid
+    if not $scope.matchData or $scope.matchData.invalid
       return "Invalid"
-    if $scope.data.gameType is "CUSTOM_GAME"
+    if $scope.matchData.gameType is "CUSTOM_GAME"
       mode = "Custom " 
-    else if $scope.data.ranked
+    else if $scope.matchData.ranked
       mode = "Ranked "
-    mode += $scope.data.teamPlayerParticipantsSummaries.length + "v" + $scope.data.otherTeamPlayerParticipantsSummaries.length
-    if $scope.data.gameMode is not "CLASSIC"
-      mode += " " + $scope.data.gameMode
+    mode += $scope.matchData.teamPlayerParticipantsSummaries.length + "v" + $scope.matchData.otherTeamPlayerParticipantsSummaries.length
+    if $scope.matchData.gameMode is not "CLASSIC"
+      mode += " " + $scope.matchData.gameMode
     return mode
 
   $scope.getGameLength = () ->
     # Return Game Druation in MM:SS
-    if not $scope.data
+    if not $scope.matchData
       return "invalid"
-    len = Math.floor($scope.data.gameLength/60) + ":" + Math.floor($scope.data.gameLength%60)
-    return len
+    minutes = Math.floor($scope.matchData.gameLength/60)
+    seconds = Math.floor($scope.matchData.gameLength%60)
+    seconds = "0" + seconds if seconds.toString().length is 1
+    return minutes + ":" + seconds
 
   ###
   #Table Info
   ###
-  $scope.getTeamString = (index) ->
-    # Return "Blue" or "Purple"
-    if index is 0 then "Blue" else "Purple"
+  $scope.getTeamString = (id) ->
+    # Return "Blue Team" or "Purple Team"
+    if id is 100 then "Blue Team" else "Purple Team"
+
+  $scope.getTeamColor = (id) ->
+    # Return Blue or Purple Color
+    console.log id
+    if id is 100 then "color:'#5CADFF'" else "color:'#D659FF'"
 
   $scope.getPlayerStatistics = (summoner, statStr) ->
     # Return the Value of the Stat (Within .statistics)
@@ -68,18 +80,33 @@ angular.module("emissaryApp", []).factory "MatchReportFactory", ($http) ->
     # Return the Summoner Icon
     directory = "summoner_spell_icons/"
     switch spellId
+      when 1  then return directory + "Cleanse.png"
+      when 2  then return directory + "Clairvoyance.png"
       when 3  then return directory + "Exhaust.png"
       when 4  then return directory + "Flash.png"
+      # No 5
       when 6  then return directory + "Ghost.png"
+      when 7  then return directory + "Heal.png"
+      # No 8, 9
+      when 10 then return directory + "Revive.png"
       when 11 then return directory + "Smite.png"
       when 12 then return directory + "Teleport.png"
+      when 13 then return directory + "Clarity.png"
       when 14 then return directory + "Ignite.png"
+      # No 15, 16
+      when 17 then return directory + "Garrison.png"
+      # No 18, 19, 20
       when 21 then return directory + "Barrier.png"
+
+  $scope.getItemIcon = (itemId) ->
+    # Return the Item Icon
+    directory = "item_icons/"
+    return directory + itemId + ".png"
 
   $scope.getTeamTotal = (team, statStr) ->
     # Return the Sum of the Team's Stat
-    if $scope.data
-      sum = $scope.data[team].reduce ((total, summoner) -> total + $scope.getPlayerStatistics(summoner, statStr)), 0
+    if $scope.matchData
+      sum = $scope.matchData[team].reduce ((total, summoner) -> total + $scope.getPlayerStatistics(summoner, statStr)), 0
     return sum
 
   ###

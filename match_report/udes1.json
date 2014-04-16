@@ -1,1 +1,2207 @@
-{"version":1,"tournamentMetaData":{"passbackDataPacket":"udes1","passbackUrl":"http://70.55.195.92:8000/gameReport"},"gameId":1251590132,"gameLength":2149,"gameType":"CUSTOM_GAME","ranked":false,"invalid":false,"gameMode":"CLASSIC","teamPlayerParticipantsSummaries":[{"level":30,"teamId":200,"isWinningTeam":false,"leaver":false,"summonerName":"MightyFranky","skinName":"DrMundo","profileIconId":588,"botPlayer":false,"spell1Id":6,"spell2Id":14,"statistics":[{"value":3065,"statTypeName":"ITEM1","m_nDataVersion":0},{"value":67851,"statTypeName":"MAGIC_DAMAGE_DEALT_PLAYER","m_nDataVersion":0},{"value":0,"statTypeName":"NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE","m_nDataVersion":0},{"value":90,"statTypeName":"TOTAL_TIME_SPENT_DEAD","m_nDataVersion":0},{"value":1470,"statTypeName":"TRUE_DAMAGE_DEALT_PLAYER","m_nDataVersion":0},{"value":1054,"statTypeName":"ITEM0","m_nDataVersion":0},{"value":3350,"statTypeName":"ITEM6","m_nDataVersion":0},{"value":3265,"statTypeName":"ITEM2","m_nDataVersion":0},{"value":0,"statTypeName":"ASSISTS","m_nDataVersion":0},{"value":18044,"statTypeName":"TOTAL_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":25332,"statTypeName":"PHYSICAL_DAMAGE_TAKEN","m_nDataVersion":0},{"value":4,"statTypeName":"NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE","m_nDataVersion":0},{"value":3921,"statTypeName":"TRUE_DAMAGE_TAKEN","m_nDataVersion":0},{"value":2,"statTypeName":"SIGHT_WARDS_BOUGHT_IN_GAME","m_nDataVersion":0},{"value":40284,"statTypeName":"TOTAL_DAMAGE_TAKEN","m_nDataVersion":0},{"value":261,"statTypeName":"TOTAL_TIME_CROWD_CONTROL_DEALT","m_nDataVersion":0},{"value":0,"statTypeName":"LARGEST_CRITICAL_STRIKE","m_nDataVersion":0},{"value":0,"statTypeName":"WARD_KILLED","m_nDataVersion":0},{"value":2443,"statTypeName":"PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":1,"statTypeName":"LARGEST_MULTI_KILL","m_nDataVersion":0},{"value":0,"statTypeName":"BARRACKS_KILLED","m_nDataVersion":0},{"value":39699,"statTypeName":"PHYSICAL_DAMAGE_DEALT_PLAYER","m_nDataVersion":0},{"value":16,"statTypeName":"LEVEL","m_nDataVersion":0},{"value":10,"statTypeName":"WARD_PLACED","m_nDataVersion":0},{"value":1,"statTypeName":"LOSE","m_nDataVersion":0},{"value":8863,"statTypeName":"GOLD_EARNED","m_nDataVersion":0},{"value":0,"statTypeName":"ITEM5","m_nDataVersion":0},{"value":4,"statTypeName":"NEUTRAL_MINIONS_KILLED","m_nDataVersion":0},{"value":0,"statTypeName":"LARGEST_KILLING_SPREE","m_nDataVersion":0},{"value":11029,"statTypeName":"MAGIC_DAMAGE_TAKEN","m_nDataVersion":0},{"value":109021,"statTypeName":"TOTAL_DAMAGE_DEALT","m_nDataVersion":0},{"value":14130,"statTypeName":"MAGIC_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":172,"statTypeName":"MINIONS_KILLED","m_nDataVersion":0},{"value":0,"statTypeName":"ITEM4","m_nDataVersion":0},{"value":3083,"statTypeName":"ITEM3","m_nDataVersion":0},{"value":13367,"statTypeName":"TOTAL_HEAL","m_nDataVersion":0},{"value":3,"statTypeName":"NUM_DEATHS","m_nDataVersion":0},{"value":1,"statTypeName":"VISION_WARDS_BOUGHT_IN_GAME","m_nDataVersion":0},{"value":0,"statTypeName":"TURRETS_KILLED","m_nDataVersion":0},{"value":1,"statTypeName":"CHAMPIONS_KILLED","m_nDataVersion":0},{"value":1470,"statTypeName":"TRUE_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0}]},{"level":30,"teamId":200,"isWinningTeam":false,"leaver":false,"summonerName":"Jess2394","skinName":"Taric","profileIconId":588,"botPlayer":false,"spell1Id":3,"spell2Id":4,"statistics":[{"value":1033,"statTypeName":"ITEM1","m_nDataVersion":0},{"value":6749,"statTypeName":"TOTAL_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":3068,"statTypeName":"ITEM3","m_nDataVersion":0},{"value":0,"statTypeName":"NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE","m_nDataVersion":0},{"value":87,"statTypeName":"TOTAL_TIME_SPENT_DEAD","m_nDataVersion":0},{"value":5844,"statTypeName":"MAGIC_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":4008,"statTypeName":"PHYSICAL_DAMAGE_DEALT_PLAYER","m_nDataVersion":0},{"value":20439,"statTypeName":"TOTAL_DAMAGE_TAKEN","m_nDataVersion":0},{"value":18816,"statTypeName":"MAGIC_DAMAGE_DEALT_PLAYER","m_nDataVersion":0},{"value":3351,"statTypeName":"ITEM6","m_nDataVersion":0},{"value":0,"statTypeName":"NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE","m_nDataVersion":0},{"value":2045,"statTypeName":"ITEM0","m_nDataVersion":0},{"value":7695,"statTypeName":"GOLD_EARNED","m_nDataVersion":0},{"value":8,"statTypeName":"ASSISTS","m_nDataVersion":0},{"value":23176,"statTypeName":"TOTAL_DAMAGE_DEALT","m_nDataVersion":0},{"value":1,"statTypeName":"SIGHT_WARDS_BOUGHT_IN_GAME","m_nDataVersion":0},{"value":351,"statTypeName":"TRUE_DAMAGE_DEALT_PLAYER","m_nDataVersion":0},{"value":0,"statTypeName":"LARGEST_CRITICAL_STRIKE","m_nDataVersion":0},{"value":5597,"statTypeName":"PHYSICAL_DAMAGE_TAKEN","m_nDataVersion":0},{"value":1,"statTypeName":"LARGEST_MULTI_KILL","m_nDataVersion":0},{"value":0,"statTypeName":"BARRACKS_KILLED","m_nDataVersion":0},{"value":1,"statTypeName":"LOSE","m_nDataVersion":0},{"value":0,"statTypeName":"NEUTRAL_MINIONS_KILLED","m_nDataVersion":0},{"value":13167,"statTypeName":"MAGIC_DAMAGE_TAKEN","m_nDataVersion":0},{"value":7,"statTypeName":"WARD_KILLED","m_nDataVersion":0},{"value":3097,"statTypeName":"ITEM5","m_nDataVersion":0},{"value":0,"statTypeName":"TRUE_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":55,"statTypeName":"TOTAL_TIME_CROWD_CONTROL_DEALT","m_nDataVersion":0},{"value":13,"statTypeName":"LEVEL","m_nDataVersion":0},{"value":0,"statTypeName":"LARGEST_KILLING_SPREE","m_nDataVersion":0},{"value":1674,"statTypeName":"TRUE_DAMAGE_TAKEN","m_nDataVersion":0},{"value":1052,"statTypeName":"ITEM2","m_nDataVersion":0},{"value":35,"statTypeName":"MINIONS_KILLED","m_nDataVersion":0},{"value":904,"statTypeName":"PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":19,"statTypeName":"WARD_PLACED","m_nDataVersion":0},{"value":0,"statTypeName":"TURRETS_KILLED","m_nDataVersion":0},{"value":4,"statTypeName":"NUM_DEATHS","m_nDataVersion":0},{"value":0,"statTypeName":"VISION_WARDS_BOUGHT_IN_GAME","m_nDataVersion":0},{"value":1,"statTypeName":"CHAMPIONS_KILLED","m_nDataVersion":0},{"value":3047,"statTypeName":"ITEM4","m_nDataVersion":0},{"value":3992,"statTypeName":"TOTAL_HEAL","m_nDataVersion":0}]},{"level":30,"teamId":200,"isWinningTeam":false,"leaver":false,"summonerName":"Blacksabbat","skinName":"Kassadin","profileIconId":577,"botPlayer":false,"spell1Id":4,"spell2Id":14,"statistics":[{"value":2512,"statTypeName":"TRUE_DAMAGE_DEALT_PLAYER","m_nDataVersion":0},{"value":12112,"statTypeName":"GOLD_EARNED","m_nDataVersion":0},{"value":3100,"statTypeName":"ITEM4","m_nDataVersion":0},{"value":21097,"statTypeName":"TOTAL_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":22943,"statTypeName":"TOTAL_DAMAGE_TAKEN","m_nDataVersion":0},{"value":3255,"statTypeName":"ITEM3","m_nDataVersion":0},{"value":1612,"statTypeName":"PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":7,"statTypeName":"NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE","m_nDataVersion":0},{"value":3089,"statTypeName":"ITEM2","m_nDataVersion":0},{"value":18264,"statTypeName":"MAGIC_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":140799,"statTypeName":"TOTAL_DAMAGE_DEALT","m_nDataVersion":0},{"value":1017,"statTypeName":"TRUE_DAMAGE_TAKEN","m_nDataVersion":0},{"value":3350,"statTypeName":"ITEM6","m_nDataVersion":0},{"value":8,"statTypeName":"ASSISTS","m_nDataVersion":0},{"value":34374,"statTypeName":"PHYSICAL_DAMAGE_DEALT_PLAYER","m_nDataVersion":0},{"value":12,"statTypeName":"NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE","m_nDataVersion":0},{"value":2895,"statTypeName":"TOTAL_HEAL","m_nDataVersion":0},{"value":0,"statTypeName":"LARGEST_CRITICAL_STRIKE","m_nDataVersion":0},{"value":0,"statTypeName":"SIGHT_WARDS_BOUGHT_IN_GAME","m_nDataVersion":0},{"value":1,"statTypeName":"WARD_KILLED","m_nDataVersion":0},{"value":616,"statTypeName":"TOTAL_TIME_CROWD_CONTROL_DEALT","m_nDataVersion":0},{"value":2,"statTypeName":"LARGEST_MULTI_KILL","m_nDataVersion":0},{"value":1220,"statTypeName":"TRUE_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":0,"statTypeName":"BARRACKS_KILLED","m_nDataVersion":0},{"value":3027,"statTypeName":"ITEM1","m_nDataVersion":0},{"value":16,"statTypeName":"LEVEL","m_nDataVersion":0},{"value":1,"statTypeName":"LOSE","m_nDataVersion":0},{"value":4,"statTypeName":"LARGEST_KILLING_SPREE","m_nDataVersion":0},{"value":2041,"statTypeName":"ITEM0","m_nDataVersion":0},{"value":0,"statTypeName":"ITEM5","m_nDataVersion":0},{"value":193,"statTypeName":"MINIONS_KILLED","m_nDataVersion":0},{"value":11,"statTypeName":"WARD_PLACED","m_nDataVersion":0},{"value":103912,"statTypeName":"MAGIC_DAMAGE_DEALT_PLAYER","m_nDataVersion":0},{"value":1,"statTypeName":"TURRETS_KILLED","m_nDataVersion":0},{"value":4,"statTypeName":"NUM_DEATHS","m_nDataVersion":0},{"value":0,"statTypeName":"VISION_WARDS_BOUGHT_IN_GAME","m_nDataVersion":0},{"value":12885,"statTypeName":"PHYSICAL_DAMAGE_TAKEN","m_nDataVersion":0},{"value":19,"statTypeName":"NEUTRAL_MINIONS_KILLED","m_nDataVersion":0},{"value":9040,"statTypeName":"MAGIC_DAMAGE_TAKEN","m_nDataVersion":0},{"value":130,"statTypeName":"TOTAL_TIME_SPENT_DEAD","m_nDataVersion":0},{"value":6,"statTypeName":"CHAMPIONS_KILLED","m_nDataVersion":0}]},{"level":30,"teamId":200,"isWinningTeam":false,"leaver":false,"summonerName":"gymovergeekin","skinName":"Shaco","profileIconId":539,"botPlayer":false,"spell1Id":11,"spell2Id":4,"statistics":[{"value":29,"statTypeName":"NEUTRAL_MINIONS_KILLED","m_nDataVersion":0},{"value":550,"statTypeName":"TRUE_DAMAGE_TAKEN","m_nDataVersion":0},{"value":21531,"statTypeName":"PHYSICAL_DAMAGE_DEALT_PLAYER","m_nDataVersion":0},{"value":1056,"statTypeName":"ITEM4","m_nDataVersion":0},{"value":585,"statTypeName":"TOTAL_TIME_CROWD_CONTROL_DEALT","m_nDataVersion":0},{"value":1682,"statTypeName":"PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":8651,"statTypeName":"MAGIC_DAMAGE_TAKEN","m_nDataVersion":0},{"value":76,"statTypeName":"TOTAL_TIME_SPENT_DEAD","m_nDataVersion":0},{"value":24,"statTypeName":"NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE","m_nDataVersion":0},{"value":5,"statTypeName":"NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE","m_nDataVersion":0},{"value":3255,"statTypeName":"ITEM1","m_nDataVersion":0},{"value":3350,"statTypeName":"ITEM6","m_nDataVersion":0},{"value":13161,"statTypeName":"MAGIC_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":1052,"statTypeName":"ITEM3","m_nDataVersion":0},{"value":11714,"statTypeName":"TRUE_DAMAGE_DEALT_PLAYER","m_nDataVersion":0},{"value":3136,"statTypeName":"ITEM2","m_nDataVersion":0},{"value":1923,"statTypeName":"TOTAL_HEAL","m_nDataVersion":0},{"value":8,"statTypeName":"ASSISTS","m_nDataVersion":0},{"value":75167,"statTypeName":"TOTAL_DAMAGE_DEALT","m_nDataVersion":0},{"value":8579,"statTypeName":"GOLD_EARNED","m_nDataVersion":0},{"value":53,"statTypeName":"MINIONS_KILLED","m_nDataVersion":0},{"value":0,"statTypeName":"SIGHT_WARDS_BOUGHT_IN_GAME","m_nDataVersion":0},{"value":0,"statTypeName":"WARD_KILLED","m_nDataVersion":0},{"value":6,"statTypeName":"WARD_PLACED","m_nDataVersion":0},{"value":1,"statTypeName":"LARGEST_MULTI_KILL","m_nDataVersion":0},{"value":0,"statTypeName":"BARRACKS_KILLED","m_nDataVersion":0},{"value":14903,"statTypeName":"TOTAL_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":3,"statTypeName":"LARGEST_KILLING_SPREE","m_nDataVersion":0},{"value":1,"statTypeName":"LOSE","m_nDataVersion":0},{"value":0,"statTypeName":"ITEM5","m_nDataVersion":0},{"value":60,"statTypeName":"TRUE_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":13,"statTypeName":"LEVEL","m_nDataVersion":0},{"value":10798,"statTypeName":"PHYSICAL_DAMAGE_TAKEN","m_nDataVersion":0},{"value":41922,"statTypeName":"MAGIC_DAMAGE_DEALT_PLAYER","m_nDataVersion":0},{"value":20000,"statTypeName":"TOTAL_DAMAGE_TAKEN","m_nDataVersion":0},{"value":1,"statTypeName":"TURRETS_KILLED","m_nDataVersion":0},{"value":3,"statTypeName":"NUM_DEATHS","m_nDataVersion":0},{"value":1,"statTypeName":"VISION_WARDS_BOUGHT_IN_GAME","m_nDataVersion":0},{"value":3,"statTypeName":"CHAMPIONS_KILLED","m_nDataVersion":0},{"value":202,"statTypeName":"LARGEST_CRITICAL_STRIKE","m_nDataVersion":0},{"value":3100,"statTypeName":"ITEM0","m_nDataVersion":0}]},{"level":30,"teamId":200,"isWinningTeam":false,"leaver":false,"summonerName":"Vaginitte","skinName":"Caitlyn","profileIconId":37,"botPlayer":false,"spell1Id":4,"spell2Id":21,"statistics":[{"value":6373,"statTypeName":"PHYSICAL_DAMAGE_TAKEN","m_nDataVersion":0},{"value":237,"statTypeName":"MINIONS_KILLED","m_nDataVersion":0},{"value":1327,"statTypeName":"LARGEST_CRITICAL_STRIKE","m_nDataVersion":0},{"value":0,"statTypeName":"NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE","m_nDataVersion":0},{"value":144,"statTypeName":"TOTAL_TIME_CROWD_CONTROL_DEALT","m_nDataVersion":0},{"value":2567,"statTypeName":"MAGIC_DAMAGE_DEALT_PLAYER","m_nDataVersion":0},{"value":11700,"statTypeName":"GOLD_EARNED","m_nDataVersion":0},{"value":152,"statTypeName":"TOTAL_TIME_SPENT_DEAD","m_nDataVersion":0},{"value":871,"statTypeName":"TRUE_DAMAGE_TAKEN","m_nDataVersion":0},{"value":442,"statTypeName":"TRUE_DAMAGE_DEALT_PLAYER","m_nDataVersion":0},{"value":3350,"statTypeName":"ITEM6","m_nDataVersion":0},{"value":162105,"statTypeName":"TOTAL_DAMAGE_DEALT","m_nDataVersion":0},{"value":159096,"statTypeName":"PHYSICAL_DAMAGE_DEALT_PLAYER","m_nDataVersion":0},{"value":19955,"statTypeName":"TOTAL_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":14,"statTypeName":"NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE","m_nDataVersion":0},{"value":7657,"statTypeName":"MAGIC_DAMAGE_TAKEN","m_nDataVersion":0},{"value":6,"statTypeName":"ASSISTS","m_nDataVersion":0},{"value":0,"statTypeName":"SIGHT_WARDS_BOUGHT_IN_GAME","m_nDataVersion":0},{"value":0,"statTypeName":"WARD_KILLED","m_nDataVersion":0},{"value":3250,"statTypeName":"ITEM0","m_nDataVersion":0},{"value":3031,"statTypeName":"ITEM1","m_nDataVersion":0},{"value":6,"statTypeName":"WARD_PLACED","m_nDataVersion":0},{"value":1,"statTypeName":"LARGEST_MULTI_KILL","m_nDataVersion":0},{"value":0,"statTypeName":"BARRACKS_KILLED","m_nDataVersion":0},{"value":14902,"statTypeName":"TOTAL_DAMAGE_TAKEN","m_nDataVersion":0},{"value":15,"statTypeName":"LEVEL","m_nDataVersion":0},{"value":2,"statTypeName":"LARGEST_KILLING_SPREE","m_nDataVersion":0},{"value":1,"statTypeName":"LOSE","m_nDataVersion":0},{"value":0,"statTypeName":"ITEM5","m_nDataVersion":0},{"value":17366,"statTypeName":"PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":0,"statTypeName":"ITEM4","m_nDataVersion":0},{"value":1119,"statTypeName":"TOTAL_HEAL","m_nDataVersion":0},{"value":3046,"statTypeName":"ITEM2","m_nDataVersion":0},{"value":2268,"statTypeName":"MAGIC_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":14,"statTypeName":"NEUTRAL_MINIONS_KILLED","m_nDataVersion":0},{"value":1,"statTypeName":"TURRETS_KILLED","m_nDataVersion":0},{"value":3072,"statTypeName":"ITEM3","m_nDataVersion":0},{"value":3,"statTypeName":"CHAMPIONS_KILLED","m_nDataVersion":0},{"value":0,"statTypeName":"VISION_WARDS_BOUGHT_IN_GAME","m_nDataVersion":0},{"value":5,"statTypeName":"NUM_DEATHS","m_nDataVersion":0},{"value":320,"statTypeName":"TRUE_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0}]}],"otherTeamPlayerParticipantsSummaries":[{"level":30,"teamId":100,"isWinningTeam":true,"leaver":false,"summonerName":"Karlyr","skinName":"Amumu","profileIconId":588,"botPlayer":false,"spell1Id":11,"spell2Id":4,"statistics":[{"value":16527,"statTypeName":"MAGIC_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":3190,"statTypeName":"ITEM1","m_nDataVersion":0},{"value":4424,"statTypeName":"TOTAL_HEAL","m_nDataVersion":0},{"value":1,"statTypeName":"WIN","m_nDataVersion":0},{"value":96437,"statTypeName":"MAGIC_DAMAGE_DEALT_PLAYER","m_nDataVersion":0},{"value":3207,"statTypeName":"ITEM0","m_nDataVersion":0},{"value":16,"statTypeName":"NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE","m_nDataVersion":0},{"value":28507,"statTypeName":"TOTAL_DAMAGE_TAKEN","m_nDataVersion":0},{"value":11,"statTypeName":"ASSISTS","m_nDataVersion":0},{"value":19295,"statTypeName":"TOTAL_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":88,"statTypeName":"NEUTRAL_MINIONS_KILLED","m_nDataVersion":0},{"value":538,"statTypeName":"TRUE_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":3270,"statTypeName":"ITEM2","m_nDataVersion":0},{"value":132326,"statTypeName":"TOTAL_DAMAGE_DEALT","m_nDataVersion":0},{"value":382,"statTypeName":"TOTAL_TIME_CROWD_CONTROL_DEALT","m_nDataVersion":0},{"value":4,"statTypeName":"SIGHT_WARDS_BOUGHT_IN_GAME","m_nDataVersion":0},{"value":0,"statTypeName":"LARGEST_CRITICAL_STRIKE","m_nDataVersion":0},{"value":1,"statTypeName":"WARD_KILLED","m_nDataVersion":0},{"value":732,"statTypeName":"TRUE_DAMAGE_TAKEN","m_nDataVersion":0},{"value":3362,"statTypeName":"ITEM6","m_nDataVersion":0},{"value":3,"statTypeName":"LARGEST_MULTI_KILL","m_nDataVersion":0},{"value":2230,"statTypeName":"PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":0,"statTypeName":"BARRACKS_KILLED","m_nDataVersion":0},{"value":3102,"statTypeName":"ITEM3","m_nDataVersion":0},{"value":20714,"statTypeName":"PHYSICAL_DAMAGE_DEALT_PLAYER","m_nDataVersion":0},{"value":16,"statTypeName":"LEVEL","m_nDataVersion":0},{"value":5,"statTypeName":"LARGEST_KILLING_SPREE","m_nDataVersion":0},{"value":15629,"statTypeName":"MAGIC_DAMAGE_TAKEN","m_nDataVersion":0},{"value":0,"statTypeName":"ITEM5","m_nDataVersion":0},{"value":1028,"statTypeName":"ITEM4","m_nDataVersion":0},{"value":12145,"statTypeName":"PHYSICAL_DAMAGE_TAKEN","m_nDataVersion":0},{"value":15,"statTypeName":"WARD_PLACED","m_nDataVersion":0},{"value":15174,"statTypeName":"TRUE_DAMAGE_DEALT_PLAYER","m_nDataVersion":0},{"value":31,"statTypeName":"MINIONS_KILLED","m_nDataVersion":0},{"value":72,"statTypeName":"NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE","m_nDataVersion":0},{"value":0,"statTypeName":"TURRETS_KILLED","m_nDataVersion":0},{"value":0,"statTypeName":"VISION_WARDS_BOUGHT_IN_GAME","m_nDataVersion":0},{"value":6,"statTypeName":"NUM_DEATHS","m_nDataVersion":0},{"value":12333,"statTypeName":"GOLD_EARNED","m_nDataVersion":0},{"value":197,"statTypeName":"TOTAL_TIME_SPENT_DEAD","m_nDataVersion":0},{"value":6,"statTypeName":"CHAMPIONS_KILLED","m_nDataVersion":0}]},{"level":30,"teamId":100,"isWinningTeam":true,"leaver":false,"summonerName":"Layius","skinName":"Vayne","profileIconId":539,"botPlayer":false,"spell1Id":21,"spell2Id":4,"statistics":[{"value":22951,"statTypeName":"TOTAL_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":28,"statTypeName":"NEUTRAL_MINIONS_KILLED","m_nDataVersion":0},{"value":19711,"statTypeName":"MAGIC_DAMAGE_DEALT_PLAYER","m_nDataVersion":0},{"value":3035,"statTypeName":"ITEM4","m_nDataVersion":0},{"value":2,"statTypeName":"NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE","m_nDataVersion":0},{"value":10223,"statTypeName":"PHYSICAL_DAMAGE_TAKEN","m_nDataVersion":0},{"value":26,"statTypeName":"NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE","m_nDataVersion":0},{"value":2369,"statTypeName":"TOTAL_HEAL","m_nDataVersion":0},{"value":1,"statTypeName":"WIN","m_nDataVersion":0},{"value":5462,"statTypeName":"TRUE_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":224,"statTypeName":"MINIONS_KILLED","m_nDataVersion":0},{"value":17495,"statTypeName":"TOTAL_DAMAGE_TAKEN","m_nDataVersion":0},{"value":15241,"statTypeName":"GOLD_EARNED","m_nDataVersion":0},{"value":3350,"statTypeName":"ITEM6","m_nDataVersion":0},{"value":16845,"statTypeName":"TRUE_DAMAGE_DEALT_PLAYER","m_nDataVersion":0},{"value":507,"statTypeName":"LARGEST_CRITICAL_STRIKE","m_nDataVersion":0},{"value":458,"statTypeName":"TRUE_DAMAGE_TAKEN","m_nDataVersion":0},{"value":2,"statTypeName":"SIGHT_WARDS_BOUGHT_IN_GAME","m_nDataVersion":0},{"value":1037,"statTypeName":"ITEM0","m_nDataVersion":0},{"value":6813,"statTypeName":"MAGIC_DAMAGE_TAKEN","m_nDataVersion":0},{"value":3102,"statTypeName":"ITEM1","m_nDataVersion":0},{"value":6,"statTypeName":"ASSISTS","m_nDataVersion":0},{"value":127229,"statTypeName":"PHYSICAL_DAMAGE_DEALT_PLAYER","m_nDataVersion":0},{"value":0,"statTypeName":"WARD_KILLED","m_nDataVersion":0},{"value":2,"statTypeName":"LARGEST_MULTI_KILL","m_nDataVersion":0},{"value":3250,"statTypeName":"ITEM2","m_nDataVersion":0},{"value":0,"statTypeName":"BARRACKS_KILLED","m_nDataVersion":0},{"value":3153,"statTypeName":"ITEM3","m_nDataVersion":0},{"value":163785,"statTypeName":"TOTAL_DAMAGE_DEALT","m_nDataVersion":0},{"value":5,"statTypeName":"LARGEST_KILLING_SPREE","m_nDataVersion":0},{"value":17,"statTypeName":"LEVEL","m_nDataVersion":0},{"value":8,"statTypeName":"WARD_PLACED","m_nDataVersion":0},{"value":15389,"statTypeName":"PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":9,"statTypeName":"CHAMPIONS_KILLED","m_nDataVersion":0},{"value":295,"statTypeName":"TOTAL_TIME_CROWD_CONTROL_DEALT","m_nDataVersion":0},{"value":0,"statTypeName":"VISION_WARDS_BOUGHT_IN_GAME","m_nDataVersion":0},{"value":2099,"statTypeName":"MAGIC_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":3087,"statTypeName":"ITEM5","m_nDataVersion":0},{"value":2,"statTypeName":"TURRETS_KILLED","m_nDataVersion":0},{"value":62,"statTypeName":"TOTAL_TIME_SPENT_DEAD","m_nDataVersion":0},{"value":2,"statTypeName":"NUM_DEATHS","m_nDataVersion":0}]},{"level":30,"teamId":100,"isWinningTeam":true,"leaver":false,"summonerName":"PandaRyuk","skinName":"Leona","profileIconId":18,"botPlayer":false,"spell1Id":4,"spell2Id":3,"statistics":[{"value":480,"statTypeName":"TRUE_DAMAGE_TAKEN","m_nDataVersion":0},{"value":3097,"statTypeName":"ITEM0","m_nDataVersion":0},{"value":3190,"statTypeName":"ITEM1","m_nDataVersion":0},{"value":0,"statTypeName":"NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE","m_nDataVersion":0},{"value":8103,"statTypeName":"PHYSICAL_DAMAGE_TAKEN","m_nDataVersion":0},{"value":23,"statTypeName":"MINIONS_KILLED","m_nDataVersion":0},{"value":1,"statTypeName":"WIN","m_nDataVersion":0},{"value":9955,"statTypeName":"GOLD_EARNED","m_nDataVersion":0},{"value":3024,"statTypeName":"ITEM4","m_nDataVersion":0},{"value":3351,"statTypeName":"ITEM6","m_nDataVersion":0},{"value":3265,"statTypeName":"ITEM2","m_nDataVersion":0},{"value":6614,"statTypeName":"TOTAL_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":0,"statTypeName":"NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE","m_nDataVersion":0},{"value":9557,"statTypeName":"MAGIC_DAMAGE_TAKEN","m_nDataVersion":0},{"value":72,"statTypeName":"TOTAL_TIME_CROWD_CONTROL_DEALT","m_nDataVersion":0},{"value":7071,"statTypeName":"PHYSICAL_DAMAGE_DEALT_PLAYER","m_nDataVersion":0},{"value":15,"statTypeName":"ASSISTS","m_nDataVersion":0},{"value":1,"statTypeName":"SIGHT_WARDS_BOUGHT_IN_GAME","m_nDataVersion":0},{"value":0,"statTypeName":"LARGEST_CRITICAL_STRIKE","m_nDataVersion":0},{"value":2,"statTypeName":"WARD_KILLED","m_nDataVersion":0},{"value":1,"statTypeName":"LARGEST_MULTI_KILL","m_nDataVersion":0},{"value":1,"statTypeName":"BARRACKS_KILLED","m_nDataVersion":0},{"value":0,"statTypeName":"NEUTRAL_MINIONS_KILLED","m_nDataVersion":0},{"value":11958,"statTypeName":"MAGIC_DAMAGE_DEALT_PLAYER","m_nDataVersion":0},{"value":0,"statTypeName":"ITEM5","m_nDataVersion":0},{"value":0,"statTypeName":"TRUE_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":1976,"statTypeName":"TOTAL_HEAL","m_nDataVersion":0},{"value":18140,"statTypeName":"TOTAL_DAMAGE_TAKEN","m_nDataVersion":0},{"value":4636,"statTypeName":"MAGIC_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":0,"statTypeName":"LARGEST_KILLING_SPREE","m_nDataVersion":0},{"value":1775,"statTypeName":"TRUE_DAMAGE_DEALT_PLAYER","m_nDataVersion":0},{"value":14,"statTypeName":"LEVEL","m_nDataVersion":0},{"value":1977,"statTypeName":"PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":3,"statTypeName":"NUM_DEATHS","m_nDataVersion":0},{"value":1,"statTypeName":"VISION_WARDS_BOUGHT_IN_GAME","m_nDataVersion":0},{"value":0,"statTypeName":"TURRETS_KILLED","m_nDataVersion":0},{"value":2045,"statTypeName":"ITEM3","m_nDataVersion":0},{"value":25,"statTypeName":"WARD_PLACED","m_nDataVersion":0},{"value":20805,"statTypeName":"TOTAL_DAMAGE_DEALT","m_nDataVersion":0},{"value":1,"statTypeName":"CHAMPIONS_KILLED","m_nDataVersion":0},{"value":60,"statTypeName":"TOTAL_TIME_SPENT_DEAD","m_nDataVersion":0}]},{"level":30,"teamId":100,"isWinningTeam":true,"leaver":false,"summonerName":"Phil15","skinName":"Singed","profileIconId":591,"botPlayer":false,"spell1Id":14,"spell2Id":6,"statistics":[{"value":236,"statTypeName":"MINIONS_KILLED","m_nDataVersion":0},{"value":0,"statTypeName":"NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE","m_nDataVersion":0},{"value":1026,"statTypeName":"ITEM5","m_nDataVersion":0},{"value":3065,"statTypeName":"ITEM3","m_nDataVersion":0},{"value":34982,"statTypeName":"TOTAL_DAMAGE_TAKEN","m_nDataVersion":0},{"value":19366,"statTypeName":"TOTAL_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":1660,"statTypeName":"TRUE_DAMAGE_DEALT_PLAYER","m_nDataVersion":0},{"value":1,"statTypeName":"WIN","m_nDataVersion":0},{"value":139090,"statTypeName":"TOTAL_DAMAGE_DEALT","m_nDataVersion":0},{"value":3116,"statTypeName":"ITEM1","m_nDataVersion":0},{"value":3350,"statTypeName":"ITEM6","m_nDataVersion":0},{"value":3265,"statTypeName":"ITEM2","m_nDataVersion":0},{"value":0,"statTypeName":"NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE","m_nDataVersion":0},{"value":37,"statTypeName":"TOTAL_TIME_SPENT_DEAD","m_nDataVersion":0},{"value":1660,"statTypeName":"TRUE_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":5146,"statTypeName":"TOTAL_HEAL","m_nDataVersion":0},{"value":2,"statTypeName":"SIGHT_WARDS_BOUGHT_IN_GAME","m_nDataVersion":0},{"value":5,"statTypeName":"ASSISTS","m_nDataVersion":0},{"value":0,"statTypeName":"LARGEST_CRITICAL_STRIKE","m_nDataVersion":0},{"value":1328,"statTypeName":"TRUE_DAMAGE_TAKEN","m_nDataVersion":0},{"value":0,"statTypeName":"WARD_KILLED","m_nDataVersion":0},{"value":1,"statTypeName":"LARGEST_MULTI_KILL","m_nDataVersion":0},{"value":0,"statTypeName":"BARRACKS_KILLED","m_nDataVersion":0},{"value":3070,"statTypeName":"ITEM4","m_nDataVersion":0},{"value":13058,"statTypeName":"PHYSICAL_DAMAGE_DEALT_PLAYER","m_nDataVersion":0},{"value":17,"statTypeName":"LEVEL","m_nDataVersion":0},{"value":0,"statTypeName":"NEUTRAL_MINIONS_KILLED","m_nDataVersion":0},{"value":2041,"statTypeName":"ITEM0","m_nDataVersion":0},{"value":11,"statTypeName":"WARD_PLACED","m_nDataVersion":0},{"value":1273,"statTypeName":"PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":0,"statTypeName":"LARGEST_KILLING_SPREE","m_nDataVersion":0},{"value":124372,"statTypeName":"MAGIC_DAMAGE_DEALT_PLAYER","m_nDataVersion":0},{"value":1172,"statTypeName":"TOTAL_TIME_CROWD_CONTROL_DEALT","m_nDataVersion":0},{"value":16433,"statTypeName":"MAGIC_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":18918,"statTypeName":"PHYSICAL_DAMAGE_TAKEN","m_nDataVersion":0},{"value":0,"statTypeName":"VISION_WARDS_BOUGHT_IN_GAME","m_nDataVersion":0},{"value":1,"statTypeName":"CHAMPIONS_KILLED","m_nDataVersion":0},{"value":11849,"statTypeName":"GOLD_EARNED","m_nDataVersion":0},{"value":2,"statTypeName":"TURRETS_KILLED","m_nDataVersion":0},{"value":14735,"statTypeName":"MAGIC_DAMAGE_TAKEN","m_nDataVersion":0},{"value":1,"statTypeName":"NUM_DEATHS","m_nDataVersion":0}]},{"level":30,"teamId":100,"isWinningTeam":true,"leaver":false,"summonerName":"Gump Neroid","skinName":"Malzahar","profileIconId":18,"botPlayer":false,"spell1Id":14,"spell2Id":4,"statistics":[{"value":4173,"statTypeName":"PHYSICAL_DAMAGE_TAKEN","m_nDataVersion":0},{"value":1432,"statTypeName":"PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":16,"statTypeName":"NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE","m_nDataVersion":0},{"value":9848,"statTypeName":"MAGIC_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":0,"statTypeName":"NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE","m_nDataVersion":0},{"value":1056,"statTypeName":"ITEM0","m_nDataVersion":0},{"value":89988,"statTypeName":"MAGIC_DAMAGE_DEALT_PLAYER","m_nDataVersion":0},{"value":1,"statTypeName":"WIN","m_nDataVersion":0},{"value":122706,"statTypeName":"TOTAL_DAMAGE_DEALT","m_nDataVersion":0},{"value":3255,"statTypeName":"ITEM1","m_nDataVersion":0},{"value":3350,"statTypeName":"ITEM6","m_nDataVersion":0},{"value":11281,"statTypeName":"TOTAL_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":0,"statTypeName":"TRUE_DAMAGE_DEALT_PLAYER","m_nDataVersion":0},{"value":7112,"statTypeName":"MAGIC_DAMAGE_TAKEN","m_nDataVersion":0},{"value":8,"statTypeName":"ASSISTS","m_nDataVersion":0},{"value":162,"statTypeName":"TRUE_DAMAGE_TAKEN","m_nDataVersion":0},{"value":1,"statTypeName":"SIGHT_WARDS_BOUGHT_IN_GAME","m_nDataVersion":0},{"value":0,"statTypeName":"LARGEST_CRITICAL_STRIKE","m_nDataVersion":0},{"value":0,"statTypeName":"WARD_KILLED","m_nDataVersion":0},{"value":3128,"statTypeName":"ITEM2","m_nDataVersion":0},{"value":221,"statTypeName":"TOTAL_HEAL","m_nDataVersion":0},{"value":1,"statTypeName":"LARGEST_MULTI_KILL","m_nDataVersion":0},{"value":0,"statTypeName":"BARRACKS_KILLED","m_nDataVersion":0},{"value":3191,"statTypeName":"ITEM4","m_nDataVersion":0},{"value":2,"statTypeName":"LARGEST_KILLING_SPREE","m_nDataVersion":0},{"value":16,"statTypeName":"LEVEL","m_nDataVersion":0},{"value":50,"statTypeName":"TOTAL_TIME_SPENT_DEAD","m_nDataVersion":0},{"value":178,"statTypeName":"MINIONS_KILLED","m_nDataVersion":0},{"value":3089,"statTypeName":"ITEM3","m_nDataVersion":0},{"value":7,"statTypeName":"WARD_PLACED","m_nDataVersion":0},{"value":0,"statTypeName":"ITEM5","m_nDataVersion":0},{"value":0,"statTypeName":"TRUE_DAMAGE_DEALT_TO_CHAMPIONS","m_nDataVersion":0},{"value":11448,"statTypeName":"TOTAL_DAMAGE_TAKEN","m_nDataVersion":0},{"value":30,"statTypeName":"TOTAL_TIME_CROWD_CONTROL_DEALT","m_nDataVersion":0},{"value":0,"statTypeName":"VISION_WARDS_BOUGHT_IN_GAME","m_nDataVersion":0},{"value":16,"statTypeName":"NEUTRAL_MINIONS_KILLED","m_nDataVersion":0},{"value":11393,"statTypeName":"GOLD_EARNED","m_nDataVersion":0},{"value":2,"statTypeName":"TURRETS_KILLED","m_nDataVersion":0},{"value":32717,"statTypeName":"PHYSICAL_DAMAGE_DEALT_PLAYER","m_nDataVersion":0},{"value":2,"statTypeName":"CHAMPIONS_KILLED","m_nDataVersion":0},{"value":2,"statTypeName":"NUM_DEATHS","m_nDataVersion":0}]}]}
+{
+  "version": 1,
+  "tournamentMetaData": {
+    "passbackDataPacket": "udes1",
+    "passbackUrl": "http://70.55.195.92:8000/gameReport"
+  },
+  "gameId": 1251590132,
+  "gameLength": 2149,
+  "gameType": "CUSTOM_GAME",
+  "ranked": false,
+  "invalid": false,
+  "gameMode": "CLASSIC",
+  "teamPlayerParticipantsSummaries": [
+    {
+      "level": 30,
+      "teamId": 200,
+      "isWinningTeam": false,
+      "leaver": false,
+      "summonerName": "MightyFranky",
+      "skinName": "DrMundo",
+      "profileIconId": 588,
+      "botPlayer": false,
+      "spell1Id": 6,
+      "spell2Id": 14,
+      "statistics": [
+        {
+          "value": 3065,
+          "statTypeName": "ITEM1",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 67851,
+          "statTypeName": "MAGIC_DAMAGE_DEALT_PLAYER",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 90,
+          "statTypeName": "TOTAL_TIME_SPENT_DEAD",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1470,
+          "statTypeName": "TRUE_DAMAGE_DEALT_PLAYER",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1054,
+          "statTypeName": "ITEM0",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3350,
+          "statTypeName": "ITEM6",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3265,
+          "statTypeName": "ITEM2",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "ASSISTS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 18044,
+          "statTypeName": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 25332,
+          "statTypeName": "PHYSICAL_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 4,
+          "statTypeName": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3921,
+          "statTypeName": "TRUE_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 2,
+          "statTypeName": "SIGHT_WARDS_BOUGHT_IN_GAME",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 40284,
+          "statTypeName": "TOTAL_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 261,
+          "statTypeName": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "LARGEST_CRITICAL_STRIKE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "WARD_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 2443,
+          "statTypeName": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "LARGEST_MULTI_KILL",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "BARRACKS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 39699,
+          "statTypeName": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 16,
+          "statTypeName": "LEVEL",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 10,
+          "statTypeName": "WARD_PLACED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "LOSE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 8863,
+          "statTypeName": "GOLD_EARNED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "ITEM5",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 4,
+          "statTypeName": "NEUTRAL_MINIONS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "LARGEST_KILLING_SPREE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 11029,
+          "statTypeName": "MAGIC_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 109021,
+          "statTypeName": "TOTAL_DAMAGE_DEALT",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 14130,
+          "statTypeName": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 172,
+          "statTypeName": "MINIONS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "ITEM4",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3083,
+          "statTypeName": "ITEM3",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 13367,
+          "statTypeName": "TOTAL_HEAL",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3,
+          "statTypeName": "NUM_DEATHS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "VISION_WARDS_BOUGHT_IN_GAME",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "TURRETS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "CHAMPIONS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1470,
+          "statTypeName": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        }
+      ]
+    },
+    {
+      "level": 30,
+      "teamId": 200,
+      "isWinningTeam": false,
+      "leaver": false,
+      "summonerName": "Jess2394",
+      "skinName": "Taric",
+      "profileIconId": 588,
+      "botPlayer": false,
+      "spell1Id": 3,
+      "spell2Id": 4,
+      "statistics": [
+        {
+          "value": 1033,
+          "statTypeName": "ITEM1",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 6749,
+          "statTypeName": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3068,
+          "statTypeName": "ITEM3",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 87,
+          "statTypeName": "TOTAL_TIME_SPENT_DEAD",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 5844,
+          "statTypeName": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 4008,
+          "statTypeName": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 20439,
+          "statTypeName": "TOTAL_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 18816,
+          "statTypeName": "MAGIC_DAMAGE_DEALT_PLAYER",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3351,
+          "statTypeName": "ITEM6",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 2045,
+          "statTypeName": "ITEM0",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 7695,
+          "statTypeName": "GOLD_EARNED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 8,
+          "statTypeName": "ASSISTS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 23176,
+          "statTypeName": "TOTAL_DAMAGE_DEALT",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "SIGHT_WARDS_BOUGHT_IN_GAME",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 351,
+          "statTypeName": "TRUE_DAMAGE_DEALT_PLAYER",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "LARGEST_CRITICAL_STRIKE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 5597,
+          "statTypeName": "PHYSICAL_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "LARGEST_MULTI_KILL",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "BARRACKS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "LOSE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "NEUTRAL_MINIONS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 13167,
+          "statTypeName": "MAGIC_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 7,
+          "statTypeName": "WARD_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3097,
+          "statTypeName": "ITEM5",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 55,
+          "statTypeName": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 13,
+          "statTypeName": "LEVEL",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "LARGEST_KILLING_SPREE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1674,
+          "statTypeName": "TRUE_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1052,
+          "statTypeName": "ITEM2",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 35,
+          "statTypeName": "MINIONS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 904,
+          "statTypeName": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 19,
+          "statTypeName": "WARD_PLACED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "TURRETS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 4,
+          "statTypeName": "NUM_DEATHS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "VISION_WARDS_BOUGHT_IN_GAME",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "CHAMPIONS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3047,
+          "statTypeName": "ITEM4",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3992,
+          "statTypeName": "TOTAL_HEAL",
+          "m_nDataVersion": 0
+        }
+      ]
+    },
+    {
+      "level": 30,
+      "teamId": 200,
+      "isWinningTeam": false,
+      "leaver": false,
+      "summonerName": "Blacksabbat",
+      "skinName": "Kassadin",
+      "profileIconId": 577,
+      "botPlayer": false,
+      "spell1Id": 4,
+      "spell2Id": 14,
+      "statistics": [
+        {
+          "value": 2512,
+          "statTypeName": "TRUE_DAMAGE_DEALT_PLAYER",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 12112,
+          "statTypeName": "GOLD_EARNED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3100,
+          "statTypeName": "ITEM4",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 21097,
+          "statTypeName": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 22943,
+          "statTypeName": "TOTAL_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3255,
+          "statTypeName": "ITEM3",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1612,
+          "statTypeName": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 7,
+          "statTypeName": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3089,
+          "statTypeName": "ITEM2",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 18264,
+          "statTypeName": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 140799,
+          "statTypeName": "TOTAL_DAMAGE_DEALT",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1017,
+          "statTypeName": "TRUE_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3350,
+          "statTypeName": "ITEM6",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 8,
+          "statTypeName": "ASSISTS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 34374,
+          "statTypeName": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 12,
+          "statTypeName": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 2895,
+          "statTypeName": "TOTAL_HEAL",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "LARGEST_CRITICAL_STRIKE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "SIGHT_WARDS_BOUGHT_IN_GAME",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "WARD_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 616,
+          "statTypeName": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 2,
+          "statTypeName": "LARGEST_MULTI_KILL",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1220,
+          "statTypeName": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "BARRACKS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3027,
+          "statTypeName": "ITEM1",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 16,
+          "statTypeName": "LEVEL",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "LOSE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 4,
+          "statTypeName": "LARGEST_KILLING_SPREE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 2041,
+          "statTypeName": "ITEM0",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "ITEM5",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 193,
+          "statTypeName": "MINIONS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 11,
+          "statTypeName": "WARD_PLACED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 103912,
+          "statTypeName": "MAGIC_DAMAGE_DEALT_PLAYER",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "TURRETS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 4,
+          "statTypeName": "NUM_DEATHS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "VISION_WARDS_BOUGHT_IN_GAME",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 12885,
+          "statTypeName": "PHYSICAL_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 19,
+          "statTypeName": "NEUTRAL_MINIONS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 9040,
+          "statTypeName": "MAGIC_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 130,
+          "statTypeName": "TOTAL_TIME_SPENT_DEAD",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 6,
+          "statTypeName": "CHAMPIONS_KILLED",
+          "m_nDataVersion": 0
+        }
+      ]
+    },
+    {
+      "level": 30,
+      "teamId": 200,
+      "isWinningTeam": false,
+      "leaver": false,
+      "summonerName": "gymovergeekin",
+      "skinName": "Shaco",
+      "profileIconId": 539,
+      "botPlayer": false,
+      "spell1Id": 11,
+      "spell2Id": 4,
+      "statistics": [
+        {
+          "value": 29,
+          "statTypeName": "NEUTRAL_MINIONS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 550,
+          "statTypeName": "TRUE_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 21531,
+          "statTypeName": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1056,
+          "statTypeName": "ITEM4",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 585,
+          "statTypeName": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1682,
+          "statTypeName": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 8651,
+          "statTypeName": "MAGIC_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 76,
+          "statTypeName": "TOTAL_TIME_SPENT_DEAD",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 24,
+          "statTypeName": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 5,
+          "statTypeName": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3255,
+          "statTypeName": "ITEM1",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3350,
+          "statTypeName": "ITEM6",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 13161,
+          "statTypeName": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1052,
+          "statTypeName": "ITEM3",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 11714,
+          "statTypeName": "TRUE_DAMAGE_DEALT_PLAYER",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3136,
+          "statTypeName": "ITEM2",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1923,
+          "statTypeName": "TOTAL_HEAL",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 8,
+          "statTypeName": "ASSISTS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 75167,
+          "statTypeName": "TOTAL_DAMAGE_DEALT",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 8579,
+          "statTypeName": "GOLD_EARNED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 53,
+          "statTypeName": "MINIONS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "SIGHT_WARDS_BOUGHT_IN_GAME",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "WARD_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 6,
+          "statTypeName": "WARD_PLACED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "LARGEST_MULTI_KILL",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "BARRACKS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 14903,
+          "statTypeName": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3,
+          "statTypeName": "LARGEST_KILLING_SPREE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "LOSE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "ITEM5",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 60,
+          "statTypeName": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 13,
+          "statTypeName": "LEVEL",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 10798,
+          "statTypeName": "PHYSICAL_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 41922,
+          "statTypeName": "MAGIC_DAMAGE_DEALT_PLAYER",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 20000,
+          "statTypeName": "TOTAL_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "TURRETS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3,
+          "statTypeName": "NUM_DEATHS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "VISION_WARDS_BOUGHT_IN_GAME",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3,
+          "statTypeName": "CHAMPIONS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 202,
+          "statTypeName": "LARGEST_CRITICAL_STRIKE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3100,
+          "statTypeName": "ITEM0",
+          "m_nDataVersion": 0
+        }
+      ]
+    },
+    {
+      "level": 30,
+      "teamId": 200,
+      "isWinningTeam": false,
+      "leaver": false,
+      "summonerName": "Vaginitte",
+      "skinName": "Caitlyn",
+      "profileIconId": 37,
+      "botPlayer": false,
+      "spell1Id": 4,
+      "spell2Id": 21,
+      "statistics": [
+        {
+          "value": 6373,
+          "statTypeName": "PHYSICAL_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 237,
+          "statTypeName": "MINIONS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1327,
+          "statTypeName": "LARGEST_CRITICAL_STRIKE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 144,
+          "statTypeName": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 2567,
+          "statTypeName": "MAGIC_DAMAGE_DEALT_PLAYER",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 11700,
+          "statTypeName": "GOLD_EARNED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 152,
+          "statTypeName": "TOTAL_TIME_SPENT_DEAD",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 871,
+          "statTypeName": "TRUE_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 442,
+          "statTypeName": "TRUE_DAMAGE_DEALT_PLAYER",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3350,
+          "statTypeName": "ITEM6",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 162105,
+          "statTypeName": "TOTAL_DAMAGE_DEALT",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 159096,
+          "statTypeName": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 19955,
+          "statTypeName": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 14,
+          "statTypeName": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 7657,
+          "statTypeName": "MAGIC_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 6,
+          "statTypeName": "ASSISTS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "SIGHT_WARDS_BOUGHT_IN_GAME",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "WARD_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3250,
+          "statTypeName": "ITEM0",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3031,
+          "statTypeName": "ITEM1",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 6,
+          "statTypeName": "WARD_PLACED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "LARGEST_MULTI_KILL",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "BARRACKS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 14902,
+          "statTypeName": "TOTAL_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 15,
+          "statTypeName": "LEVEL",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 2,
+          "statTypeName": "LARGEST_KILLING_SPREE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "LOSE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "ITEM5",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 17366,
+          "statTypeName": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "ITEM4",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1119,
+          "statTypeName": "TOTAL_HEAL",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3046,
+          "statTypeName": "ITEM2",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 2268,
+          "statTypeName": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 14,
+          "statTypeName": "NEUTRAL_MINIONS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "TURRETS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3072,
+          "statTypeName": "ITEM3",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3,
+          "statTypeName": "CHAMPIONS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "VISION_WARDS_BOUGHT_IN_GAME",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 5,
+          "statTypeName": "NUM_DEATHS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 320,
+          "statTypeName": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        }
+      ]
+    }
+  ],
+  "otherTeamPlayerParticipantsSummaries": [
+    {
+      "level": 30,
+      "teamId": 100,
+      "isWinningTeam": true,
+      "leaver": false,
+      "summonerName": "Karlyr",
+      "skinName": "Amumu",
+      "profileIconId": 588,
+      "botPlayer": false,
+      "spell1Id": 11,
+      "spell2Id": 4,
+      "statistics": [
+        {
+          "value": 16527,
+          "statTypeName": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3190,
+          "statTypeName": "ITEM1",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 4424,
+          "statTypeName": "TOTAL_HEAL",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "WIN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 96437,
+          "statTypeName": "MAGIC_DAMAGE_DEALT_PLAYER",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3207,
+          "statTypeName": "ITEM0",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 16,
+          "statTypeName": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 28507,
+          "statTypeName": "TOTAL_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 11,
+          "statTypeName": "ASSISTS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 19295,
+          "statTypeName": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 88,
+          "statTypeName": "NEUTRAL_MINIONS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 538,
+          "statTypeName": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3270,
+          "statTypeName": "ITEM2",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 132326,
+          "statTypeName": "TOTAL_DAMAGE_DEALT",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 382,
+          "statTypeName": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 4,
+          "statTypeName": "SIGHT_WARDS_BOUGHT_IN_GAME",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "LARGEST_CRITICAL_STRIKE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "WARD_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 732,
+          "statTypeName": "TRUE_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3362,
+          "statTypeName": "ITEM6",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3,
+          "statTypeName": "LARGEST_MULTI_KILL",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 2230,
+          "statTypeName": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "BARRACKS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3102,
+          "statTypeName": "ITEM3",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 20714,
+          "statTypeName": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 16,
+          "statTypeName": "LEVEL",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 5,
+          "statTypeName": "LARGEST_KILLING_SPREE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 15629,
+          "statTypeName": "MAGIC_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "ITEM5",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1028,
+          "statTypeName": "ITEM4",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 12145,
+          "statTypeName": "PHYSICAL_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 15,
+          "statTypeName": "WARD_PLACED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 15174,
+          "statTypeName": "TRUE_DAMAGE_DEALT_PLAYER",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 31,
+          "statTypeName": "MINIONS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 72,
+          "statTypeName": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "TURRETS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "VISION_WARDS_BOUGHT_IN_GAME",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 6,
+          "statTypeName": "NUM_DEATHS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 12333,
+          "statTypeName": "GOLD_EARNED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 197,
+          "statTypeName": "TOTAL_TIME_SPENT_DEAD",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 6,
+          "statTypeName": "CHAMPIONS_KILLED",
+          "m_nDataVersion": 0
+        }
+      ]
+    },
+    {
+      "level": 30,
+      "teamId": 100,
+      "isWinningTeam": true,
+      "leaver": false,
+      "summonerName": "Layius",
+      "skinName": "Vayne",
+      "profileIconId": 539,
+      "botPlayer": false,
+      "spell1Id": 21,
+      "spell2Id": 4,
+      "statistics": [
+        {
+          "value": 22951,
+          "statTypeName": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 28,
+          "statTypeName": "NEUTRAL_MINIONS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 19711,
+          "statTypeName": "MAGIC_DAMAGE_DEALT_PLAYER",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3035,
+          "statTypeName": "ITEM4",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 2,
+          "statTypeName": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 10223,
+          "statTypeName": "PHYSICAL_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 26,
+          "statTypeName": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 2369,
+          "statTypeName": "TOTAL_HEAL",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "WIN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 5462,
+          "statTypeName": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 224,
+          "statTypeName": "MINIONS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 17495,
+          "statTypeName": "TOTAL_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 15241,
+          "statTypeName": "GOLD_EARNED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3350,
+          "statTypeName": "ITEM6",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 16845,
+          "statTypeName": "TRUE_DAMAGE_DEALT_PLAYER",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 507,
+          "statTypeName": "LARGEST_CRITICAL_STRIKE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 458,
+          "statTypeName": "TRUE_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 2,
+          "statTypeName": "SIGHT_WARDS_BOUGHT_IN_GAME",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1037,
+          "statTypeName": "ITEM0",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 6813,
+          "statTypeName": "MAGIC_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3102,
+          "statTypeName": "ITEM1",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 6,
+          "statTypeName": "ASSISTS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 127229,
+          "statTypeName": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "WARD_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 2,
+          "statTypeName": "LARGEST_MULTI_KILL",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3250,
+          "statTypeName": "ITEM2",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "BARRACKS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3153,
+          "statTypeName": "ITEM3",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 163785,
+          "statTypeName": "TOTAL_DAMAGE_DEALT",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 5,
+          "statTypeName": "LARGEST_KILLING_SPREE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 17,
+          "statTypeName": "LEVEL",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 8,
+          "statTypeName": "WARD_PLACED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 15389,
+          "statTypeName": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 9,
+          "statTypeName": "CHAMPIONS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 295,
+          "statTypeName": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "VISION_WARDS_BOUGHT_IN_GAME",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 2099,
+          "statTypeName": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3087,
+          "statTypeName": "ITEM5",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 2,
+          "statTypeName": "TURRETS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 62,
+          "statTypeName": "TOTAL_TIME_SPENT_DEAD",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 2,
+          "statTypeName": "NUM_DEATHS",
+          "m_nDataVersion": 0
+        }
+      ]
+    },
+    {
+      "level": 30,
+      "teamId": 100,
+      "isWinningTeam": true,
+      "leaver": false,
+      "summonerName": "PandaRyuk",
+      "skinName": "Leona",
+      "profileIconId": 18,
+      "botPlayer": false,
+      "spell1Id": 4,
+      "spell2Id": 3,
+      "statistics": [
+        {
+          "value": 480,
+          "statTypeName": "TRUE_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3097,
+          "statTypeName": "ITEM0",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3190,
+          "statTypeName": "ITEM1",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 8103,
+          "statTypeName": "PHYSICAL_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 23,
+          "statTypeName": "MINIONS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "WIN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 9955,
+          "statTypeName": "GOLD_EARNED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3024,
+          "statTypeName": "ITEM4",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3351,
+          "statTypeName": "ITEM6",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3265,
+          "statTypeName": "ITEM2",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 6614,
+          "statTypeName": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 9557,
+          "statTypeName": "MAGIC_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 72,
+          "statTypeName": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 7071,
+          "statTypeName": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 15,
+          "statTypeName": "ASSISTS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "SIGHT_WARDS_BOUGHT_IN_GAME",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "LARGEST_CRITICAL_STRIKE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 2,
+          "statTypeName": "WARD_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "LARGEST_MULTI_KILL",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "BARRACKS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "NEUTRAL_MINIONS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 11958,
+          "statTypeName": "MAGIC_DAMAGE_DEALT_PLAYER",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "ITEM5",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1976,
+          "statTypeName": "TOTAL_HEAL",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 18140,
+          "statTypeName": "TOTAL_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 4636,
+          "statTypeName": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "LARGEST_KILLING_SPREE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1775,
+          "statTypeName": "TRUE_DAMAGE_DEALT_PLAYER",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 14,
+          "statTypeName": "LEVEL",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1977,
+          "statTypeName": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3,
+          "statTypeName": "NUM_DEATHS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "VISION_WARDS_BOUGHT_IN_GAME",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "TURRETS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 2045,
+          "statTypeName": "ITEM3",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 25,
+          "statTypeName": "WARD_PLACED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 20805,
+          "statTypeName": "TOTAL_DAMAGE_DEALT",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "CHAMPIONS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 60,
+          "statTypeName": "TOTAL_TIME_SPENT_DEAD",
+          "m_nDataVersion": 0
+        }
+      ]
+    },
+    {
+      "level": 30,
+      "teamId": 100,
+      "isWinningTeam": true,
+      "leaver": false,
+      "summonerName": "Phil15",
+      "skinName": "Singed",
+      "profileIconId": 591,
+      "botPlayer": false,
+      "spell1Id": 14,
+      "spell2Id": 6,
+      "statistics": [
+        {
+          "value": 236,
+          "statTypeName": "MINIONS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1026,
+          "statTypeName": "ITEM5",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3065,
+          "statTypeName": "ITEM3",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 34982,
+          "statTypeName": "TOTAL_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 19366,
+          "statTypeName": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1660,
+          "statTypeName": "TRUE_DAMAGE_DEALT_PLAYER",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "WIN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 139090,
+          "statTypeName": "TOTAL_DAMAGE_DEALT",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3116,
+          "statTypeName": "ITEM1",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3350,
+          "statTypeName": "ITEM6",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3265,
+          "statTypeName": "ITEM2",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 37,
+          "statTypeName": "TOTAL_TIME_SPENT_DEAD",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1660,
+          "statTypeName": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 5146,
+          "statTypeName": "TOTAL_HEAL",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 2,
+          "statTypeName": "SIGHT_WARDS_BOUGHT_IN_GAME",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 5,
+          "statTypeName": "ASSISTS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "LARGEST_CRITICAL_STRIKE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1328,
+          "statTypeName": "TRUE_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "WARD_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "LARGEST_MULTI_KILL",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "BARRACKS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3070,
+          "statTypeName": "ITEM4",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 13058,
+          "statTypeName": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 17,
+          "statTypeName": "LEVEL",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "NEUTRAL_MINIONS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 2041,
+          "statTypeName": "ITEM0",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 11,
+          "statTypeName": "WARD_PLACED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1273,
+          "statTypeName": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "LARGEST_KILLING_SPREE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 124372,
+          "statTypeName": "MAGIC_DAMAGE_DEALT_PLAYER",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1172,
+          "statTypeName": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 16433,
+          "statTypeName": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 18918,
+          "statTypeName": "PHYSICAL_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "VISION_WARDS_BOUGHT_IN_GAME",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "CHAMPIONS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 11849,
+          "statTypeName": "GOLD_EARNED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 2,
+          "statTypeName": "TURRETS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 14735,
+          "statTypeName": "MAGIC_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "NUM_DEATHS",
+          "m_nDataVersion": 0
+        }
+      ]
+    },
+    {
+      "level": 30,
+      "teamId": 100,
+      "isWinningTeam": true,
+      "leaver": false,
+      "summonerName": "Gump Neroid",
+      "skinName": "Malzahar",
+      "profileIconId": 18,
+      "botPlayer": false,
+      "spell1Id": 14,
+      "spell2Id": 4,
+      "statistics": [
+        {
+          "value": 4173,
+          "statTypeName": "PHYSICAL_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1432,
+          "statTypeName": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 16,
+          "statTypeName": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 9848,
+          "statTypeName": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1056,
+          "statTypeName": "ITEM0",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 89988,
+          "statTypeName": "MAGIC_DAMAGE_DEALT_PLAYER",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "WIN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 122706,
+          "statTypeName": "TOTAL_DAMAGE_DEALT",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3255,
+          "statTypeName": "ITEM1",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3350,
+          "statTypeName": "ITEM6",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 11281,
+          "statTypeName": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "TRUE_DAMAGE_DEALT_PLAYER",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 7112,
+          "statTypeName": "MAGIC_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 8,
+          "statTypeName": "ASSISTS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 162,
+          "statTypeName": "TRUE_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "SIGHT_WARDS_BOUGHT_IN_GAME",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "LARGEST_CRITICAL_STRIKE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "WARD_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3128,
+          "statTypeName": "ITEM2",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 221,
+          "statTypeName": "TOTAL_HEAL",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 1,
+          "statTypeName": "LARGEST_MULTI_KILL",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "BARRACKS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3191,
+          "statTypeName": "ITEM4",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 2,
+          "statTypeName": "LARGEST_KILLING_SPREE",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 16,
+          "statTypeName": "LEVEL",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 50,
+          "statTypeName": "TOTAL_TIME_SPENT_DEAD",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 178,
+          "statTypeName": "MINIONS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 3089,
+          "statTypeName": "ITEM3",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 7,
+          "statTypeName": "WARD_PLACED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "ITEM5",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 11448,
+          "statTypeName": "TOTAL_DAMAGE_TAKEN",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 30,
+          "statTypeName": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 0,
+          "statTypeName": "VISION_WARDS_BOUGHT_IN_GAME",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 16,
+          "statTypeName": "NEUTRAL_MINIONS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 11393,
+          "statTypeName": "GOLD_EARNED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 2,
+          "statTypeName": "TURRETS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 32717,
+          "statTypeName": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 2,
+          "statTypeName": "CHAMPIONS_KILLED",
+          "m_nDataVersion": 0
+        },
+        {
+          "value": 2,
+          "statTypeName": "NUM_DEATHS",
+          "m_nDataVersion": 0
+        }
+      ]
+    }
+  ]
+}
