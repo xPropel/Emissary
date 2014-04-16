@@ -1,4 +1,4 @@
-angular.module("generatorApp", []).controller "OptionsCtrl", ($scope) ->
+angular.module("emissaryApp", []).controller "OptionsCtrl", ($scope) ->
 
   $scope.map = "Summoner's Rift"
   $scope.mode = "Blind Pick"
@@ -69,10 +69,13 @@ angular.module("generatorApp", []).controller "OptionsCtrl", ($scope) ->
 
     # Determine the Selected Map
     switch $scope.map
-      when "Summoner's Rift"  then return 1
-      when "Howling Abyss"    then return 12
-      when "Crystal Scar"     then return 8
-      when "Twisted Treeline" then return 10
+      when "Summoner's Rift"          then return 1
+      when "Summoner's Rift (Autumn)" then return 2
+      when "The Proving Grounds"      then return 3
+      when "Twisted Treeline (Old)"   then return 4
+      when "Howling Abyss"            then return 12
+      when "Crystal Scar"             then return 8
+      when "Twisted Treeline"         then return 10
 
   getMode = () ->
 
