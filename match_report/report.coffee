@@ -2,7 +2,7 @@ angular.module("emissaryApp", []).factory "MatchReportFactory", ($http) ->
   
   return {
     report: (callback) ->
-      $http.get("udes4.json").success(callback)
+      $http.get("udes1.json").success(callback)
   }
   
 .controller "MatchReportCtrl", ($scope, MatchReportFactory) ->

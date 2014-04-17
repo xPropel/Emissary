@@ -17,6 +17,7 @@ body
     font-size 2em
 
     h1
+      font-size 2em
       margin 0
 
   #victory-line
@@ -81,6 +82,9 @@ body
         overflow: hidden
 
         tr
+          th
+            text-align center
+
           td
             padding-top 5px
             padding-bottom 5px
@@ -90,13 +94,19 @@ body
           #champion-td
             width 130px
           #summoner-td
-            width 200px
+            width 170px
           #level-td, #summoners-td, #kda-td, #cs-td, #gold-td
             text-align center
             width 70px
+          #items-td
+            img
+              vertical-align middle
+              margin-right 5px
+              width 27px
+              height 27px
           #team-totals
             padding-right: 100px
-          #champion-td, #summoners-td, #items-td
+          #champion-td, #summoners-td
             img
               vertical-align middle
               margin-right 3px

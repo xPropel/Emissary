@@ -20,7 +20,7 @@ html(ng-app="emissaryApp")
               label {{getGameModeStr()}}
             li#divider
             li#game-info Game Length:
-              label {{getGameLength()}}
+              label {{getGameLengthStr()}}
             li#divider
             li#game-info Game ID:
               label {{matchData.gameId}}
@@ -49,8 +49,10 @@ html(ng-app="emissaryApp")
                     img(ng-src="{{getSpellIcon(summoner.spell1Id)}}")
                     img(ng-src="{{getSpellIcon(summoner.spell2Id)}}")
                   td#kda-td {{getPlayerStatistics(summoner, "CHAMPIONS_KILLED")}}/{{getPlayerStatistics(summoner, "NUM_DEATHS")}}/{{getPlayerStatistics(summoner, "ASSISTS")}}
-                  td#cs-td {{getPlayerStatistics(summoner, "MINIONS_KILLED")}}
-                  td#gold-td {{getPlayerStatistics(summoner, "GOLD_EARNED")}}k                                                                                                        
+                  td#cs-td
+                    span(a href="#" tooltip-placement="bottom" tooltip="{{getAverageCs(summoner)}}/min" tooltip-append-to-body="true") {{getPlayerStatistics(summoner, "MINIONS_KILLED")}}
+                  td#gold-td
+                    span(a href="#" tooltip-placement="bottom" tooltip="{{getAverageGold(summoner)}}/min" tooltip-append-to-body="true") {{parseInt(getPlayerStatistics(summoner, "GOLD_EARNED")/100)/10}}k
                   td#items-td
                     img(ng-src="{{getItemIcon(getPlayerStatistics(summoner, \"ITEM0\"))}}")
                     img(ng-src="{{getItemIcon(getPlayerStatistics(summoner, \"ITEM1\"))}}")
@@ -66,11 +68,12 @@ html(ng-app="emissaryApp")
                   th
                   th {{getTeamTotal(team, "CHAMPIONS_KILLED")}}/{{getTeamTotal(team, "NUM_DEATHS")}}/{{getTeamTotal(team, "ASSISTS")}}
                   th {{getTeamTotal(team, "MINIONS_KILLED")}}
-                  th {{getTeamTotal(team, "GOLD_EARNED")}}k
+                  th {{(parseInt(getTeamTotal(team, "GOLD_EARNED")/100)/10)}}k
                   th
 
     //- Javascript
     block javascript
 
       //- Required Libraries
-      script(src="//code.angularjs.org/1.3.0-beta.1/angular.min.js")
+      script(src="//code.angularjs.org/1.3.0-beta.2/angular.min.js")
+      link(href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css", rel="stylesheet")
