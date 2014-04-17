@@ -3,7 +3,7 @@ angular.module("emissaryApp", ['ui.bootstrap']).factory "MatchReportFactory", ($
   return {
     getMatchData: (callback) ->
       # Load Match Report Json File using $http.get
-      $http.get("udes1.json").success(callback)
+      $http.get("udes4.json").success(callback)
     getItemData: (callback) ->
       # Load Item Data CSV File using $http.get
       $http.get("item_data.csv").success(callback)
@@ -42,9 +42,8 @@ angular.module("emissaryApp", ['ui.bootstrap']).factory "MatchReportFactory", ($
       mode = "Ranked "
     if $scope.matchData.gameMode is not "CLASSIC"
       mode += " " + $scope.matchData.gameMode
-    mode += $scope.matchData.teamPlayerParticipantsSummaries.length + "v" + $scope.matchData.otherTeamPlayerParticipantsSummaries.length
-    
-    return mode
+    mode += $scope.matchData.teamPlayerParticipantsSummaries.length + "v" + $scope.matchData.otherTeamPlayerParticipantsSummaries.length 
+    mode
 
   $scope.getGameLengthStr = () ->
     # Return Game Duration in MM:SS
@@ -52,36 +51,49 @@ angular.module("emissaryApp", ['ui.bootstrap']).factory "MatchReportFactory", ($
     minutes = Math.floor($scope.matchData.gameLength/60)
     seconds = Math.floor($scope.matchData.gameLength%60)
     seconds = "0" + seconds if seconds.toString().length is 1
-    return minutes + ":" + seconds
+    minutes + ":" + seconds
 
   $scope.getGameLengthMin = () ->
     # Return Game Duration in Minutes
     if not $scope.matchData then return 0
-    return $scope.matchData.gameLength/60
+    $scope.matchData.gameLength/60
 
   ###
   #Table Info
   ###
   $scope.getTeamString = (id) ->
     # Return "Blue Team" or "Purple Team"
-    if id is 100 then "Blue Team" else "Purple Team"
+    if id is 100
+      "Blue Team"
+    else if id is 200
+      "Purple Team"
+    else
+      "Neutral"
 
   $scope.getTeamColor = (id) ->
     # Return Blue or Purple Color
-    ###
-    TODO: Actually make the colors change for both the header and the top of page VICTORY thing
-    ###
-    if id is 100 then "color:'#5CADFF'" else "color:'#D659FF'"
+    if id is -1
+      if $scope.getVictoryStr() is "Blue Team Victory"
+        "#5CADFF" # Blue
+      else if $scope.getVictoryStr() is "Purple Team Victory"
+        "#D659FF" # Purple
+      else
+        "#9E9E9E" # Gray
+    else if id is 100
+      "#5CADFF" # Blue
+    else if id is 200
+      "#D659FF" # Purple
+    else
+      "#9E9E9E" # Gray
 
   $scope.getPlayerStatistics = (summoner, statStr) ->
     # Return the Value of the Stat (Within .statistics)
     stat = val.value for val in summoner.statistics when val.statTypeName == statStr
-    # Deal with Specific Cases
-    ###
-    if statStr is "GOLD_EARNED"
-      stat = (Math.round stat / 100) / 10 # 1 Decimal Place
-    ###
-    return stat
+    stat
+
+  $scope.getChampionLink = (summoner) ->
+    # Return the Champion Link (on LoLKing.net)
+    "http://www.lolking.net/champions/" + summoner.skinName
 
   $scope.getChampIcon = (summoner) ->
     # Return the Champion Icon
@@ -121,10 +133,28 @@ angular.module("emissaryApp", ['ui.bootstrap']).factory "MatchReportFactory", ($
     # Return Gold in Gold/Minutes
     return Math.round($scope.getPlayerStatistics(summoner, "GOLD_EARNED")/$scope.getGameLengthMin()*10)/10
 
+  $scope.getItemId = (summoner, index) ->
+    # Return the Item ID of the Item
+    $scope.getPlayerStatistics(summoner, "ITEM" + index)
+
+  $scope.getItemLink = (itemId) ->
+    # Return the Item Link (on LoLKing.net)
+    if itemId
+      "http://www.lolking.net/items/" + itemId
+    else
+      "#"
+
   $scope.getItemIcon = (itemId) ->
     # Return the Item Icon
-    directory = "item_icons/"
-    return directory + itemId + ".png"
+    "item_icons/" + itemId + ".png"
+
+  $scope.getItemTooltip = (itemId) ->
+    # Return the Item Tooltip
+    if not $scope.itemData
+      return "Item <em>#{itemId}</em>"
+    tooltip = item.description for item in $scope.itemData.rows when item.id is itemId
+    tooltip
+    # "<html>Item <b>#{itemId}</b></html>"
 
   $scope.getTeamTotal = (team, statStr) ->
     # Return the Sum of the Team's Stat

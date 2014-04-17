@@ -12,7 +12,7 @@ html(ng-app="emissaryApp")
     div#content-container
       div#game-info-container
         div#victory-team-content
-          h1 {{getVictoryStr()}}
+          h1(style="color:{{getTeamColor(-1)}}") {{getVictoryStr()}}
         hr#victory-line
         div#game-info-content
           ul
@@ -26,7 +26,7 @@ html(ng-app="emissaryApp")
               label {{matchData.gameId}}
       div(ng-init="teams = ['teamPlayerParticipantsSummaries', 'otherTeamPlayerParticipantsSummaries']")#game-details
         section(ng-repeat="team in teams")#table-container
-          header(style="{{getTeamColor(matchData[team][0].teamId)}}")#team-name {{getTeamString(matchData[team][0].teamId)}}
+          header(style="color:{{getTeamColor(matchData[team][0].teamId)}}")#team-name {{getTeamString(matchData[team][0].teamId)}}
           article
             table#team-table
               tbody
@@ -41,8 +41,9 @@ html(ng-app="emissaryApp")
                   th#items-th Items
                 tr(ng-repeat="summoner in matchData[team]" style="background:{{getRowColor($index)}}")
                   td#champion-td
-                    img(ng-src="{{getChampIcon(summoner)}}")
-                    {{summoner.skinName}}
+                    a(href="{{getChampionLink(summoner)}}")
+                      img(ng-src="{{getChampIcon(summoner)}}" a href="#" tooltip-placement="bottom" tooltip="display champion details" tooltip-append-to-body="true")
+                      {{summoner.skinName}}
                   td#summoner-td {{summoner.summonerName}} ({{summoner.level}})
                   td#level-td {{getPlayerStatistics(summoner, "LEVEL")}}
                   td#summoners-td
@@ -50,17 +51,12 @@ html(ng-app="emissaryApp")
                     img(ng-src="{{getSpellIcon(summoner.spell2Id)}}")
                   td#kda-td {{getPlayerStatistics(summoner, "CHAMPIONS_KILLED")}}/{{getPlayerStatistics(summoner, "NUM_DEATHS")}}/{{getPlayerStatistics(summoner, "ASSISTS")}}
                   td#cs-td
-                    span(a href="#" tooltip-placement="bottom" tooltip="{{getAverageCs(summoner)}}/min" tooltip-append-to-body="true") {{getPlayerStatistics(summoner, "MINIONS_KILLED")}}
+                    span(a href="#" tooltip-placement="bottom" tooltip="{{getAverageCs(summoner)}} /min" tooltip-append-to-body="true") {{getPlayerStatistics(summoner, "MINIONS_KILLED")}}
                   td#gold-td
-                    span(a href="#" tooltip-placement="bottom" tooltip="{{getAverageGold(summoner)}}/min" tooltip-append-to-body="true") {{parseInt(getPlayerStatistics(summoner, "GOLD_EARNED")/100)/10}}k
+                    span(a href="#" tooltip-placement="bottom" tooltip="{{getAverageGold(summoner)}} /min" tooltip-append-to-body="true") {{parseInt(getPlayerStatistics(summoner, "GOLD_EARNED")/100)/10}}k
                   td#items-td
-                    img(ng-src="{{getItemIcon(getPlayerStatistics(summoner, \"ITEM0\"))}}")
-                    img(ng-src="{{getItemIcon(getPlayerStatistics(summoner, \"ITEM1\"))}}")
-                    img(ng-src="{{getItemIcon(getPlayerStatistics(summoner, \"ITEM2\"))}}")
-                    img(ng-src="{{getItemIcon(getPlayerStatistics(summoner, \"ITEM3\"))}}")
-                    img(ng-src="{{getItemIcon(getPlayerStatistics(summoner, \"ITEM4\"))}}")
-                    img(ng-src="{{getItemIcon(getPlayerStatistics(summoner, \"ITEM5\"))}}")
-                    img(ng-src="{{getItemIcon(getPlayerStatistics(summoner, \"ITEM6\"))}}")
+                    a(ng-repeat="i in [0, 1, 2, 3, 4, 5, 6]" href="{{getItemLink(getItemId(summoner, i))}}" tooltip-placement="bottom" data-tooltip-html-unsafe="{{getItemTooltip(getItemId(summoner, i))}}" tooltip-append-to-body="true")
+                      img(ng-src="{{getItemIcon(getItemId(summoner, i))}}")
               tfoot  
                 tr
                   th(colspan="2")#team-totals Team Totals

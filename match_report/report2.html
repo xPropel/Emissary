@@ -27,5 +27,6 @@ $.get "report2.styl", (styl) ->
   stylus.render styl, (err, css) ->
     styl = document.createElement("style")
     styl.innerHTML = css # Compiled Stylus
-    document.body.appendChild(styl)
+    document.head.appendChild(styl)
+
 </script>
