@@ -1,21 +1,32 @@
 angular.module("emissaryApp", ['ui.bootstrap']).factory "MatchReportFactory", ($http) ->
-  
+
   return {
     getMatchData: (callback) ->
       # Load Match Report Json File using $http.get
+      # Return the Promised Json Object
       $http.get("udes4.json").success(callback)
-    getItemData: (callback) ->
-      # Load Item Data CSV File using $http.get
-      $http.get("item_data.csv").success(callback)
+
+    getItemData: (success, error, id) ->
+      url = "https://prod.api.pvp.net"
+      region = "na"
+      key = "bd4466a9-7b6b-4c20-b151-70db062a9ad8"
+      version = "4.6.3" # Has nothing to do with API version (currently 1.2)
+      request = "#{url}/api/lol/static-data/#{region}/v1.2/item/#{id}?itemData=all&api_key=#{key}"
+
+      $http.get(request, {cache: true}).success(success).error(error)
   }
   
 .controller "MatchReportCtrl", ($scope, MatchReportFactory) ->
 
-  MatchReportFactory.getMatchData (results) ->
-    $scope.matchData = results
-  
-  MatchReportFactory.getItemData (results) ->
-    $scope.itemData = $.parse(results).results
+  # Call getMatchData and Pass in the Callback Function
+  # The Callback Function is Executed When the $http.get
+  # Succeeds (calls success(callback))
+  MatchReportFactory.getMatchData((data) ->
+    # Executed upon Successful $http.get
+    $scope.matchData = data
+  )
+
+  $scope.items = []
 
   ###
   #General Game Info
@@ -133,7 +144,7 @@ angular.module("emissaryApp", ['ui.bootstrap']).factory "MatchReportFactory", ($
     # Return Gold in Gold/Minutes
     return Math.round($scope.getPlayerStatistics(summoner, "GOLD_EARNED")/$scope.getGameLengthMin()*10)/10
 
-  $scope.getItemId = (summoner, index) ->
+  $scope.getSummonerItemId = (summoner, index) ->
     # Return the Item ID of the Item
     $scope.getPlayerStatistics(summoner, "ITEM" + index)
 
@@ -148,13 +159,34 @@ angular.module("emissaryApp", ['ui.bootstrap']).factory "MatchReportFactory", ($
     # Return the Item Icon
     "item_icons/" + itemId + ".png"
 
+  $scope.getItem = (id) ->
+    # Return the Item Object
+    if not $scope[id]
+      MatchReportFactory.getItemData((data) ->
+        if data then $scope[id] = data
+      , (data, status) ->
+        $scope[id] = status
+      , id)
+    $scope[id]
+
   $scope.getItemTooltip = (itemId) ->
     # Return the Item Tooltip
-    if not $scope.itemData
-      return "Item <em>#{itemId}</em>"
-    tooltip = item.description for item in $scope.itemData.rows when item.id is itemId
-    tooltip
-    # "<html>Item <b>#{itemId}</b></html>"
+
+    return "STOP ASKING FOR ITEMS sir"
+    if itemId is 0 then return ""
+
+    item = $scope.getItem(itemId)
+    if not item or item is 404 or Object.keys(item).length <= 1
+      return "<em>Item Unavailable</em>"
+    #console.log $scope.items
+    #tooltip = item.description for item in $scope.items when item.id is itemId
+    #tooltip
+
+  $scope.initTooltip = (itemId) ->
+    # Set data-tooltip-html-unsafe of item-#{itemId} to Item Information
+    if document.getElementsByClassName("item-#{itemId}")[0].getAttribute("data-tooltip-html-unsafe") is "lololol"
+      element.setAttribute("data-tooltip-html-unsafe", $scope.getItemTooltip(itemId)) for element in document.getElementsByClassName("item-#{itemId}")
+      console.log "set success..????"
 
   $scope.getTeamTotal = (team, statStr) ->
     # Return the Sum of the Team's Stat
@@ -169,3 +201,9 @@ angular.module("emissaryApp", ['ui.bootstrap']).factory "MatchReportFactory", ($
   $scope.getRowColor = (rowIndex) ->
     # Return Alternating Color for Rows
     if rowIndex % 2 is 0 then "rgba(255, 255, 255, 0.04)" else "rgba(255, 255, 255, 0.08)"
+
+  ###
+  #Startup Routines
+  ###
+  do () ->
+    console.log "nothing to see here"

@@ -55,8 +55,10 @@ html(ng-app="emissaryApp")
                   td#gold-td
                     span(a href="#" tooltip-placement="bottom" tooltip="{{getAverageGold(summoner)}} /min" tooltip-append-to-body="true") {{parseInt(getPlayerStatistics(summoner, "GOLD_EARNED")/100)/10}}k
                   td#items-td
-                    a(ng-repeat="i in [0, 1, 2, 3, 4, 5, 6]" href="{{getItemLink(getItemId(summoner, i))}}" tooltip-placement="bottom" data-tooltip-html-unsafe="{{getItemTooltip(getItemId(summoner, i))}}" tooltip-append-to-body="true")
-                      img(ng-src="{{getItemIcon(getItemId(summoner, i))}}")
+                    a(ng-repeat="i in [0, 1, 2, 3, 4, 5, 6]" href="{{getItemLink(getSummonerItemId(summoner, i))}}" ng-mouseover="initTooltip(getSummonerItemId(summoner, i))" class="item-{{getSummonerItemId(summoner, i)}}" data-tooltip-html-unsafe="lololol" tooltip-placement="bottom" tooltip-append-to-body="true")
+                      img(ng-src="{{getItemIcon(getSummonerItemId(summoner, i))}}")
+                    //-a(ng-repeat="i in [0, 1, 2, 3, 4, 5, 6]" href="{{getItemLink(getSummonerItemId(summoner, i))}}" tooltip-placement="bottom" data-tooltip-html-unsafe="{{getItemTooltip(getSummonerItemId(summoner, i))}}" tooltip-append-to-body="true")
+                      img(ng-src="{{getItemIcon(getSummonerItemId(summoner, i))}}")
               tfoot  
                 tr
                   th(colspan="2")#team-totals Team Totals
