@@ -1,10 +1,10 @@
-angular.module("emissaryApp", ['ui.bootstrap']).factory "MatchReportFactory", ($http) ->
+angular.module("emissaryApp", ['ui.bootstrap', 'ionic']).factory "MatchReportFactory", ($http) ->
 
   return {
     getMatchData: (callback) ->
       # Load Match Report Json File using $http.get
       # Return the Promised Json Object
-      $http.get("udes4.json").success(callback)
+      $http.get("udes3.json").success(callback)
 
     getItemData: (success, error, id) ->
       url = "https://prod.api.pvp.net"
@@ -27,6 +27,8 @@ angular.module("emissaryApp", ['ui.bootstrap']).factory "MatchReportFactory", ($
   )
 
   $scope.items = []
+
+  $scope.displayLevel = false
 
   ###
   #General Game Info
@@ -109,6 +111,15 @@ angular.module("emissaryApp", ['ui.bootstrap']).factory "MatchReportFactory", ($
   $scope.getChampIcon = (summoner) ->
     # Return the Champion Icon
     "champion_icons/" + summoner.skinName + ".png"
+
+  $scope.getSummonerLink = (summoner) ->
+    # Return the Summoner Link to op.gg
+    "http://na.op.gg/summoner/userName=" + summoner.summonerName
+
+  $scope.getSummonerLevel = (summoner) ->
+    $scope.displayLevel = true if summoner.level is not 30
+    # Return the Summoner Level
+    summoner.level
 
   $scope.getSpellIcon = (spellId) ->
     # Return the Summoner Icon
@@ -201,6 +212,11 @@ angular.module("emissaryApp", ['ui.bootstrap']).factory "MatchReportFactory", ($
   $scope.getRowColor = (rowIndex) ->
     # Return Alternating Color for Rows
     if rowIndex % 2 is 0 then "rgba(255, 255, 255, 0.04)" else "rgba(255, 255, 255, 0.08)"
+
+  ###
+  #Misc.
+  ###
+  
 
   ###
   #Startup Routines
