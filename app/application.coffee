@@ -8,4 +8,5 @@ app = () ->
   return this
 
 app = app.call(do require "express")
-         .listen(process.env.PORT or 8080)
+app.post("/match_report", require("connect").json(), require("./matchreport").report)
+app.listen(process.env.PORT or 8080)

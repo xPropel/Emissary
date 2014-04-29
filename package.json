@@ -4,7 +4,10 @@
     "bower"         : "latest",
     "coffee-script" : "latest",
     "express"       : "latest",
-    "harp"          : "latest"
+    "harp"          : "latest",
+    "connect"       : "latest",
+    "mongodb"       : "latest",
+    "nodemailer"    : "latest"
 
   },
 
