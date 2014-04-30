@@ -1,5 +1,3 @@
-dns = require "dns"
-
 mdb = require "./mdb"
 email = require "./email"
 
@@ -7,18 +5,23 @@ MDB_URL = process.env.MONGOHQ_URL || "mongodb://localhost/test"
 MDB_COLL = process.env.MONGO_COLL || "games"
 
 report = (req, res) ->
-    #console.log req.ip
-    #dns.reverse req.ip, (err, doms) -> console.log err or doms
-
     if "gameId" of req.body
         mdb.set MDB_URL, MDB_COLL, req.body
 
         recipients = req.body.tournamentMetaData.passbackDataPacket
-        email.send_email recipients, "match@report", "Match Report", JSON.stringify req.body
-        res.send("#{req.body.gameId}\n")
+        email.send_email recipients, "match@report", "Match Report", "http://#{req.host}/#?matchId=#{req.body.gameId}"
 
-    else
-        res.send("received\n")
+    res.send()
+
+get_matches = (req, res) ->
+    mdb.get MDB_URL, MDB_COLL, parseInt(req.params.gameid, 10), (err, doc) ->
+        if err
+            console.log "[#{req.params.gameid}] #{err}"
+            res.send "Error"
+        else
+            res.send JSON.stringify doc
+
 
 exports.report = report
+exports.get_matches = get_matches
 
