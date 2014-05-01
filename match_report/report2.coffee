@@ -1,10 +1,10 @@
 angular.module("emissaryApp", ['ui.bootstrap', 'ionic']).factory "MatchReportFactory", ($http) ->
 
   return {
-    getMatchData: (callback) ->
+    getMatchData: (callback, file) ->
       # Load Match Report Json File using $http.get
       # Return the Promised Json Object
-      $http.get("udes3.json").success(callback)
+      $http.get(file).success(callback)
 
     getItemData: (success, error, id) ->
       url = "https://prod.api.pvp.net"
@@ -16,7 +16,7 @@ angular.module("emissaryApp", ['ui.bootstrap', 'ionic']).factory "MatchReportFac
       $http.get(request, {cache: true}).success(success).error(error)
   }
   
-.controller "MatchReportCtrl", ($scope, MatchReportFactory) ->
+.controller "MatchReportCtrl", ($scope, $location, MatchReportFactory) ->
 
   # Call getMatchData and Pass in the Callback Function
   # The Callback Function is Executed When the $http.get
@@ -24,7 +24,7 @@ angular.module("emissaryApp", ['ui.bootstrap', 'ionic']).factory "MatchReportFac
   MatchReportFactory.getMatchData((data) ->
     # Executed upon Successful $http.get
     $scope.matchData = data
-  )
+  , $location.search().matchId)
 
   $scope.items = []
 
@@ -195,9 +195,14 @@ angular.module("emissaryApp", ['ui.bootstrap', 'ionic']).factory "MatchReportFac
 
   $scope.initTooltip = (itemId) ->
     # Set data-tooltip-html-unsafe of item-#{itemId} to Item Information
+    0
+    ###
+    #doesn't work...
+    
     if document.getElementsByClassName("item-#{itemId}")[0].getAttribute("data-tooltip-html-unsafe") is "lololol"
       element.setAttribute("data-tooltip-html-unsafe", $scope.getItemTooltip(itemId)) for element in document.getElementsByClassName("item-#{itemId}")
-      console.log "set success..????"
+      #console.log "set success..????"
+    ###
 
   $scope.getTeamTotal = (team, statStr) ->
     # Return the Sum of the Team's Stat
