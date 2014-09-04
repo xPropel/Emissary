@@ -61,19 +61,6 @@ body
 
 #game-details
   margin-top 12px
-  position relative
-  background-color transparent
-
-  .pane, .view
-    position relative
-    background-color transparent
-
-  .tabs
-    position relative
-    border-top 0
-    width 900px
-    margin auto
-    //padding 4px
 
   #table-container
     margin auto
@@ -86,6 +73,7 @@ body
       margin-top 8px
 
     article
+      padding 4px
 
       #team-table
         border 3px solid #272727
@@ -94,14 +82,7 @@ body
         width 900px
         overflow: hidden
 
-        #champion-row
-          height 36px
-
         tr
-          th, td
-            span
-              border-bottom 1px dotted #DBDBDB
-
           th
             text-align center
             padding 1px
@@ -109,6 +90,9 @@ body
           td
             padding-top 5px
             padding-bottom 5px
+
+            span
+              border-bottom 1px dotted #DBDBDB
 
           #champion-th, #summoner-th, #items-th
             text-align left
@@ -119,7 +103,7 @@ body
           #summoner-td
             width 170px
 
-          #level-td, #summoners-td, #kda-td, #cs-td, #gold-td, #tdd-td, #pdd-td, #mdd-td, #td-td, #tdr-td, #pdr-td, #mdr-td, #tr-td
+          #level-td, #summoners-td, #kda-td, #cs-td, #gold-td
             text-align center
             width 70px
 
