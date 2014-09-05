@@ -1,0 +1,20 @@
+{
+  "dependencies" : {
+
+    "bower"         : "latest",
+    "coffee-script" : "latest",
+    "express"       : "latest",
+    "harp"          : "latest",
+    "connect"       : "latest",
+    "mongodb"       : "latest",
+    "nodemailer"    : "latest"
+
+  },
+
+  "scripts" : {
+
+    "start"       : "coffee app/application.coffee",
+    "supervisor"  : "supervisor -q -e 'coffee|jade|styl' app/application.coffee",
+    "postinstall" : "bower install"
+
+}}

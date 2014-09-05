@@ -1,4 +1,4 @@
-angular.module("emissaryApp", []).controller "OptionsCtrl", ($scope, $location) ->
+angular.module("generatorApp", []).controller "OptionsCtrl", ($scope, $location) ->
 
   $scope.location = $location
   
@@ -42,7 +42,7 @@ angular.module("emissaryApp", []).controller "OptionsCtrl", ($scope, $location) 
     console.log "index: " + $scope.userOptions.index + ", " + $location.search().index
     ###
 
-    console.log typeof $location.search().rpass
+    #console.log typeof $location.search().rpass
     
     $scope.userOptions.number = parseInt $location.search().number or 0, 10
 

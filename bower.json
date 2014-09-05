@@ -1,0 +1,9 @@
+{
+  "name" : "Emissary",
+  "private" : true,
+  "dependencies" : {
+
+    "jquery" : "1.9.x",
+    "uri.js" : "1.x.x"
+
+}}

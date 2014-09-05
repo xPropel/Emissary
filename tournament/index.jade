@@ -8,9 +8,19 @@ html(ng-app="generatorApp")
 
       title Emissary • Tournament Codes
 
+
+      //-link(rel="stylesheet" href="/index.css")
+
   body(ng-controller="OptionsCtrl")
 
-    button(ng-click="update()") Generate New Code
+    //- Floating "Fork me on GitHub" Ribbon
+    a(href="https://github.com/Polytonic/Emissary")
+      img.gh-ribbon(alt="Fork me on GitHub"
+        style="position: absolute; top: 0; right: 0; border: 0;"
+        src="https://github-camo.global.ssl.fastly.net/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67"
+        data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png")
+
+    button(ng-clickk="update()") refresh
 
     select(ng-model="userOptions.map" ng-change="updateTeams()")#maps
 
@@ -26,10 +36,11 @@ html(ng-app="generatorApp")
       option Draft Mode
       option Tournament Draft
 
+      //- Periodic Game Modes
+      option Blind Draft
 
       //- Legacy Game Modes
       option(disabled)
-      option(disabled) Blind Draft
       option(disabled) One for All
 
     select(ng-model="userOptions.player" ng-change="update()")#players
@@ -77,4 +88,10 @@ html(ng-app="generatorApp")
     block javascript
 
       //- Required Libraries
+
       script(src="//code.angularjs.org/1.3.0-beta.1/angular.min.js")
+      //-script(src="/static/jquery/jquery.min.js")
+      //-script(src="/static/uri.js/src/URI.js")
+
+      //- Local Dependencies
+      //-script(src="/index.js")

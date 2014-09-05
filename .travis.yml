@@ -1,0 +1,25 @@
+language: node_js
+
+node_js:
+  - "0.11"
+  - "0.10"
+
+matrix:
+  fast_finish: true
+  allow_failures:
+    - node_js: "0.11"
+
+before_install:
+  - git submodule update --init --recursive
+
+before_script:
+  - npm start &
+
+deploy:
+  provider: heroku
+  app: emissary
+  on:
+    repo: Polytonic/Emissary
+    node: "0.10"
+  api_key:
+    secure: Iums7BSTEmvIqGeB9cSzenNQzvYxrO5xr/jM5+Whd4kw2irROyXulydPFOLZmmdZ4iDRvEEs5OhLbpWLliZz+0krAZWDAeGpuMkphMznziyAMf5N+2hsfBdSs4ukkWp9OOTX7yPx89C3T4jIny4iOOtq5nQh/gTLmXrGzDjDKxQ=
