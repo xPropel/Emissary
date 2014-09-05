@@ -211,4 +211,4 @@ angular.module("emissaryApp", ['ui.bootstrap']).factory "MatchReportFactory", ($
   #Startup Routines
   ###
   do () ->
-    console.log "nothing to see here"
+    

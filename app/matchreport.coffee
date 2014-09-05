@@ -9,7 +9,8 @@ report = (req, res) ->
         mdb.set MDB_URL, MDB_COLL, req.body
 
         recipients = req.body.tournamentMetaData.passbackDataPacket
-        email.send_email recipients, "match@report", "Match Report", "http://#{req.host}/#?matchId=#{req.body.gameId}"
+        #email.send_email recipients, "match@report", "Match Report", "http://#{req.host}/#?matchId=#{req.body.gameId}"
+        email.send_email recipients, "match@report", "Match Report", "http://#{req.host}/matches/#{req.body.gameId}"
 
     res.send()
 

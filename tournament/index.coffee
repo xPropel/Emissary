@@ -96,7 +96,7 @@ angular.module("generatorApp", []).controller "OptionsCtrl", ($scope, $location)
 
     # Format and Return a Tournament Code
     return endpoint + btoa JSON.stringify
-      name: lname, password: lpass
+      name: lname, password: lpass, report: "http://secret-shore-6847.herokuapp.com/match_report", extra: ["lin.darren95@gmail.com"]
 
   formatEndpoint = () ->
 
