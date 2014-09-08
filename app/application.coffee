@@ -13,6 +13,9 @@ app = () ->
 
 app = express()
 
+instanceMethods = (v for k, v of connect when typeof v is "function")
+console.log instanceMethods
+
 app.post("/match_report", connect.json(), matchreport.report)
 app.get("/matches/:gameid", matchreport.get_matches)
 app.get("/", (req, res) ->
