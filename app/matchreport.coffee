@@ -19,7 +19,7 @@ get_matches = (req, res) ->
         if err
             console.log "[#{req.params.gameId}] #{err}"
             #res.send "Error - Game #{req.params.gameId} doesn't exist."
-            res.send #{req.params}
+            res.send #{req.params.gameId}
         else
             res.send JSON.stringify doc
 
