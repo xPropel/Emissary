@@ -1,5 +1,5 @@
 {
-  "name": "Emissary/match_report",
+  "name": "Emissary",
   "version": "0.0.1",
   "description": "Match report system for League of Legends",
   "main": "app/application.coffee",
@@ -10,14 +10,17 @@
     "harp"          : "latest",
     "connect"       : "latest",
     "mongodb"       : "latest",
+    "mongoose"      : "latest",
     "nodemailer"    : "latest",
-    "require"       : "latest"
+    "require"       : "latest",
+    "connect-mongo" : "latest"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/xPropel/Emissary.git"
   },
   "scripts" : {
+    "web"   : "coffee app/application.coffee",
     "start" : "coffee app/application.coffee"
   },
   "license": "MIT"

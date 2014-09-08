@@ -1,4 +1,6 @@
 matchreport = require "./matchreport"
+express = require "express"
+connect = require "connect"
 
 app = () ->
 
@@ -9,7 +11,12 @@ app = () ->
   @use            require("harp")    .mount(client)
   return this
 
-app = app.call(do require "express")
-app.post("/match_report", require("connect").json(), matchreport.report)
+app = express()
+
+#app.post("/match_report", connect.json(), matchreport.report)
 app.get("/matches/:gameid", matchreport.get_matches)
-app.listen(process.env.PORT or 8080)
+app.get("/", (req, res) ->
+	res.send "Something is working, but you probably mean to look at /matches/:gameid or send game to /match_report" 
+)
+
+app.listen(process.env.PORT)
