@@ -18,7 +18,7 @@ get_matches = (req, res) ->
     mdb.get MDB_URL, MDB_COLL, parseInt(req.params.gameId, 10), (err, doc) ->
         if err
             console.log "[#{req.params.gameId}] #{err}"
-            res.send "Error - Game #{req.body.gameId} doesn't exist."
+            res.send "Error - Game #{req.params.gameId} doesn't exist."
         else
             res.send JSON.stringify doc
 
