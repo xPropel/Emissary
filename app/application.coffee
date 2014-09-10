@@ -23,7 +23,7 @@ app.get("/", (req, res) ->
 app.get("/testemail/:email", (req, res) ->
 	res.send "sending email to " + req.params.email
 	email = require "./email"
-	email.send_email "lin.darren95@gmail.com", "aqueous-ocean-9313", "/testemail/:email", "i should get this email"
+	email.send_email "#{req.params.email}", "aqueous-ocean-9313@aqueous-ocean-9313", "/testemail/:email", "i should get this email"
 )
 
 app.listen(process.env.PORT)
