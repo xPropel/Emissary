@@ -13,7 +13,8 @@
     "mongoose"      : "latest",
     "nodemailer"    : "latest",
     "require"       : "latest",
-    "connect-mongo" : "latest"
+    "connect-mongo" : "latest",
+    "body-parser"   : "latest"
   },
   "repository": {
     "type": "git",

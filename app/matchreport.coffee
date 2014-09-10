@@ -11,15 +11,16 @@ report = (req, res) ->
         recipients = req.body.tournamentMetaData.passbackDataPacket
         #email.send_email recipients, "match@report", "Match Report", "http://#{req.host}/#?matchId=#{req.body.gameId}"
         email.send_email recipients, "match@report", "Match Report", "http://#{req.host}/matches/#{req.body.gameId}"
-
+    else
+        console.log "No 'gameId' in req.body"
+        
     res.send()
 
 get_matches = (req, res) ->
     mdb.get MDB_URL, MDB_COLL, parseInt(req.params.gameId, 10), (err, doc) ->
         if err
-            console.log "[#{req.params.gameId}] #{err}"
-            #res.send "Error - Game #{req.params.gameId} doesn't exist."
-            res.send #{req.params.gameId}
+            console.log "#{err} (gameId=#{req.params.gameId})"
+            res.send "Error - Game #{req.params.gameId} doesn't exist."
         else
             res.send JSON.stringify doc
 

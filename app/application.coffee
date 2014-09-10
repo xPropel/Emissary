@@ -1,6 +1,7 @@
 matchreport = require "./matchreport"
 express = require "express"
 connect = require "connect"
+bodyParser = require "body-parser"
 
 app = () ->
 
@@ -13,13 +14,16 @@ app = () ->
 
 app = express()
 
-instanceMethods = (v for k, v of connect when typeof v is "function")
-console.log instanceMethods
+app.post("/match_report", bodyParser.json(), matchreport.report)
 
-#app.post("/match_report", connect.json(), matchreport.report)
 app.get("/matches/:gameId", matchreport.get_matches)
 app.get("/", (req, res) ->
 	res.send "Something is working, but you probably mean to look at /matches/:gameid or send game to /match_report" 
+)
+app.get("/testemail/:email", (req, res) ->
+	res.send "sending email to " + req.params.email
+	email = require "./email"
+	email.send_email "lin.darren95@gmail.com", "aqueous-ocean-9313", "/testemail/:email", "i should get this email"
 )
 
 app.listen(process.env.PORT)
