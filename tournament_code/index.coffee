@@ -26,23 +26,10 @@ angular.module("generatorApp", []).controller "OptionsCtrl", ($scope, $location)
 
     $scope.userOptions.lobbyName = $location.search().lobbyName
     $scope.userOptions.lobbyPass = $location.search().lobbyPass
-    ###
-    console.log "------before------"
-    console.log "rpass: " + $scope.userOptions.rpass + ", " + $location.search().rpass
-    console.log "rhash: " + $scope.userOptions.rhash + ", " + $location.search().rhash
-    console.log "index: " + $scope.userOptions.index + ", " + $location.search().index
-    ###
+
     $scope.userOptions.rpass = $location.search().rpass
     $scope.userOptions.rhash = $location.search().rhash
     $scope.userOptions.index = $location.search().index
-    ###
-    console.log "------after------"
-    console.log "rpass: " + $scope.userOptions.rpass + ", " + $location.search().rpass
-    console.log "rhash: " + $scope.userOptions.rhash + ", " + $location.search().rhash
-    console.log "index: " + $scope.userOptions.index + ", " + $location.search().index
-    ###
-
-    #console.log typeof $location.search().rpass
     
     $scope.userOptions.number = parseInt $location.search().number or 0, 10
 
@@ -96,7 +83,7 @@ angular.module("generatorApp", []).controller "OptionsCtrl", ($scope, $location)
 
     # Format and Return a Tournament Code
     return endpoint + btoa JSON.stringify
-      name: lname, password: lpass, report: "http://aqueous-ocean-9313.herokuapp.com/match_report", extra: ["lin.darren95@gmail.com"]
+      name: lname, password: lpass, report: "http://aqueous-ocean-9313.herokuapp.com/report_match", extra: ["lin.darren95@gmail.com"]
 
   formatEndpoint = () ->
 

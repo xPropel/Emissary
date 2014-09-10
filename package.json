@@ -14,7 +14,11 @@
     "nodemailer"    : "latest",
     "require"       : "latest",
     "connect-mongo" : "latest",
-    "body-parser"   : "latest"
+    "body-parser"   : "latest",
+    "jade"          : "latest",
+    "jquery"        : "latest",
+    "angular"       : "latest",
+    "consolidate"   : "latest"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,22 @@
+<!-- Load Client-Side Compiler Dependencies -->
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="//rawgithub.com/visionmedia/jade/master/jade.js"></script>
+<script src="//learnboost.github.io/stylus/try/stylus.min.js"></script>
+<script src="//coffeescript.org/extras/coffee-script.js"></script>
+<script src="//code.angularjs.org/1.3.0-beta.2/angular.min.js"></script>
+
+<script type="text/coffeescript" src="index.coffee"></script>
+
+<!-- Process the Template and Stylesheet -->
+<script type="text/coffeescript">
+$.get "index.jade", (template) ->
+  template = jade.compile(template, pretty: true)
+  contents = document.open("text/html", "replace")
+  contents.write template()
+  contents.close()
+$.get "index.styl", (styl) ->
+  stylus.render styl, (err, css) ->
+    styl = document.createElement("style")
+    styl.innerHTML = css # Compiled Stylus
+    document.body.appendChild(styl)
+</script>
