@@ -13,8 +13,8 @@ report = (req, res) ->
         email.send_email recipients, "match@report", "Match Report", "http://#{req.host}/matches/#{req.body.gameId}"
     else
         console.log "No 'gameId' in req.body"
-        
-    res.send()
+
+    res.send("Match reported")
 
 get_matches = (req, res) ->
     mdb.get MDB_URL, MDB_COLL, parseInt(req.params.gameId, 10), (err, doc) ->
