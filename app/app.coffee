@@ -12,7 +12,7 @@ Kevin's code here
 
 app = express()
 
-
+###
 # Catch 404 and Forwarding to Error Handler
 app.use (req, res, next) ->
   err = new Error("Content Not Found")
@@ -39,7 +39,7 @@ app.use (err, req, res, next) ->
     error: {}
 
   return
-
+###
 
 
 
