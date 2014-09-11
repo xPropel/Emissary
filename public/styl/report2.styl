@@ -1,0 +1,129 @@
+html, body, #content-container
+  height 100%
+  font-family sans-serif
+  color #FFF
+  background #313131
+
+body
+  margin 0
+
+#game-info-container
+  color #FFF
+  background #272727
+
+  #victory-team-content
+    margin auto
+    text-align center
+    font-size 2em
+
+    h1
+      font-size 2em
+      font-weight bold
+      margin 0
+
+  #victory-line
+    width 60%
+    margin auto
+    margin-top 3px
+
+  #game-info-content
+    width 50%
+    margin auto
+    text-align center
+
+    ul
+      padding 0
+      margin-top 5px
+      margin-bottom 0
+      padding-bottom 20px
+
+      li
+        list-style none
+        display inline
+        font-weight bold
+        margin-left 10px
+        margin-right 10px
+        font-size 1em
+
+      #divider
+        border-right 1px solid #FFF
+        border-left 1px solid #FFF
+
+      li:first-of-type
+        margin-left 0px
+
+      li:last-of-type
+        margin-right 0px
+
+      label
+        font-size 0.85em
+        font-weight normal
+
+#game-details
+  margin-top 12px
+
+  #table-container
+    margin auto
+    width 900px
+
+    #team-name
+      font-size 1.3em
+      font-weight bold
+      margin-top 12px
+      margin-top 8px
+
+    article
+      padding 4px
+
+      #team-table
+        border 3px solid #272727
+        background #272727
+        border-collapse collapse
+        width 900px
+        overflow: hidden
+
+        tr
+          th
+            text-align center
+            padding 1px
+
+          td
+            padding-top 5px
+            padding-bottom 5px
+
+            span
+              border-bottom 1px dotted #DBDBDB
+
+          #champion-th, #summoner-th, #items-th
+            text-align left
+
+          #champion-td
+            width 130px
+
+          #summoner-td
+            width 170px
+
+          #level-td, #summoners-td, #kda-td, #cs-td, #gold-td
+            text-align center
+            width 70px
+
+          #items-td
+            img
+              vertical-align middle
+              margin-right 5px
+              width 27px
+              height 27px
+
+            a:last-of-type
+              margin-left 10px
+
+          #team-totals
+            padding-right: 100px
+
+          #champion-td, #summoners-td
+            img
+              vertical-align middle
+              margin-right 3px
+              width 25px
+              height 25px
+
