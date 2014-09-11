@@ -5,62 +5,38 @@ bodyParser     = require "body-parser"
 engine         = require "consolidate"
 
 
-###
-Kevin's code here
-###
+app = () ->
+
+  bower  = "#{__dirname}/../bower_components/"
+  client = "#{__dirname}/../client/"
+
+  @use "/static", require("express") .static(bower)
+  @use            require("harp")    .mount(client)
+  return this
 
 
 app = express()
 
-###
-# Catch 404 and Forwarding to Error Handler
-app.use (req, res, next) ->
-  err = new Error("Content Not Found")
-  err.status = 404
-  next err
-  return
-
-
-# Shows stack trace during development
-if app.get("env") is "development"
-  app.use (err, req, res, next) ->
-    res.status err.status or 500
-    res.render "error",
-      message: err.message
-      error: err
-
-    return
-
-# Hides stack trace otherwise
-app.use (err, req, res, next) ->
-  res.status err.status or 500
-  res.render "error",
-    message: err.message
-    error: {}
-
-  return
-###
-
-
-
+# Set Up Public Directory
 app.use("/public", express.static("#{__dirname}/public"))
 
-
+# Configure Default Extension, Display Engine, and View Dir.
 app.engine("html", engine.jade)
 app.set("view engine", "html")
 app.set("views", "#{__dirname}/views")
 
+# Set Up Match Reporting Endpoint (Riot Submits to Here)
 app.post("/report_match", bodyParser.json(), matchreport.report)
 
 # Home -> Tournament Code Generator
-app.get(["/", "/home", "/tournament_code"], (req, res) ->
+app.get(["/", "/index", "/home", "/tournament_code"], (req, res) ->
 	res.render "tournament_code/tournament.html"
 )
 
-# Raw JSON output of match
+# Raw JSON Output of Match
 app.get("/raw/:gameId", matchreport.get_matches)
 
-# Match information
+# Match Information
 app.get("/match/:gameId", (req, res) ->
 	res.redirect "http://matchhistory.na.leagueoflegends.com/en/#match-details/NA1/#{req.params.gameId}"
 	#res.render("../match_report/report2.html")
@@ -72,7 +48,7 @@ app.get("/testemail/:email", (req, res) ->
 	email.send_email "#{req.params.email}", "aqueous-ocean-9313@aqueous-ocean-9313", "☆*:.｡. o(≧▽≦)o .｡.:*☆", "∠( ᐛ 」∠)＿\nヾ(@°▽°@)ノ"
 )
 
-# Serve files
+# Serve Files Directly
 app.get("/public/*", (req, res) ->
 	res.sendFile(req.path)
 )

@@ -7,15 +7,20 @@ smtpTransport = nodemailer.createTransport
         pass: "asdf"
     
     
-send_email = (to, from, subject, text) ->
+send_email = (to, from, subject, text, attachments) ->
     options =
-        to: to
         from: from
+        to: to
         subject: subject
         text: text
+        attachments: attachments
 
     smtpTransport.sendMail options, (error, resp) ->
-        console.log error or resp
+      console.log error or resp
+
+
+
+
 
 exports.send_email = send_email
 

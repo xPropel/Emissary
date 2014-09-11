@@ -62,6 +62,10 @@ html(ng-app="generatorApp")
     h4 Lobby Password:
     input(ng-model="userOptions.lobbyPass" ng-change="update()" ng-disabled="userOptions.rpass || userOptions.rpass === 'true'" 
       placeholder="Enter a Password (Optional)")#lobbyPass
+    h4 Email(s):
+    input(ng-model="userOptions.emails" ng-change="update()"
+      placeholder="Enter an Email or Emails for Match Data")#emails
+    br
     h4 Tournament Code:
     input(ng-model="outputs.single" onclick="this.select()" readonly)#single
 
