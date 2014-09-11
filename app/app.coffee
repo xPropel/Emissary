@@ -12,6 +12,37 @@ Kevin's code here
 
 app = express()
 
+
+# Catch 404 and Forwarding to Error Handler
+app.use (req, res, next) ->
+  err = new Error("Content Not Found")
+  err.status = 404
+  next err
+  return
+
+
+# Shows stack trace during development
+if app.get("env") is "development"
+  app.use (err, req, res, next) ->
+    res.status err.status or 500
+    res.render "error",
+      message: err.message
+      error: err
+
+    return
+
+# Hides stack trace otherwise
+app.use (err, req, res, next) ->
+  res.status err.status or 500
+  res.render "error",
+    message: err.message
+    error: {}
+
+  return
+
+
+
+
 app.use("/public", express.static("#{__dirname}/public"))
 
 

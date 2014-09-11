@@ -2,7 +2,7 @@ mdb = require "./mdb"
 email = require "./email"
 
 MDB_URL = process.env.MONGOHQ_URL || "mongodb://localhost/test"
-MDB_COLL = process.env.MONGO_COLL || "games"
+MDB_COLL = process.env.MONGO_COLL || "app29370737"
 
 report = (req, res) ->
     console.log "Reporting a match..."
