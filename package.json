@@ -2,7 +2,7 @@
   "name": "Emissary",
   "version": "0.0.1",
   "description": "Match report system for League of Legends",
-  "main": "app/application.coffee",
+  "main": "app/app.coffee",
   "dependencies" : {
     "bower"         : "latest",
     "coffee-script" : "latest",
