@@ -42,7 +42,7 @@ app.get("/match/:gameId", (req, res) ->
     #res.render("../match_report/report2.html")
 )
 
-# Test sending email
+# Test Sending Email
 app.get("/testemail/:email", (req, res) ->
     res.send "Sending email to #{req.params.email}"
     attachments = [{

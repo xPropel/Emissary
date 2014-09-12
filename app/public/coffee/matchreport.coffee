@@ -18,6 +18,7 @@ report = (req, res) ->
         email.send_email recipients, "Emissary <do-not-reply@sandbox32938.mailgun.org>", "Emissary • Match Report for Game #{req.body.gameId}", "This is the official result of your match: http://matchhistory.na.leagueoflegends.com/en/#match-details/NA1/#{req.body.gameId}", attachments
     else
         console.log "Failed to record match - No 'gameId' in req.body"
+        res.status(400).send "No 'gameId' in req.body"
 
 get_matches = (req, res) ->
     mdb.get MDB_URL, MDB_COLL, parseInt(req.params.gameId, 10), (err, doc) ->

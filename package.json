@@ -15,7 +15,8 @@
     "jade"          : "latest",
     "jquery"        : "latest",
     "angular"       : "latest",
-    "consolidate"   : "latest"
+    "consolidate"   : "latest",
+    "http"          : "latest"
   },
   "repository": {
     "type": "git",
