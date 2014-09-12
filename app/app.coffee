@@ -30,7 +30,7 @@ app.post("/report_match", bodyParser.json(), matchreport.report)
 
 # Home -> Tournament Code Generator
 app.get(["/", "/index", "/home", "/tournament_code"], (req, res) ->
-	res.render "tournament_code/tournament.html"
+    res.render "tournament_code/tournament.html"
 )
 
 # Raw JSON Output of Match
@@ -38,19 +38,24 @@ app.get("/raw/:gameId", matchreport.get_matches)
 
 # Match Information
 app.get("/match/:gameId", (req, res) ->
-	res.redirect "http://matchhistory.na.leagueoflegends.com/en/#match-details/NA1/#{req.params.gameId}"
-	#res.render("../match_report/report2.html")
+    res.redirect "http://matchhistory.na.leagueoflegends.com/en/#match-details/NA1/#{req.params.gameId}"
+    #res.render("../match_report/report2.html")
 )
 
 # Test sending email
 app.get("/testemail/:email", (req, res) ->
-	res.send "sending email to " + req.params.email
-	email.send_email "#{req.params.email}", "aqueous-ocean-9313@aqueous-ocean-9313", "☆*:.｡. o(≧▽≦)o .｡.:*☆", "∠( ᐛ 」∠)＿\nヾ(@°▽°@)ノ"
+    res.send "Sending email to #{req.params.email}"
+    attachments = [{
+            filename: "filename.json",
+            content: "why doesn't this work"
+            contentType: "text/plain"
+        }]
+    email.send_email "#{req.params.email}", "test@email", "☆*:.｡. o(≧▽≦)o .｡.:*☆", "∠( ᐛ 」∠)＿\nヾ(@°▽°@)ノ", attachments
 )
 
 # Serve Files Directly
 app.get("/public/*", (req, res) ->
-	res.sendFile(req.path)
+    res.sendFile(req.path)
 )
 
 
