@@ -31,7 +31,7 @@ angular.module("generatorApp", []).controller "OptionsCtrl", ($scope, $location)
     $scope.userOptions.rhash = $location.search().rhash
     $scope.userOptions.index = $location.search().index
 
-    $scope.userOptions.emails = $location.search().emails
+    $scope.userOptions.email = $location.search().email
     
     $scope.userOptions.number = parseInt $location.search().number or 0, 10
 
@@ -85,7 +85,7 @@ angular.module("generatorApp", []).controller "OptionsCtrl", ($scope, $location)
 
     # Format and Return a Tournament Code
     return endpoint + btoa JSON.stringify
-      name: lname, password: lpass, report: "http://aqueous-ocean-9313.herokuapp.com/report_match", extra: emails.value.split(",")
+      name: lname, password: lpass, report: "http://aqueous-ocean-9313.herokuapp.com/report_match", extra: $scope.userOptions.email
 
   formatEndpoint = () ->
 

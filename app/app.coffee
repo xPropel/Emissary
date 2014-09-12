@@ -29,7 +29,7 @@ app.set("views", "#{__dirname}/views")
 app.post("/report_match", bodyParser.json(), matchreport.report)
 
 # Home -> Tournament Code Generator
-app.get(["/", "/index", "/home", "/tournament_code"], (req, res) ->
+app.get(["/", "/index", "/candy", "/home", "/tournament_code"], (req, res) ->
     res.render "tournament_code/tournament.html"
 )
 
