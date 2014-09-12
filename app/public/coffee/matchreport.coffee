@@ -10,7 +10,7 @@ report = (req, res) ->
         mdb.set MDB_URL, MDB_COLL, req.body
 
         recipients = req.body.tournamentMetaData.passbackDataPacket
-        attachments: [
+        attachments = [
           {
             fileName: "#{req.body.gameId}.json"
             contents: "#{req.body}"

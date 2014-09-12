@@ -9,8 +9,6 @@
     "express"       : "latest",
     "harp"          : "latest",
     "mongodb"       : "latest",
-    "morgan"        : "latest",
-    "monk"          : "latest",
     "nodemailer"    : "latest",
     "require"       : "latest",
     "body-parser"   : "latest",
