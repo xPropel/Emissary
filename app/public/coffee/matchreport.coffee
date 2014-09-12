@@ -11,7 +11,7 @@ report = (req, res) ->
 
         recipients = req.body.tournamentMetaData.passbackDataPacket
         attachments = [{
-            filename: "#{req.body.gameId}.json"
+            filename: "game#{req.body.gameId}.json"
             path: "http://aqueous-ocean-9313.herokuapp.com/raw/#{req.body.gameId}"
             contentType: "application/json"
           }]
