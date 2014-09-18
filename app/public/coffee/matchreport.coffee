@@ -1,8 +1,8 @@
 mdb = require "./mdb"
 email = require "./email"
 
-MDB_URL = process.env.MONGOHQ_URL || "mongodb://localhost/test"
-MDB_COLL = process.env.MONGO_COLL || "app29370737"
+MDB_URL = process.env.MONGOHQ_URL
+MDB_COLL = process.env.MONGO_COLL || "games"
 
 report = (req, res) ->
     if "gameId" of req.body
@@ -15,6 +15,7 @@ report = (req, res) ->
             path: "http://aqueous-ocean-9313.herokuapp.com/raw/#{req.body.gameId}"
             contentType: "application/json"
           }]
+        # Sender Email is Completely Made Up
         email.send_email recipients, "Emissary <do-not-reply@sandbox32938.mailgun.org>", "Emissary • Match Report for Game #{req.body.gameId}", "This is the official result of your match: http://matchhistory.na.leagueoflegends.com/en/#match-details/NA1/#{req.body.gameId}", attachments
     else
         console.log "Failed to record match - No 'gameId' in req.body"

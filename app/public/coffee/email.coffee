@@ -1,10 +1,13 @@
 nodemailer = require "nodemailer"
 
+MG_USER = process.env.MAILGUN_SMTP_LOGIN
+MG_PASS = process.env.MAILGUN_SMTP_PASSWORD
+
 smtpTransport = nodemailer.createTransport
     service: "Mailgun"
     auth:
-        user: "darren@app29370737.mailgun.org"
-        pass: "asdf"
+        user: MG_USER
+        pass: MG_PASS
     
     
 send_email = (to, from, subject, text, attach) ->
