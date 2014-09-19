@@ -5,6 +5,7 @@ MDB_URL = process.env.MONGOHQ_URL
 MDB_COLL = process.env.MONGO_COLL || "games"
 
 MG_FROM = process.env.MAILGUN_SMTP_LOGIN
+APP_URL = process.env.APP_URL
 
 report = (req, res) ->
     if "gameId" of req.body
