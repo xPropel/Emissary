@@ -4,6 +4,9 @@ email = require "./email"
 MDB_URL = process.env.MONGOHQ_URL
 MDB_COLL = process.env.MONGO_COLL || "games"
 
+MG_FROM = process.env.MAILGUN_SMTP_LOGIN
+APP_URL = process.env.APP_URL
+
 report = (req, res) ->
     if "gameId" of req.body
         console.log "Recording Match #{req.body.gameId}"
@@ -12,11 +15,11 @@ report = (req, res) ->
         recipients = req.body.tournamentMetaData.passbackDataPacket
         attachments = [{
             filename: "game#{req.body.gameId}.json"
-            path: "http://aqueous-ocean-9313.herokuapp.com/raw/#{req.body.gameId}"
+            path: "#{APP_URL}/raw/#{req.body.gameId}"
             contentType: "application/json"
           }]
         # Sender Email is Completely Made Up
-        email.send_email recipients, "Emissary <do-not-reply@sandbox32938.mailgun.org>", "Emissary • Match Report for Game #{req.body.gameId}", "This is the official result of your match: http://matchhistory.na.leagueoflegends.com/en/#match-details/NA1/#{req.body.gameId}", attachments
+        email.send_email recipients, "Emissary <#{MG_FROM}>", "Emissary • Match Report for Game #{req.body.gameId}", "This is the official result of your match: http://matchhistory.na.leagueoflegends.com/en/#match-details/NA1/#{req.body.gameId}", attachments
     else
         console.log "Failed to record match - No 'gameId' in req.body"
         res.status(400).send "No 'gameId' in req.body"

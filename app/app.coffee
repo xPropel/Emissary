@@ -41,7 +41,7 @@ app.get("/match/:gameId", (req, res) ->
     res.redirect "http://matchhistory.na.leagueoflegends.com/en/#match-details/NA1/#{req.params.gameId}"
     #res.render("../match_report/report2.html")
 )
-
+###
 # Test Sending Email
 app.get("/testemail/:email", (req, res) ->
     res.send "Sending email to #{req.params.email}"
@@ -52,7 +52,7 @@ app.get("/testemail/:email", (req, res) ->
         }]
     email.send_email "#{req.params.email}", "test@email", "☆*:.｡. o(≧▽≦)o .｡.:*☆", "∠( ᐛ 」∠)＿\nヾ(@°▽°@)ノ", attachments
 )
-
+###
 # Serve Files Directly
 app.get("/public/*", (req, res) ->
     res.sendFile(req.path)
