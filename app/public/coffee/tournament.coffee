@@ -1,6 +1,6 @@
 angular.module("generatorApp", []).controller "OptionsCtrl", ($scope, $location) ->
 
-  APP_URL = $location.protocol() + $location.host()
+  APP_URL = $location.protocol() + "://" + $location.host()
 
   $scope.location = $location
   
