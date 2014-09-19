@@ -4,8 +4,6 @@ express        = require "express"
 bodyParser     = require "body-parser"
 engine         = require "consolidate"
 
-APP_URL = process.env.APP_URL
-
 app = () ->
 
   bower  = "#{__dirname}/../bower_components/"

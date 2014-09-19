@@ -1,6 +1,6 @@
 angular.module("generatorApp", []).controller "OptionsCtrl", ($scope, $location) ->
 
-  APP_URL = $location.host()
+  APP_URL = $location.protocol() + $location.host()
 
   $scope.location = $location
   
@@ -84,9 +84,6 @@ angular.module("generatorApp", []).controller "OptionsCtrl", ($scope, $location)
     lpass = lobbyPass.value or ""
     rpass = $scope.userOptions.rpass
     if rpass then lpass = prand
-
-
-    console.log APP_URL
 
     # Format and Return a Tournament Code
     return endpoint + btoa JSON.stringify
