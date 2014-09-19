@@ -1,6 +1,6 @@
 angular.module("generatorApp", []).controller "OptionsCtrl", ($scope, $location) ->
 
-  APP_URL = process.env.APP_URL
+  APP_URL = $location.host()
 
   $scope.location = $location
   
@@ -87,7 +87,7 @@ angular.module("generatorApp", []).controller "OptionsCtrl", ($scope, $location)
 
 
     console.log APP_URL
-    
+
     # Format and Return a Tournament Code
     return endpoint + btoa JSON.stringify
       name: lname, password: lpass, report: "#{APP_URL}/report_match", extra: $scope.userOptions.email
