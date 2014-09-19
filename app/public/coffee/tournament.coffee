@@ -1,5 +1,7 @@
 angular.module("generatorApp", []).controller "OptionsCtrl", ($scope, $location) ->
 
+  APP_URL = process.env.APP_URL
+
   $scope.location = $location
   
   $scope.userOptions = {}
@@ -83,9 +85,12 @@ angular.module("generatorApp", []).controller "OptionsCtrl", ($scope, $location)
     rpass = $scope.userOptions.rpass
     if rpass then lpass = prand
 
+
+    console.log APP_URL
+    
     # Format and Return a Tournament Code
     return endpoint + btoa JSON.stringify
-      name: lname, password: lpass, report: "http://aqueous-ocean-9313.herokuapp.com/report_match", extra: $scope.userOptions.email
+      name: lname, password: lpass, report: "#{APP_URL}/report_match", extra: $scope.userOptions.email
 
   formatEndpoint = () ->
 
