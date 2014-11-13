@@ -141,8 +141,12 @@ angular.module("masteryApp", [])#["720kb.tooltips"])
       $scope.mastery_data = res.data
       $scope.load()
 
+  $scope.isNull = (mastery) ->
+    return typeof mastery is "undefined" or mastery is null
+
   $scope.load = () ->
     $scope.mastery_data.tree.total = 0
+
     # Create a Blank "Pre-requisite" Mastery
     $scope.mastery_data.data["0"] = {}
     $scope.mastery_data.data["0"].name = ""
@@ -152,174 +156,147 @@ angular.module("masteryApp", [])#["720kb.tooltips"])
     $scope.mastery_data.data["0"].rank = 0
     $scope.mastery_data.data["0"].ranks = 0
 
+    # Create Extra Fields for Each Tree/Mastery
     for tree in ["Offense", "Defense", "Utility"]
       depth = 0
-      $scope.mastery_data.tree[tree].total = 0
+      $scope.mastery_data.tree[tree].total = 0                            # Total for a Specific Tree
       for level in $scope.mastery_data.tree[tree]
         depth++
         for mastery in level
-          if typeof mastery != "undefined" and mastery != null
+          if not $scope.isNull(mastery)
             $scope.mastery_data.data[mastery.masteryId].rank = 0          # Current Rank of Mastery
             $scope.mastery_data.data[mastery.masteryId].deep = depth-1    # Depth of Mastery
             $scope.mastery_data.data[mastery.masteryId].tree = tree       # Which Tree This Mastery Belongs Under
             $scope.mastery_data.data[mastery.masteryId].reqby = 0         # Other Way of Prereq
             if $scope.mastery_data.data[mastery.masteryId].prereq > 0
               $scope.mastery_data.data[$scope.mastery_data.data[mastery.masteryId].prereq].reqby = mastery.masteryId
-            #console.log $scope.mastery_data.data[mastery.masteryId].name + " " + $scope.mastery_data.data[mastery.masteryId].prereq
-            #console.log $scope.mastery_data.data[mastery.masteryId].name + " " + $scope.mastery_data.data[mastery.masteryId].deep + " " + ($scope.mastery_data.data[mastery.masteryId].deep * 4 <= $scope.mastery_data.tree[$scope.mastery_data.data[mastery.masteryId].tree].total)
 
   $scope.available = (mastery) ->
-    if typeof mastery != "undefined" and mastery != null
-      return ($scope.mastery_data.data[mastery.masteryId].rank > 0 and # Rank Must Be In Between 0 and Max
-        $scope.mastery_data.data[mastery.masteryId].rank < $scope.mastery_data.data[mastery.masteryId].ranks) or # OR
-        ($scope.checkTreeReq(mastery) and
-        $scope.checkMasteryReq(mastery) and
-        $scope.mastery_data.tree.total < 30) # Max Number of Mastery Points
+    return (($scope.mastery_data.data[mastery.masteryId].rank > 0 and # Rank Must Be In Between 0 and Max
+      $scope.mastery_data.data[mastery.masteryId].rank < $scope.mastery_data.data[mastery.masteryId].ranks) or # OR
+      ($scope.checkTreeReq(mastery) and
+      $scope.checkMasteryReq(mastery) and
+      $scope.mastery_data.tree.total < 30)) unless $scope.isNull(mastery) # Max Number of Mastery Points
 
   $scope.unavailable = (mastery) ->
-    if typeof mastery != "undefined" and mastery != null
-      return !$scope.full(mastery) and !$scope.available(mastery) # Neither available() NOR full()
+    return not $scope.full(mastery) and not $scope.available(mastery) unless $scope.isNull(mastery) # Neither available() NOR full()
 
   $scope.full = (mastery) ->
-    if typeof mastery != "undefined" and mastery != null
-      return $scope.mastery_data.data[mastery.masteryId].rank == $scope.mastery_data.data[mastery.masteryId].ranks # Current Rank == Max Rank
+    return $scope.mastery_data.data[mastery.masteryId].rank is $scope.mastery_data.data[mastery.masteryId].ranks\ # Current Rank == Max Rank
+     unless $scope.isNull(mastery)
 
   $scope.getIconPath = (mastery) ->
-    if typeof mastery != "undefined" and mastery != null
-      if $scope.full(mastery) or $scope.available(mastery)
-        return "/images/mastery/#{mastery.masteryId}.png"
-      if $scope.unavailable(mastery)
-        return "/images/mastery/gray_#{mastery.masteryId}.png"
+    (return "/images/mastery/#{mastery.masteryId}.png" if $scope.full(mastery) or $scope.available(mastery)
+    return "/images/mastery/gray_#{mastery.masteryId}.png" if $scope.unavailable(mastery)) unless $scope.isNull(mastery)
 
   $scope.getReqBackground = (mastery) ->
-    if typeof mastery != "undefined" and mastery != null and $scope.mastery_data.data[mastery.masteryId].prereq > 0
-      if $scope.full(mastery)
-        return "/images/mastery/req_full.png"
-      if $scope.available(mastery)
-        return "/images/mastery/req_available.png"
-      if $scope.unavailable(mastery)
-        return "/images/mastery/req_unavailable.png"
+    (return "/images/mastery/req_full.png"          if $scope.full(mastery)
+    return "/images/mastery/req_available.png"      if $scope.available(mastery)
+    return "/images/mastery/req_unavailable.png"    if $scope.unavailable(mastery))\
+     unless $scope.isNull(mastery) or $scope.mastery_data.data[mastery.masteryId].prereq <= 0
 
   $scope.getBorderBackground = (mastery) ->
-    if typeof mastery != "undefined" and mastery != null
-      if $scope.full(mastery)
-        return "/images/mastery/border_full.png"
-      if $scope.available(mastery)
-        return "/images/mastery/border_available.png"
-      if $scope.unavailable(mastery)
-        return "/images/mastery/border_unavailable.png"
+    (return "/images/mastery/border_full.png"       if $scope.full(mastery)
+    return "/images/mastery/border_available.png"   if $scope.available(mastery)
+    return "/images/mastery/border_unavailable.png" if $scope.unavailable(mastery))\
+     unless $scope.isNull(mastery)
 
   $scope.getRankBackground = (mastery) ->
-    if typeof mastery != "undefined" and mastery != null
-      if $scope.full(mastery)
-        return "/images/mastery/rank_full.bmp"
-      if $scope.available(mastery)
-        return "/images/mastery/rank_available.png"
-      if $scope.unavailable(mastery)
-        return "/images/mastery/rank_unavailable.png"
+    (return "/images/mastery/rank_full.bmp"         if $scope.full(mastery)
+    return "/images/mastery/rank_available.png"     if $scope.available(mastery)
+    return "/images/mastery/rank_unavailable.png"   if $scope.unavailable(mastery))\
+     unless $scope.isNull(mastery)
 
   # Get Text Color of Rank/Max of Mastery
   $scope.getRankStrColor = (mastery) ->
-    if typeof mastery != "undefined" and mastery != null
-      if $scope.full(mastery)
-        return "#e0df00"
-      if $scope.available(mastery)
-        return "#42cc00"
-      if $scope.unavailable(mastery)
-        return "#747474"
+    (return "#e0df00"                               if $scope.full(mastery)
+    return "#42cc00"                                if $scope.available(mastery)
+    return "#747474"                                if $scope.unavailable(mastery))\
+     unless $scope.isNull(mastery)
 
   # Get Rank/Max of Mastery
   $scope.getRankStr = (mastery) ->
-    if typeof mastery != "undefined" and mastery != null
-      return $scope.mastery_data.data[mastery.masteryId].rank + "/" + $scope.mastery_data.data[mastery.masteryId].ranks
+    return "#{$scope.mastery_data.data[mastery.masteryId].rank}/#{$scope.mastery_data.data[mastery.masteryId].ranks}"\
+     unless $scope.isNull(mastery)
 
-  # Get Offense: Rank/ Defense: Rank/ Utility: Rank
+  # Get {Offense: Rank}/ {Defense: Rank}/ {Utility: Rank}
   $scope.getTreeRank = (tree) ->
-    if typeof $scope.mastery_data.tree != "undefined" and $scope.mastery_data.tree != null
-      return $scope.mastery_data.tree[tree].total
+    return $scope.mastery_data.tree[tree].total unless typeof $scope.mastery_data.tree is "undefined" or $scope.mastery_data.tree is null
 
   # Add a Point to Mastery
   $scope.increment = (mastery) ->
-    if typeof mastery != "undefined" and mastery != null
-      if $scope.available(mastery) and !$scope.full(mastery) and $scope.mastery_data.tree.total < 30
-        # Increase Rank
-        $scope.mastery_data.data[mastery.masteryId].rank++
-        $scope.mastery_data.tree[$scope.mastery_data.data[mastery.masteryId].tree].total++
-        $scope.mastery_data.tree.total++
+    # Increase Rank
+    ($scope.mastery_data.data[mastery.masteryId].rank++
+    $scope.mastery_data.tree[$scope.mastery_data.data[mastery.masteryId].tree].total++
+    $scope.mastery_data.tree.total++)\
+     unless $scope.isNull(mastery) or not $scope.available(mastery) or $scope.full(mastery) or $scope.mastery_data.tree.total >= 30
 
   # Returns If This Mastery Fulfilled Depth Requirements
   $scope.checkTreeReq = (mastery) ->
-    if typeof mastery != "undefined" and mastery != null
-      return $scope.mastery_data.data[mastery.masteryId].deep * 4 <= $scope.mastery_data.tree[$scope.mastery_data.data[mastery.masteryId].tree].total
+    return $scope.mastery_data.data[mastery.masteryId].deep * 4 <= $scope.mastery_data.tree[$scope.mastery_data.data[mastery.masteryId].tree].total unless $scope.isNull(mastery)
 
   # Returns If This Mastery Fulfilled Its Parent Requirements
   $scope.checkMasteryReq = (mastery) ->
-    if typeof mastery != "undefined" and mastery != null
-      return $scope.mastery_data.data[$scope.mastery_data.data[mastery.masteryId].prereq].ranks == 0 or # Non-existant Pre-requisite OR
-        $scope.mastery_data.data[$scope.mastery_data.data[mastery.masteryId].prereq].rank == $scope.mastery_data.data[$scope.mastery_data.data[mastery.masteryId].prereq].ranks
+    return $scope.mastery_data.data[$scope.mastery_data.data[mastery.masteryId].prereq].ranks is 0 or # Non-existant Pre-requisite OR
+      $scope.mastery_data.data[$scope.mastery_data.data[mastery.masteryId].prereq].rank is $scope.mastery_data.data[$scope.mastery_data.data[mastery.masteryId].prereq].ranks unless $scope.isNull(mastery)
 
   # Decrease a Point from Mastery
   $scope.decrement = (mastery) ->
-    if typeof mastery != "undefined" and mastery != null
-      if ($scope.full(mastery) or ($scope.mastery_data.data[mastery.masteryId].rank > 0 and $scope.available(mastery))) and
-        $scope.mastery_data.data[$scope.mastery_data.data[mastery.masteryId].reqby].rank == 0 # Check for Pre-requisites
-          sum = 0
-          deepest = $scope.mastery_data.data[$scope.getDeepestMasteryId(mastery)].deep # Deepest Ranked Mastery
-          for depth in [0..deepest-1] by 1 # Only Need to Check Until Deepest Ranked Mastery
-            for m in $scope.mastery_data.tree[$scope.mastery_data.data[mastery.masteryId].tree][depth]
-              if typeof m != "undefined" and m != null
-                sum += $scope.mastery_data.data[m.masteryId].rank # Count Total Ranks From 0 To depth
-            if $scope.mastery_data.data[mastery.masteryId].deep <= depth and sum - 1 < (depth+1)*4
-              return # Cancel decrement() If Subtracting the Rank Will Fail Requirements
+    (if ($scope.full(mastery) or ($scope.mastery_data.data[mastery.masteryId].rank > 0 and $scope.available(mastery))) and
+      $scope.mastery_data.data[$scope.mastery_data.data[mastery.masteryId].reqby].rank is 0 # Check for Pre-requisites
+        sum = 0
+        deepest = $scope.mastery_data.data[$scope.getDeepestMasteryId(mastery)].deep # Deepest Ranked Mastery
+        for depth in [0..deepest-1] by 1 # Only Need to Check Until Deepest Ranked Mastery
+          for m in $scope.mastery_data.tree[$scope.mastery_data.data[mastery.masteryId].tree][depth]
+            sum += $scope.mastery_data.data[m.masteryId].rank unless $scope.isNull(m) # Count Total Ranks From 0 To depth
+          if $scope.mastery_data.data[mastery.masteryId].deep <= depth and sum - 1 < (depth+1)*4
+            return # Cancel decrement() If Subtracting the Rank Will Fail Requirements
 
-          # Decrase Rank
-          $scope.mastery_data.data[mastery.masteryId].rank--
-          $scope.mastery_data.tree[$scope.mastery_data.data[mastery.masteryId].tree].total--
-          $scope.mastery_data.tree.total--
+        # Decrase Rank
+        $scope.mastery_data.data[mastery.masteryId].rank--
+        $scope.mastery_data.tree[$scope.mastery_data.data[mastery.masteryId].tree].total--
+        $scope.mastery_data.tree.total--) unless $scope.isNull(mastery)
 
   # Get the Deepest Mastery with Rank > 0 In Current Tree
   $scope.getDeepestMasteryId = (mastery) ->
-    if typeof mastery != "undefined" and mastery != null
-      id = mastery.masteryId
-      for depth in [$scope.mastery_data.data[mastery.masteryId].deep..$scope.mastery_data.tree[$scope.mastery_data.data[mastery.masteryId].tree].length-1] by 1
-        for m in $scope.mastery_data.tree[$scope.mastery_data.data[mastery.masteryId].tree][depth]
-          if typeof m != "undefined" and m != null
-            if $scope.mastery_data.data[m.masteryId].rank > 0
-              id = m.masteryId
-              depth++
-      return id
+    (id = mastery.masteryId
+    for depth in [$scope.mastery_data.data[mastery.masteryId].deep..$scope.mastery_data.tree[$scope.mastery_data.data[mastery.masteryId].tree].length-1] by 1
+      for m in $scope.mastery_data.tree[$scope.mastery_data.data[mastery.masteryId].tree][depth]
+        (if $scope.mastery_data.data[m.masteryId].rank > 0
+          id = m.masteryId
+          depth++) unless $scope.isNull(m)
+    return id) unless $scope.isNull(mastery)
 
   # Get Tree Color
   $scope.getTreeColor = (tree) ->
-    if tree == "Offense" then return "#b31c00"
-    if tree == "Defense" then return "#309030"
-    if tree == "Utility" then return "#49a8f6"
+    return "#b31c00" if tree is "Offense"
+    return "#309030" if tree is "Defense"
+    return "#49a8f6" if tree is "Utility"
 
   # Build Mastery tooltip
   $scope.getTooltip = (mastery) ->
-    if typeof mastery != "undefined" and mastery != null
-      html =  "<span style=color:#{$scope.getTreeColor($scope.mastery_data.data[mastery.masteryId].tree)};font-size:17px>#{$scope.mastery_data.data[mastery.masteryId].name}</span>"
-      html += "<br><br>"
-      html += "<span style=color:#{$scope.getRankStrColor(mastery)}>Rank: #{$scope.getRankStr(mastery)}</span>"
-      if !$scope.checkTreeReq(mastery)
-        html += "<br>"
-        html += "<br>"
-        html += "<span style=color:red>Requires #{$scope.mastery_data.data[mastery.masteryId].deep*4} points in #{$scope.mastery_data.data[mastery.masteryId].tree}.</span>"
-      if !$scope.checkMasteryReq(mastery)
-        html += "<br>"
-        html += "<span style=color:red>Requires #{$scope.mastery_data.data[$scope.mastery_data.data[mastery.masteryId].prereq].ranks} points in #{$scope.mastery_data.data[$scope.mastery_data.data[mastery.masteryId].prereq].name}.</span>"
+    (html =  "<span style=color:#{$scope.getTreeColor($scope.mastery_data.data[mastery.masteryId].tree)};font-size:17px>#{$scope.mastery_data.data[mastery.masteryId].name}</span>"
+    html += "<br><br>"
+    html += "<span style=color:#{$scope.getRankStrColor(mastery)}>Rank: #{$scope.getRankStr(mastery)}</span>"
+    if not $scope.checkTreeReq(mastery)
       html += "<br>"
       html += "<br>"
-      html += "<span style=color:white>"
-      if $scope.mastery_data.data[mastery.masteryId].rank == 0
-        html += $scope.mastery_data.data[mastery.masteryId].description[0]
-      else
-        html += $scope.mastery_data.data[mastery.masteryId].description[$scope.mastery_data.data[mastery.masteryId].rank-1]
-      if $scope.mastery_data.data[mastery.masteryId].rank != 0 and !$scope.full(mastery)
-        html += "<br>"
-        html += "<br>"
-        html += "Next Rank:"
-        html += "<br>"
-        html += $scope.mastery_data.data[mastery.masteryId].description[$scope.mastery_data.data[mastery.masteryId].rank]
-      html += "</span>"
-      return html
+      html += "<span style=color:red>Requires #{$scope.mastery_data.data[mastery.masteryId].deep*4} points in #{$scope.mastery_data.data[mastery.masteryId].tree}.</span>"
+    if not $scope.checkMasteryReq(mastery)
+      html += "<br>"
+      html += "<span style=color:red>Requires #{$scope.mastery_data.data[$scope.mastery_data.data[mastery.masteryId].prereq].ranks} points in #{$scope.mastery_data.data[$scope.mastery_data.data[mastery.masteryId].prereq].name}.</span>"
+    html += "<br>"
+    html += "<br>"
+    html += "<span style=color:white>"
+    if $scope.mastery_data.data[mastery.masteryId].rank is 0
+      html += $scope.mastery_data.data[mastery.masteryId].description[0]
+    else
+      html += $scope.mastery_data.data[mastery.masteryId].description[$scope.mastery_data.data[mastery.masteryId].rank-1]
+    if $scope.mastery_data.data[mastery.masteryId].rank isnt 0 and not $scope.full(mastery)
+      html += "<br>"
+      html += "<br>"
+      html += "Next Rank:"
+      html += "<br>"
+      html += $scope.mastery_data.data[mastery.masteryId].description[$scope.mastery_data.data[mastery.masteryId].rank]
+    html += "</span>"
+    return html) unless $scope.isNull(mastery)
