@@ -1,7 +1,7 @@
 {
   "name": "Emissary",
   "version": "0.0.1",
-  "description": "Match report system for League of Legends",
+  "description": "Emissary | League of Legends Tool Set",
   "main": "app/app.coffee",
   "dependencies" : {
     "bower"         : "latest",
@@ -15,15 +15,16 @@
     "jade"          : "latest",
     "jquery"        : "latest",
     "angular"       : "latest",
-    "consolidate"   : "latest"
+    "consolidate"   : "latest",
+    "nib"           : "latest",
+    "stylus"        : "latest"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/xPropel/Emissary.git"
   },
   "scripts" : {
-    "web"   : "coffee app/application.coffee",
-    "start" : "coffee app/application.coffee"
+    "start" : "coffee app/app.coffee"
   },
   "license": "MIT"
 }

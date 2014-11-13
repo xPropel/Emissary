@@ -1,45 +1,57 @@
-matchreport    = require "./public/coffee/matchreport"
-email          = require "./public/coffee/email"
+process.stdout.write "Starting... "
+
 express        = require "express"
 bodyParser     = require "body-parser"
 engine         = require "consolidate"
+nib            = require "nib"
+stylus         = require "stylus"
+harp           = require "harp"
 
-app = () ->
-
-  bower  = "#{__dirname}/../bower_components/"
-  client = "#{__dirname}/../client/"
-
-  @use "/static", require("express") .static(bower)
-  @use            require("harp")    .mount(client)
-  return this
+matchreport    = require "./public/coffee/matchreport"
+email          = require "./public/coffee/email"
 
 
 app = express()
 
-# Set Up Public Directory
-app.use("/public", express.static("#{__dirname}/public"))
+# Configure Default Extension, Display Engine, and View Directory
+app.set("views", "#{__dirname}/public")
 
-# Configure Default Extension, Display Engine, and View Dir.
-app.engine("html", engine.jade)
-app.set("view engine", "html")
-app.set("views", "#{__dirname}/views")
+# Set Up Public Directory
+app.use express.static("#{__dirname}/public")
+
+# Set Up Harp
+app.use harp.mount("#{__dirname}/public"), (req, res, next) ->
+  next()
 
 # Set Up Match Reporting Endpoint (Riot Submits to Here)
 app.post("/report_match", bodyParser.json(), matchreport.report)
 
 # Home -> Tournament Code Generator
-app.get(["/", "/index", "/candy", "/home", "/tournament_code"], (req, res) ->
-    res.render "tournament_code/tournament.html"
+app.get(["/", "/index", "/candy", "/home", "/tournament_code"], (req, res, next) ->
+    res.render "jade/tournament.jade"
+    next()
 )
 
 # Raw JSON Output of Match
 app.get("/raw/:gameId", matchreport.get_matches)
 
 # Match Information
-app.get("/match/:gameId", (req, res) ->
+app.get("/match/:gameId", (req, res, next) ->
     res.redirect "http://matchhistory.na.leagueoflegends.com/en/#match-details/NA1/#{req.params.gameId}"
     #res.render("../match_report/report2.html")
+    next()
 )
+
+app.get("/mastery", (req, res, next) ->
+    res.render "jade/mastery.jade"
+    next()
+)
+
+app.get("/test", (req, res, next) ->
+    res.render "jade/test.jade"
+    next()
+)
+
 ###
 # Test Sending Email
 app.get("/testemail/:email", (req, res) ->
@@ -52,10 +64,7 @@ app.get("/testemail/:email", (req, res) ->
     email.send_email "#{req.params.email}", "test@email", "☆*:.｡. o(≧▽≦)o .｡.:*☆", "∠( ᐛ 」∠)＿\nヾ(@°▽°@)ノ", attachments
 )
 ###
-# Serve Files Directly
-app.get("/public/*", (req, res) ->
-    res.sendFile(req.path)
-)
 
+app.listen(process.env.PORT | 3000)
 
-app.listen(process.env.PORT)
+console.log "Started!"

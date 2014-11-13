@@ -1,0 +1,44 @@
+doctype html
+html(ng-app="masteryApp")
+
+  head
+    //- script(type="text/coffeescript" src="/coffee/mastery.coffee")
+    link(rel="stylesheet" type="text/css" href="css/mastery.css")
+
+    //- Site Information
+    block meta
+
+      title Emissary • Mastery
+
+
+  body(ng-controller="MasteryCtrl")
+    div(style="background-image:url(public/images/mastery/masteryback.jpg)")#mastery-page
+      div(ng-repeat="tree in ['Offense', 'Defense', 'Utility']" style="left:{{($index * 265) + ($index+1)*8}}px")#tree
+        div(ng-repeat="row in [0,1,2,3,4,5]" style="top:{{($index+1 * 12)+($index * (50+20))}}px")#row
+          div(ng-repeat="col in [0,1,2,3]" class="req"
+            style="background-image:url({{getReqBackground(mastery_data.tree[tree][row][col])}}); left: {{(($index+1) * 31)+($index * 31)}}px")
+          div(ng-repeat="col in [0,1,2,3]" class="mastery"
+            style="background-image:url({{getIconPath(mastery_data.tree[tree][row][col])}}); left:{{(($index+1) * 12)+($index * 50)}}px")
+          div(ng-repeat="col in [0,1,2,3]" class="border" ng-click="increment(mastery_data.tree[tree][row][col])" ng-right-click="decrement(mastery_data.tree[tree][row][col])"
+            style="background-image: url({{getBorderBackground(mastery_data.tree[tree][row][col])}}); left: {{(($index+1) * 12)+($index * 50)}}px")
+          div(ng-repeat="col in [0,1,2,3]" class="rankbox"
+            style="background-image:url({{getRankBackground(mastery_data.tree[tree][row][col])}}); left: {{(($index+1) * 32)+($index * 30)}}px")
+            label(class="rank", style="color: {{getRankStrColor(mastery_data.tree[tree][row][col])}}"
+               ng-click="increment(mastery_data.tree[tree][row][col])" ng-rigthe-click="decrement(mastery_data.tree[tree][row][col])") {{getRankStr(mastery_data.tree[tree][row][col])}}
+        label(class="tree-rank") {{tree}}: {{getTreeRank(tree)}}
+
+    
+
+    //- Javascript
+    block javascript
+
+      //- Required Libraries
+
+      //-script(src="//code.angularjs.org/1.3.0-beta.1/angular.min.js")
+      //-script(src="//code.angularjs.org/1.3.0-rc.3/angular.min.js")
+      script(src="//coffeescript.org/extras/coffee-script.js")
+      
+      script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.js")
+      //-script.
+      //-   app = angular.module("masteryApp", []);
+      script(type="text/coffeescript" src="/coffee/mastery.coffee")

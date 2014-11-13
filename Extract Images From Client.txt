@@ -1,0 +1,28 @@
+To Extract Images From Client
+--------
+Target:
+To extract in game images from the League of Legends client directly.
+
+Software needed:
+- Flash Decompiler Trillix (or equivalent software that decompiles .swf files)
+- League of Legends
+
+Common images and their containing SWF files:
+Mastery icons - /Riot Games/League of Legends/RADS/projects/lol_air_client/releases/0.0.1.110/deploy/assets/imagePacks/ImagePack_masteryIcons.swf
+Summoner spells - /Riot Games/League of Legends/RADS/projects/lol_air_client/releases/0.0.1.110/deploy/assets/imagePacks/ImagePack_spells.swf
+Item icons - /Riot Games/League of Legends/RADS/projects/lol_air_client/releases/0.0.1.110/deploy/assets/imagePacks/ImagePack_items.swf
+Profile icons - /Riot Games/League of Legends/RADS/projects/lol_air_client/releases/0.0.1.110/deploy/assets/imagePacks/ImagePack_buddyIcons.swf
+
+Other images NOT in SWF files:
+Ability icons - /Riot Games/League of Legends/RADS/projects/lol_air_client/releases/0.0.1.110/deploy/assets/images/abilities/
+Champion icons - /Riot Games/League of Legends/RADS/projects/lol_air_client/releases/0.0.1.110/deploy/assets/images/champions/
+Champion portraits (with skins) - /Riot Games/League of Legends/RADS/projects/lol_air_client/releases/0.0.1.110/deploy/assets/images/champions/
+Rune icons - /Riot Games/League of Legends/RADS/projects/lol_air_client/releases/0.0.1.110/deploy/assets/images/runes/
+
+Steps:
+1. Open Flash Decompiler Trillix (or equivalent)
+2. Identify what type images you want to extract
+3. Locate the appropriate SWF file (see above) and drag it into the blank workspace of Flash Decompiler
+4. In the "My tasks" window, click on "Images" and the workspace will display all the images inside the SWF file
+5. Select the images you want to extract and click on "Extract objects" in the Manage ribbon
+6. The program will automatically launch a window where the images are extracted
