@@ -7,8 +7,8 @@ nib            = require "nib"
 stylus         = require "stylus"
 harp           = require "harp"
 
-matchreport    = require "./public/coffee/matchreport"
-email          = require "./public/coffee/email"
+matchreport    = require "./public/js/match_report/matchreport"
+email          = require "./public/js/match_report/email"
 
 
 app = express()
@@ -27,8 +27,8 @@ app.use harp.mount("#{__dirname}/public"), (req, res, next) ->
 app.post("/report_match", bodyParser.json(), matchreport.report)
 
 # Home -> Tournament Code Generator
-app.get(["/", "/index", "/candy", "/home", "/tournament_code"], (req, res, next) ->
-    res.render "jade/tournament.jade"
+app.get(["/", "/index", "/candy", "/home", "/tournament_code", "/tournamentcode"], (req, res, next) ->
+    res.render "tournament.jade"
     next()
 )
 
@@ -43,12 +43,12 @@ app.get("/match/:gameId", (req, res, next) ->
 )
 
 app.get("/mastery", (req, res, next) ->
-    res.render "jade/mastery.jade"
+    res.render "mastery.jade"
     next()
 )
 
 app.get("/test", (req, res, next) ->
-    res.render "jade/test.jade"
+    res.render "test.jade"
     next()
 )
 

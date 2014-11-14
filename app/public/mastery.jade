@@ -1,0 +1,36 @@
+doctype html
+html(ng-app="masteryApp")
+
+  head
+    link(rel="stylesheet" type="text/css" href="styles/mastery.css")
+    link(rel="stylesheet" type="text/css" href="styles/angular-tooltips.css")
+    
+    //- Site Information
+    block meta
+
+      title Emissary • Mastery
+
+
+  body(ng-controller="MasteryCtrl")
+    div(style="background-image:url(assets/images/mastery/masteryback.jpg)")#mastery-page
+      div(ng-repeat="tree in ['Offense', 'Defense', 'Utility']" style="left:{{($index * 265) + ($index+1)*8}}px")#tree
+        div(ng-repeat="row in [0,1,2,3,4,5]" style="top:{{($index+1 * 12)+($index * (50+20))}}px")#row
+          div(ng-repeat="col in [0,1,2,3]" class="req" ng-if="getReqBackground(mastery_data.tree[tree][row][col])"
+            style="background-image:url({{getReqBackground(mastery_data.tree[tree][row][col])}}); left: {{(($index+1) * 31)+($index * 31)}}px")
+          div(ng-repeat="col in [0,1,2,3]" class="mastery" ng-if="getIconPath(mastery_data.tree[tree][row][col])"
+            style="background-image:url({{getIconPath(mastery_data.tree[tree][row][col])}}); left:{{(($index+1) * 12)+($index * 50)}}px")
+          div(ng-repeat="col in [0,1,2,3]" class="border" ng-click="increment(mastery_data.tree[tree][row][col])" ng-right-click="decrement(mastery_data.tree[tree][row][col])"
+            style="background-image: url({{getBorderBackground(mastery_data.tree[tree][row][col])}}); left: {{(($index+1) * 12)+($index * 50)}}px"
+            ng-if="getBorderBackground(mastery_data.tree[tree][row][col])")
+            span(tooltips tooltip-content="{{getTooltip(mastery_data.tree[tree][row][col])}}" tooltip-side="bottom" tooltip-mastery="{{mastery_data.tree[tree][row][col]}}")#tooltip
+          div(ng-repeat="col in [0,1,2,3]" class="rankbox" ng-if="getRankBackground(mastery_data.tree[tree][row][col])"
+            style="background-image:url({{getRankBackground(mastery_data.tree[tree][row][col])}}); left: {{(($index+1) * 32)+($index * 30)}}px")
+            label(class="rank", style="color: {{getRankStrColor(mastery_data.tree[tree][row][col])}}"
+               ng-click="increment(mastery_data.tree[tree][row][col])" ng-right-click="decrement(mastery_data.tree[tree][row][col])") {{getRankStr(mastery_data.tree[tree][row][col])}}
+        label(class="tree-rank") {{tree}}: {{getTreeRank(tree)}}
+
+    
+    //- Required Libraries
+    script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.js")
+
+    script(src="js/mastery/mastery.js")
